@@ -8,13 +8,15 @@ Nơi lưu trữ các từ và giải thích các từ đó từ chuyên ngành t
 + Kí hiệu là 
 + Justified (căn đều hai bên) là . . .
 
-+ Nhà khoa học máy tính  [Donald Knuth](). 
++ Nhà khoa học máy tính  [Donald Knuth]() là ai ? 
 
 + Thế nào là phương trình toán học ?  
 
 + AMS: American Mathematical Society (Hiệp hội toán học Hoa Kỳ) là một hiệp hội [các nhà toán học](https://en.wikipedia.org/wiki/Mathematician "Nhà toán học")(mathematician) chuyên nghiệp tận tâm với lợi ích của nghiên cứu và học thuật [toán học](https://en.wikipedia.org/wiki/Mathematics "Toán học") (mathematical), và phục vụ cộng đồng trong nước và quốc tế thông qua các ấn phẩm, hội nghị, hoạt động vận động và các chương trình khác.[^1]
 
 + Bộ encode UTF-8 là gì ?
+
++ Dòng văn bản là gì ? Đoạn văn bản là gì ? 
 
 ## Thuật ngữ toán học
 
@@ -42,5 +44,12 @@ Hệ quả (corollary):
 Nhận xét (remark): 
 
 Điều kiện (conditions): 
+
+
+
+
+
+
+---
 
 [^1]: Nguồn tham khảo từ Wiki: https://en.wikipedia.org/wiki/American_Mathematical_Society 

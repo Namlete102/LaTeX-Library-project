@@ -1,10 +1,13 @@
+# a. Giới thiệu 
 
-![](./images/banner.jpg)
+Có viết ở phần [[About]]
 
-# a. Các bài học 
+---
+# b. Các bài học 
 
 ## Bố cục các tệp trong dự án LaTeX: 
 
+. . . 
 
 ---
 
@@ -12,14 +15,26 @@
 
 . . . 
 
+```latex
+\documentclass{article}
+\begin{document}
+Hello \LaTeX{} !
+\end{document}
+```
+
+(? Ảnh meme nào đó thú vị về  Hello LaTeX)
+
 ---
 
 ## Viết từ "TeX" và "LaTeX" trong LaTeX:
 
-Trong một số tài liệu ghi chép về LaTeX, người dùng có thể thấy tác giả viết từ "TeX" và "LaTeX" rất khác so với các từ khác như trong hình ảnh minh họa sau đây. 
+Ở ví dụ . . . của bài học . . .  người dùng có thể thấy rằng từ "LaTeX"  
+
+Hơn nữa, trong một số tài liệu giới thiệu về LaTeX, người dùng cũng có thể thấy rằng các tác giả viết từ "TeX" và "LaTeX" rất khác so với các từ khác như trong hình ảnh minh họa (? lấy hình từ cuốn sách hay tài liệu nào đó để làm minh họa nhé) sau đây. 
+
 . . . (hình minh họa)
 
-Để làm được điều này, người dùng chỉ cần thêm kí tự `\` (kí tự này rất quan trọng về các bài học như [kí tự đặc biệt]()) vào trước từ TeX và cũng như là LaTeX. Cụ thể ta có lệnh đầy đủ sau đây
+Để làm được điều này, người dùng chỉ cần thêm kí tự `\` (kí tự này rất quan trọng về các bài học như [kí tự đặc biệt]()) vào trước từ TeX và cũng như là LaTeX. Cụ thể ta có lệnh đầy đủ sau đây 
 
 ```latex
 \TeX{} 
@@ -37,7 +52,7 @@ hoặc cũng có thể là
 
 $$\LaTeX{}, \ \TeX{}$$
 
-Mục đích của dấu ngoặc nhọn hoặc kí tự `\` cần được thêm vào sau lệnh `\TeX`, `\LaTeX` là nhằm để hệ thống sẽ không tự động lấy mất khoảng trắng (dấu cách) khi người dùng viết tiếp câu văn ngay sau từ LaTeX đó.
+Mục đích của dấu `{}` hoặc kí tự `\` cần được thêm vào sau lệnh `\TeX`, `\LaTeX` là nhằm để hệ thống sẽ không tự động lấy mất khoảng trắng (dấu cách) khi người dùng viết tiếp câu văn ngay sau từ LaTeX đó.
 
 Để dễ hình dung, người dùng xem qua ví dụ đoạn mã sau đây về việc nếu như người dùng không thêm dấu ngoặc hay dấu `\` vào sau  lệnh \LaTeX`
 
@@ -45,11 +60,11 @@ Mục đích của dấu ngoặc nhọn hoặc kí tự `\` cần được thêm
 \documentclass{article} 
 \usepackage[utf8]{vietnam}
 \begin{document} 
-\LaTeX là một trình soạn thảo văn bản tuyệt vời. 
+\LaTeX là một trình soạn thảo văn bản tuyệt vời ! 
 \end{document}
 ```
 
-Người dùng có thể thấy dù chúng ta có nhấn dấu cách (nút space) trên bàn phím bao nhiêu lần, thì từ "là" vẫn sẽ bị dính liền với từ trước của nó là từ "LaTeX" . 
+Người dùng có thể thấy dù người dùng có nhấn dấu cách (space) trên bàn phím bao nhiêu lần, thì từ "là" vẫn sẽ bị dính liền với từ trước của nó là từ "LaTeX" . 
  
 ---
 
@@ -85,6 +100,8 @@ Ví dụ: Đặt tất cả các lề của trang đều bằng 1in
 ```latex
 % chú thích 
 ```
+
+
 
 --- 
 ## Kí tự thông thường: 
@@ -171,16 +188,7 @@ Ví dụ:
 
 ```latex
 \documentclass{article}
-% --- Cấu hình ngôn ngữ tài liệu ---
-\usepackage[english]{babel}
-
 \begin{document}
-% --- Khai báo thông tin bài viết ---
-\title{Your Paper}
-\author{You}
-\date{\today}
-% --- Hiển thị tiêu đề, tác giả, ngày tháng ---
-\maketitle
 % Viết kí tự đặc biệt nhờ vào dấu '\' 
 \% 
 \_ 
@@ -375,15 +383,7 @@ hệ thống sẽ tự động xuất sang trang tài liệu khoảng bảy đo�
 
 ```latex
 \documentclass{article}
-% Language setting
-% Replace `english' with e.g. `spanish' to change the document language
-\usepackage[english]{babel}
-\usepackage{lipsum} 
-\title{Your Paper}
-\author{You}
-\date{}
 \begin{document}
-\maketitle
 \lipsum
 \end{document}
 ```
@@ -396,9 +396,15 @@ Với lệnh
 
 hệ thống sẽ tự động xuất sang trang tài liệu đầy đủ từ 1 đến 150  đoạn văn bản lorem ipsum mặc định. 
 
-Nếu như người dùng để lệnh
+```latex
+\documentclass{article}
+\usepackage{lipsum} 
+\begin{document}
+\lipsum[1-150]
+\end{document}
+```
 
-. . . (có khoảng 150 văn bản lorem khác nhau, đây là giới hạn . . ., nếu như người dùng sử dụng
+. . . (150 đoạn văn bản lorem khác nhau, đây cũng chính là giới hạn . . . ,  nếu như người dùng sử dụng)
 
 ```latex
 \lipsum[1000]
@@ -570,6 +576,7 @@ Kích thước thụt lề đầu dòng của lệnh `\indent` là 20pt (? viế
 ## Khoảng cách giữa các đoạn văn trong văn bản:
 
 Để tùy chỉnh khoảng cách giữa các đoạn, ta sử dụng lệnh
+
 ```latex
 \setlength{\parskip}{#}
 ```
@@ -790,12 +797,6 @@ Lệnh này được đặt ở . . .
 ```latex
 \colorbox{color}{text}
 ```
-
-
----
-
-## Tham chiếu chéo:  
-
 
 
 ---
@@ -1439,8 +1440,6 @@ Sử dụng lệnh sau:
 ```latex
 \verb|. . .|
 ```
-
-
 . . . 
 
 ---
@@ -1472,14 +1471,6 @@ F = k_e \frac{|q_1 q_2|}{r^2}
 \]
 \end{document}
 ```
-
-<div align="center">
-
-<img src="./images/Coulomb.jpg" alt="Coulomb">
-
-Nhà vật lý người Pháp Charles-Augustin de Coulomb
-
-</div>
 
 > [!NOTE] 
 > Người viết khuyên người dùng nên viết lệnh `\footnote` dính liền ngay sau từ cần chú thích, không nên để khoảng trắng ở giữa, vì điều này giúp chỉ số nhỏ hiển thị ở phía trên từ đó không bị nhảy hàng lỗi khi từ đó nằm ở cuối dòng văn bản. 
@@ -1517,6 +1508,14 @@ F = k_e \frac{|q_1 q_2|}{r^2}
 
 Lúc này, trên trang tài liệu, người dùng có thể thấy rằng từ "Coulomb" lúc này mang chỉ số nhỏ hiển thị phía trên là **42**, còn ở chân trang phần nội dung chú thích của từ "Coulomb" cũng sẽ bắt đầu bằng số **42**.
 
+<div align="center">
+
+<img src="./images/Coulomb.jpg" alt="Coulomb">
+
+Nhà vật lý người Pháp Charles-Augustin de Coulomb
+
+</div>
+
 ---
 
 ## Toán học: [^5] [^7]
@@ -1525,19 +1524,80 @@ Lúc này, trên trang tài liệu, người dùng có thể thấy rằng từ 
 
 Một trong những động lực lớn nhất thúc đẩy [Donald Knuth]() khi bắt đầu phát triển hệ thống TeX ban đầu là tạo ra một công cụ cho phép xây dựng các công thức toán học một cách đơn giản, đồng thời trông chuyên nghiệp khi in ấn. Việc ông thành công có lẽ là lý do tại sao TeX (và sau này là LaTeX) trở nên phổ biến trong cộng đồng khoa học. Việc trình bày toán học là một trong những thế mạnh lớn nhất của LaTeX. Đây cũng là một chủ đề rộng lớn do sự tồn tại của rất nhiều ký hiệu toán học.[^6] 
 
-. . . . (viết tiếp sau)
+. . . . 
+
+Đối với phép tính thông thường chẳng hạn như phép toán cộng 1+1 = 2 
+
+```latex
+\documentclass{article}
+\usepackage[utf8]{vietnam}
+\begin{document}
+
+Phép tính 1 + 1 = 2 là một phép tính sơ khai trong lịch sử phát triển học và nghiên cứu toán học của loài người. Tuy vây, thật bất ngờ khi mãi đến thế kỉ thứ . . . các nhà toán học mới tổng quát cấu trúc đại số . . . bắt đầu từ tiên đề Peano về . . . cho đến khi hai nhà toán học Russell và Whitehead trong tác phẩm . . . xuất bản . . .ở trang . . . mới chứng minh định lý 1 + 1 = 2. 
+
+\end{document}
+```
+
+người dùng có thể dễ dàng nhập trực tiếp toán tử (+, -), quan hệ (? dấu =, < > trong toán học được gọi thống nhất là gì nhỉ) và các số thực cơ bản (như 1, -1 ) trong phần soạn thảo văn LaTeX. 
+
+(? Ảnh các nhà toán học Peano, Russell, Whitehead)
+
+Điều này cũng tương tự, khi người dùng viết số phần trăm 
+
+```latex
+99%  
+```
+
+các đơn vị đo lượng cơ bản như khối lượng 
+
+```latex
+70kg
+```
+
+vận tốc
+
+```latex
+5 cm/s
+```
+
+khoảng cách
+
+```latex
+10 m 
+```
+
+Tập hợp các kí hiệu toán tử ... (? gồm gì nữa) có thể được gõ trực tiếp trên bàn phím, người dùng có thể xem lại bài . . . (? bài học nào trong đây)
+
+Tuy vậy, để người dùng có thể viết toán học ở mức độ phức tạp hơn có các [kí hiệu toán học, chữ cái Hy Lạp] . . .vv. . . không thể được gõ trực tiếp trên bàn phím, chẳng hạn như ví dụ sau 
+
+```latex
+Phương trình toán học từ nguyên lý bất định Heisenberg trong cơ học lượng tử . . . 
+
+\Delta x \cdot \Delta p \ge \frac{\hbar}{2} 
+```
+
+So với 1 + 1 = 2, 99%, 70kg, 5 cm/s, 10 m trên, việc viết trực tiếp [toán tử]() nhân ($\cdot$), [kí hiệu Hy Lạp]() $\Delta$, [quan hệ so sánh]() $\geq$, [phân số]()  $\frac{\hbar}{2}$  từ phương trình nguyên lý bất định của Heisenberg vào soạn thảo LaTeX, khi xuất sang trang tài liệu, liền hệ thống sẽ lập tức báo lỗi `! Missing $ inserted`. 
+
+(? Ảnh báo lỗi) 
+
+Hơn nữa, phương trình đó không được căn ở một dòng riêng biệt như bài báo 
+
+(https://ntrs.nasa.gov/citations/19840008978)
+
+Từ hai điều cơ bản trên, người dùng có thể thấy rằng, để viết được một hai hai nhiều (hệ) phương trình toán học phức tạp (? lặp từ quá nhỉ), chúng cần được đặt vào một môi trường, lệnh riêng biệt khác, nhằm phân tách việc đâu là văn bản chữ thông thường (? đúng ko nhỉ ?), đâu là văn bản toán học, để hệ thống có thể dễ dàng phân loại, xác nhận . . . (? đúng ko nhỉ ?), giúp hiển thị chính xác các kí hiệu mà người dùng mong muốn trên trang tài liệu, khi xuất ra từ phần soạn thảo LaTeX. 
 
 ---
 #### `inline math`, `display math`: 
 
-
-
-Để tổng quát những gì mà người viết đã giới thiệu ở phần đầu của nội dung (? tìm ý viết lại) này, người viết tóm lược lại như sau: 
+. . . (? Giới thiệu) với 1+1 = 2 ở ví dụ . . . chúng được gọi là `inline math` còn nguyên lý bất định hải sơn bắc là `displaymath`. 
 
 LaTeX cung cấp đầy đủ hai chế độ trình bày toán học chính bao gồm
 + `inline math`(**toán học nội tuyến**): được sử dụng để viết các biểu thức, kí hiệu toán học nằm trong cùng ở đoạn văn bản.
 + `display math`(**toán học hiển thị**): được sử dụng để viết các biểu thức, kí hiệu toán học không thuộc ở đoạn văn và được trình bày trên các dòng riêng biệt. 
-##### `inline math`:
+
+---
+
+##### **inline math**:
 
 Để viết toán học ở chế độ **inline math**, người dùng cần viết chúng vào bên trong một trong ba cách sau: 
 
@@ -1551,14 +1611,14 @@ LaTeX cung cấp đầy đủ hai chế độ trình bày toán học chính bao
 \end{math}
 ```
 
-Điều này có nghĩa là người dùng có thể viết **inline math** phương trình toán học nổi tiếng từ định lý Pytago về mối quan hệ giữa hai cạnh góc vuông và một cạnh huyền trong một tam giác vuông bằng một cặp dấu đô la đơn 
+Điều này có nghĩa là người dùng có thể viết phương trình toán học nổi tiếng từ định lý Pytago về mối quan hệ giữa hai cạnh góc vuông và một cạnh huyền trong một tam giác vuông ở chế độ **inline math** bằng một cặp dấu đô la đơn 
 
 ```latex
 \documentclass{article}
 % --- Cấu hình ngôn ngữ tiếng Việt ---
 \usepackage[utf8]{vietnam}
 \begin{document}
-Phương trình định lý Pytago: $x^2 + y^2 =z^2$
+Phương trình định lý Pythagoras: $x^2 + y^2 =z^2$
 \end{document}
 ```
 
@@ -1569,11 +1629,11 @@ hoặc cũng có thể là bằng một cặp dấu ngoặc tròn
 % --- Cấu hình ngôn ngữ tiếng Việt ---
 \usepackage[utf8]{vietnam}
 \begin{document}
-Phương trình định lý Pytago: \(x^2 + y^2 =z^2\)
+Phương trình định lý Pythagoras: \(x^2 + y^2 =z^2\)
 \end{document}
 ```
 
-hay cũng thể là bằng môi trường `math`
+hay cũng thể là bằng môi trường `math` 
 
 ```latex
 \documentclass{article}
@@ -1581,14 +1641,14 @@ hay cũng thể là bằng môi trường `math`
 \usepackage[utf8]{vietnam}
 \begin{document}
 \begin{math} 
-Phương trình định lý Pytago: x^2 + y^2 =z^2
+Phương trình định lý Pythagoras: x^2 + y^2 = z^2
 \end{math}
 \end{document}
 ```
 
 mà kết quả cho ra được đều sẽ là giống nhau: 
 
-Phương trình định lý Pytago:  $x^2 + y^2 =z^2$ 
+Phương trình định lý Pythagoras:  $x^2 + y^2 =z^2$ 
 
 <div align="center">
 <img src="./images/Pythagoras.jpg" alt="Pythagoras">
@@ -1600,23 +1660,26 @@ Việc lựa chọn một trong ba cách trên để viết **inline math** tùy
 > [!WARNING]  
 > Nếu như người dùng không viết các dấu gạch dưới `_`, dấu mũ `^` và các [kí hiệu, chữ cái toán học]() khác vào một trong ba cách viết toán học ở chế độ **inline math** trên, thì hệ thống sẽ báo lỗi `! Missing $ inserted.`
 
-Người dùng có thể thấy ở đoạn mã dưới đây, các dấu mũ không được viết vào trong chế độ **inline math** ở phần soạn thảo LaTeX
+Người dùng có thể thấy ở đoạn mã dưới đây, các dấu mũ `^` khi không được viết vào trong chế độ **inline math** ở phần soạn thảo LaTeX 
 
 ```latex
 \documentclass{article}
 % --- Cấu hình ngôn ngữ tiếng Việt ---
 \usepackage[utf8]{vietnam}
 \begin{document}
-Phương trình định lý Pytago: x^2 + y^2 =z^2 
+Phương trình định lý Pytago: x^2 + y^2 = z^2 
 \end{document}
 ```
 
-khi xuất sang trang tài liệu, lập tức hệ thống sẽ tự động báo lỗi như đã nêu ở chú ý trên.  
+khi xuất sang trang tài liệu, lập tức hệ thống sẽ tự động báo lỗi như đã nêu ở chú ý trên. 
 
 (? Ảnh báo lỗi đoạn mã trên)
 
-Chú ý trên cũng được áp dụng tương tự đối với việc người dùng viết toán học ở chế độ [display math](). 
-##### `display math`:
+Chú ý trên cũng được áp dụng tương tự đối với việc người dùng viết toán học ở chế độ [display math]()  ngay sau đây.
+
+---
+
+##### **display math**:
 
 Để viết toán học ở chế độ **display math**, người dùng cần viết chúng vào bên trong một trong ba cách sau:
 
@@ -1630,15 +1693,15 @@ Chú ý trên cũng được áp dụng tương tự đối với việc ngườ
 \end{displaymath}
 ```
 
-Tương tự như **inline math**, tùy thuộc vào sở thích, thói quen cá nhân của người dùng để có thể chọn một trong ba cách trên để viết toán học ở chế độ **display math**, mà vẫn đảm bảo kết quả cho ra được vẫn là giống nhau. 
+Tương tự như **inline math**, tùy thuộc vào sở thích, thói quen cá nhân của người dùng để có thể chọn một trong ba cách trên để viết toán học ở chế độ **display math**, mà vẫn đảm bảo kết quả cho ra được vẫn là giống nhau. (? Quan điểm này cũng sẽ được thay đổi chút ít khi học lập trình [marco]())
 
-Ví dụ về việc viết toán học ở chế độ `display math` với phương trình logarit của một tích là tổng của logarit của các thừa số: 
+Ví dụ về việc viết toán học ở chế độ `display math` với phương trình logarithm của một tích là tổng của logarit của các thừa số: 
 
 + Với phương trình được viết bên trong `$$...$$`
 
 ```latex
 \documentclass{article}
-\begin{document} % Sử dụng cặp dấu $$ để viết phương trình logarit
+\begin{document} % Sử dụng cặp dấu $$ để viết phương trình logarithm
 $$\log_b{xy} = \log_b{x} + \log_b{y}$$
 \end{document}
 ```
@@ -1646,7 +1709,7 @@ $$\log_b{xy} = \log_b{x} + \log_b{y}$$
 +  Với phương trình được viết bên trong `\[...\]`
 
 ```latex
-\documentclass{article} % Sử dụng cặp dấu \[\] để viết phương trình logarit
+\documentclass{article} % Sử dụng cặp dấu \[\] để viết phương trình logarithm
 \begin{document}
 \[\log_b{xy} = \log_b{x} + \log_b{y}\] 
 \end{document}
@@ -1657,7 +1720,7 @@ $$\log_b{xy} = \log_b{x} + \log_b{y}$$
 ```latex
 \documentclass{article}
 \begin{document}
-\begin{displaymath} % Sử dụng môi trường displaymath để viết phương trình logarit
+\begin{displaymath} % Sử dụng môi trường displaymath để viết phương trình logarithm
 \log_b{xy} = \log_b{x} + \log_b{y}\
 \end{displaymath}s
 \end{document}
@@ -1677,15 +1740,7 @@ Nhà toán học người Scotland John Napier
 
 </div>
 
-Trong một số trường hợp, khi người dùng viết tài liệu toán học cần [tham chiếu]() từ đoạn văn bản này đến phương trình toán học ở chế độ `display math`, mà không cần phải viết lặp lại, cũng như sẽ bị tràn ra khỏi văn bản đối với các [phương trình dài]() (? của phương trình đó ở chế độ `inline math` . . . (? viết tiếp đê)    
-
-Để làm được điều này, trước tiên người dùng cần phải khai báo package ở bài học [liên kết thông thường]() 
-
-```latex 
-\usepackage{hyperref}
-```
-
-Sau đó, người dùng cần phải viết phần toán học đó vào trong một môi trường mới có tên là `equation` 
+. . .  
 
 ```latex
 \begin{equation} 
@@ -1693,8 +1748,7 @@ Sau đó, người dùng cần phải viết phần toán học đó vào trong 
 \end{equation}
 ```
 
-Khác với ba cách ở trên khi người dùng viết toán học ở chế độ `display math`, nếu như người dùng thay các cặp dấu, môi trường `displaymath` ở ví dụ . . . trên bằng môi trường `equation`, thì người dùng có thể thấy rằng phần toán học được đặt bên trong môi trường đó sẽ được LaTeX tự động đánh thêm một số thứ tự từ 1 đến số lượng cuối cùng . . .(? số lượng cuối cùng gì) có trong phần soạn thảo, được nằm ở bên phải phần toán học đó có trong trang tài liệu.   
-
+Khác với ba cách ở trên khi người dùng viết toán học ở chế độ `display math`, nếu như người dùng thay các cặp dấu, môi trường `displaymath` ở ví dụ . . . trên bằng môi trường `equation`, thì người dùng có thể thấy rằng phần toán học được đặt bên trong môi trường đó sẽ được LaTeX tự động đánh thêm một số thứ tự từ 1 đến số lượng cuối cùng . . .(? số lượng cuối cùng gì) có trong phần soạn thảo và mặc định số đó được nằm ở bên phải phần toán học đó có trong trang tài liệu.   
 ```latex
 \documentclass{article}
 \begin{document}
@@ -1718,13 +1772,13 @@ Trong một số tài liệu toán học, đôi khi người dùng cũng thế t
 
 <img src="LaTeX-Library-project-v1.0.0/images/Kakeya.jpg" alt="John Napier">
 
-Ảnh được cắt từ trang 1 bài báo toán học <a src="https://drive.google.com/file/d/1dlpgd5Q5AAOsaCFQK5MGRisJNUPmgxFu/view?usp=sharing" target="_blank">"A STREAMLINED PROOF OF THE KAKEYA SET CONJECTURE IN $\mathbb{R^3}$</a> của ba nhà toán học <a src="https://math.mit.edu/~lguth/" target="_blank">Larry Guth</a>, <a src="https://sites.google.com/view/hongwang/home" target="_blank">Hong Wang]</a>, <a src="https://jzahl.github.io/" target="_blank">Joshua Zahl</a>
+Ảnh được cắt từ trang 1 bài báo toán học <a src="https://drive.google.com/file/d/1dlpgd5Q5AAOsaCFQK5MGRisJNUPmgxFu/view?usp=sharing" target="_blank">"A STREAMLINED PROOF OF THE KAKEYA SET CONJECTURE IN \(\mathbb{R^3}\)</a> của ba nhà toán học <a src="https://math.mit.edu/~lguth/" target="_blank">Larry Guth</a>, <a src="https://sites.google.com/view/hongwang/home" target="_blank">Hong Wang]</a>, <a src="https://jzahl.github.io/" target="_blank">Joshua Zahl</a>
 
 </div>
 
-(? ảnh ba nhà toán học trên)
+(? ảnh ba nhà toán học trên)  
 
-Để chuyển số thứ tự nằm đó từ bên phải sang bên trái như mặc định trên, người dùng chỉ cần thêm options
+Để chuyển số thứ tự đó nằm từ bên phải như mặc định sang bên trái như hình . . ., người dùng chỉ cần thêm options 
 
 ```latex
 leqno
@@ -1738,115 +1792,6 @@ leqno
 \begin{equation} % Sử dụng môi trường equation để đánh số thứ tự ở phương trình logarit
 \log_b{xy} = \log_b{x} + \log_b{y}
 \end{equation}
-\end{document}
-```
-
-Đến đây, để tham chiếu chéo đến phương trình toán học đó, người dùng cần sử dụng lệnh 
-
-```latex
-\label{} 
-```
-
-được đặt ở trong môi trường `equation`. 
-
-Và lệnh 
-
-```latex
-\ref{}
-```
-
-hoặc lệnh 
-
-```latex
-\eqref{}
-```
-
-được đặt ở trong đoạn văn mà người dùng mong muốn để được tham chiếu đến phương trình có lệnh `\label` tương ứng.  
-
-```latex
-\documentclass{article} % 
-\usepackage{hyperref} % . . .
-\begin{document} 
-\begin{equation} % Sử dụng môi trường equation để đánh số thứ tự ở phương trình logarit
-\log_b{xy} = \log_b{x} + \log_b{y}
-\label{eq:1} % 
-\end{equation}
-. . . \ref{}
-\end{document}
-```
-
-> [!NOTE]  
->  Người dùng nên để lệnh `\label` ở bên cạnh `\begin{equation}`, vì . . . (? vì sao thế nhỉ ?)
-
-```latex
-\documentclass{article} % 
-\usepackage{hyperref} % . . .
-\begin{document} \label{eq:1} %
-\begin{equation} % Sử dụng môi trường equation để đánh số thứ tự ở phương trình logarit
-\log_b{xy} = \log_b{x} + \log_b{y} 
-\end{equation}
-. . . \ref{}
-\end{document}
-```
-
-
-> [!NOTE]  
->  Nếu như người dùng để nội dung bên trong dấu ngoặc nhọn `{}` của lệnh `\ref`, cũng như là lệnh `\eqref` khác với nội dung bên trong dấu ngoặc nhọn của lệnh `\label`, thì hệ thống sẽ báo lỗi `Undefined reference` và ở trong trang tài liệu đoạn văn có lệnh`\ref` (hoặc lệnh `\eqref`) sẽ xuất hiện hai lần dấu chấm hỏi `??` thay vì số thứ tự tương ứng với phần toán học cần được trỏ đến. Vậy nên, nội dung bên trong dấu ngoặc nhọn của lệnh `\label` và lệnh `\ref` (hoặc `\eqref`) đều phải được giống nhau. 
-
-(? Tạm thời vẫn đề đoạn mã ở ví dụ trên để lắp vô cho ví dụ về chú ý trên gần nhất)
-
-```latex
-\documentclass{article}
-\begin{document}
-\usepackage{hyperref} 
-\begin{equation} % Sử dụng môi trường equation để đánh số thứ tự ở phương trình logarit
-\log_b{xy} = \log_b{x} + \log_b{y}
-\label{eq:1}
-\end{equation}
-
-. . . \ref{eq:2} . . .\ref{eq:1}
-
-\end{document}
-```
-
-> [!NOTE]  
-> Nếu như người dùng để nội dung bên trong dấu ngoặc nhọn `{}` của nhiều lệnh `\label` là giống hệt nhau, thì hệ thống sẽ báo lỗi `multiply-defined labels`. Hơn nữa, nếu `\label` bị trùng nội dung với nhau bên trong dấu ngoặc nhọn, thì  lệnh `\ref` cũng như là lệnh `\eqref` sẽ được hệ thống mặc định trỏ đến vị trí có `\label` xuất hiện gần nhất.  Vậy nên, nội dung bên trong dấu ngoặc nhọn của mỗi lệnh `\label` là phải khác nhau.  
-
-```latex
-\documentclass{article}
-
-\begin{document}
-
-\begin{equation} % 
-\log_b{xy} = \log_b{x} + \log_b{y}
-\label{eq:1} % 
-\end{equation}
-
-\begin{equation} % 
-\log_b{\frac{x}{y}} = \log_b{x} - \log_b{y} 
-\label{eq:1} % 
-\end{equation}
-
-. . . \ref{eq:1} . . . 
-
-\end{document}
-```
-
-Hai chú ý trên cũng được áp dụng tương tự với các bài học tham chiếu chéo [hình ảnh](), [bảng](), ..vv..   
-
-Điểm khác biệt của lệnh `\ref` và `\eqref` đó là lệnh `\eqref` sẽ tự động thêm dấu ngoặc tròn `()` cho số thứ tự tương ứng với phương trình được tham chiếu ở đoạn văn, còn lệnh `\ref` thì không.  
-
-```latex
-\documentclass{article}
-\begin{document}
-\begin{equation} % Sử dụng môi trường equation để đánh số thứ tự ở phương trình logarit
-\log_b{xy} = \log_b{x} + \log_b{y}
-\label{eq:1} % . . .
-\end{equation}
-
-. . . (\ref{eq:1}) % lệnh \ref không được hệ thống tự động đóng ngoặc tròn, mà người dùng phải tự chủ động thêm vào nếu cần.    
-. . . \eqref{eq:1} % lệnh \eqref được hệ thống tự động đóng ngoặc tròn, mà người dùng không cần phải tự chủ động thêm vào. 
-
 \end{document}
 ```
 
@@ -1883,7 +1828,7 @@ Việc thêm dấu `*` như trên cũng được áp dụng tương tự đối 
 
 **(?)** Điểm khác biệt của môi trường `equation*` và `displaymath` là gì ? Nên sử dụng chúng trong trường hợp nào ? (xem qua issues đây https://github.com/Namlete102/LaTeX-Library-project/issues/1) 
 
-> [!NOTE]
+> [!WARNING]
 > Khi người dùng viết toán học dù ở chế độ `inline math` hay `display math`, người dùng không được phép để các biểu thức,  toán tử, kí hiệu, chữ cái toán học có các khoảng trống ở mỗi dòng. Nếu không, thì hệ thống sẽ báo lỗi  `Missing $ inserted`
 
 Để dễ hình dung lưu ý trên, người dùng hãy xem qua ví dụ sau đây với phương trình Clapeyron-Mendeleev thiết lập mối liên hệ giữa các đại lượng áp suất, thể tích, và nhiệt độ của một khối khí lý tưởng: 
@@ -1901,7 +1846,7 @@ P \cdot V
 
 Có thể thấy ở đoạn mã trên, nếu người dùng vô tình để khoảng trống giữa các dòng biểu thức $P \cdot V$  và $= n \cdot T \cdot R$, thì hệ thống sẽ lập tức báo lỗi `Missing $ inserted`:  
 
-Ta khắc phục lỗi ở đoạn mã ở ví dụ . . . bằng cách xóa đi khoảng trắng giữa hai biểu thức đó
+Ta khắc phục lỗi ở đoạn mã ở ví dụ . . . (? đánh số ví dụ) bằng cách xóa đi khoảng trắng giữa hai biểu thức đó
 
 ```latex
 \documentclass{article}
@@ -1913,14 +1858,14 @@ P \cdot V
 \end{document}
 ```
 
-hoặc thêm [chú thích]() vào khoảng trống giữa hai biểu thức đó
+hoặc thêm [chú thích]() vào  khoảng trống giữa hai biểu thức đó
 
 ```latex
 \documentclass{article}
 \begin{document}
 \[
 P \cdot V 
-% Điều này sẽ loại bỏ dòng trống
+% Chú thích này sẽ lấp lại dòng trống
 = n \cdot T \cdot R
 \]
 \end{document}
@@ -1957,7 +1902,7 @@ Ví dụ về công thức tính định thức tổng quát của một ma trâ
 Người dùng có thể thấy, trong công thức tính định thức của Leibniz có chữ cái Hy Lạp là $\sigma$ (đọc là sigma) được dùng để quy ước về khái niệm phép thế (?) trong lĩnh vực đại số của toán học. 
 
 $$
-    \mathrm{det}(A) = \sum_{\sigma \in S_n} sgn(\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right )
+    \det(A) = \sum_{\sigma \in S_n} sgn(\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right )
 $$
 
 <div align="center">
@@ -1988,7 +1933,7 @@ Ví dụ, người dùng có thể viết kí hiệu toán học của các tậ
 \usepackage{amssymb}
 ```
 
-Package `amssymb` . . . 
+Package `amssymb` . . . (? Giới thiệu và giải thích đôi điều gói này)
 
 Để viết được phông chữ các kí hiệu về tập số ở ví dụ trên, người dùng cần để chữ cái thường đó vào lệnh
 
@@ -2025,7 +1970,7 @@ Dấu ngoặc rất phổ biến trong việc bao quát các biểu thức, toá
 |   $\Vert \Vert$   | Dấu chuẩn (Toán học) / Dấu gạch đôi | Double vertical bars (or Norm)    | `\Vert...\Vert` hoặc `\|\| ...\|\|`                    |
 | $\lfloor \rfloor$ | Dấu hàm sàn / Ngoặc dưới            | Floor brackets                    | `\lfloor...\rfloor`                                    |
 |  $\lceil \rceil$  | Dấu hàm trần / Ngoặc trên           | Ceiling brackets                  | `\lceil...\rceil`                                      |
-|                   |                                     |                                   |                                                        |
+|        ...        |                                     |                                   |                                                        |
 
 Để viết toán học ở chế độ `inline math` hoặc `display math` được bao quát bởi dấu ngoặc, người dùng chỉ cần đặt phần toán học đó vào bên trong các dấu ngoặc ở bảng trên một cách bình thường. 
 
@@ -2333,7 +2278,7 @@ $$
 R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R + g_{\mu\nu}\Lambda = \frac{8\pi G}{c^4}T_{\mu\nu} 
 $$
 
-Người dùng có thể thấy, để viết được bao quát chỉ số dưới $\mu\nu$, chúng cần được viết vào trong bởi dấu ngoặc `{}`. 
+Người dùng có thể thấy, để viết được bao quát chỉ số dưới $\mu\nu$, chúng cần được viết vào trong bởi dấu ngoặc nhọn `{}`. 
 
 <div align="center">
 
@@ -2345,7 +2290,66 @@ Nhà vật lý người Đức Albert Einstein
 
 ---
 
-### Viết văn bản trong chế độ toán học 
+### Căn chỉnh phương trình:  
+
+Gợi ý viết ví dụ: 
++ Thuật toán Euclid
+
+---
+
+### Khoảng cách trong chế độ toán học:  [^12]
+
+Khi người dùng viết toán học,  . . . (nêu vấn đề)
+
+Để điều chỉnh khoảng cách giữa các biểu thức, toán tử . . . người dùng chỉ cần thêm lệnh ở bảng sau đây 
+
+| Lệnh LaTeX | Mô tả                                                   | Ví dụ         |
+| :--------- | :------------------------------------------------------ | ------------- |
+| `\quad`    | = 18 mu                                                 | $a \quad b$   |
+| `\qquad`   | $= 2 \cdot$`\quad` (= 36 mu)                            | $a \qquad b$  |
+| `\enskip`  | $= \frac{1}{2} \cdot$`\quad` (= 9 mu)                   | $a \enskip b$ |
+| `\,`       | $= \frac{3}{18} \cdot$`\quad` (= 3 mu)                  | $a \, b$      |
+| `\:`       | $= \frac{4}{18} \cdot$`\quad` (= 4 mu)                  | $a \: b$      |
+| `\;`       | $= \frac{5}{18} \cdot$`\quad` (= 5 mu)                  | $a \; b$      |
+| `\!`       | $= \frac{-3}{18} \cdot$`\quad` (= -3 mu)                | $a \! b$      |
+| `\`        | tương đương với khoảng trắng trong văn bản thông thường | $a \ b$       |
+
+(Bảng tham khảo từ [Overleaf](https://www.overleaf.com/learn/latex/Spacing_in_math_mode#Spaces)) 
+
+vào ngay bên cạnh . . . (? bên cạnh gì)
+
+Với các [toán tử quan hệ]()  
+
+Ví dụ về khoảng cách trong chế độ toán học với các biểu thức, toán tử trong định lý Taylor[^11] (? Viết tiếp một tí về định lý Taylor)
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\[
+f(x) \ = \ f(a) \ + \ \frac{f'(a)}{1!}(x-a) \ + \ \frac{f^{''}(a)}{2!}(x-a)^2 \ + \ \frac{f^{'''}(a)}{3!}(x-a)^3 \ + \ \dots \  = \ \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n 
+\]
+
+\end{document}
+```
+
+$$
+f(x) \ = \ f(a) \ + \ \frac{f'(a)}{1!}(x-a) \ + \ \frac{f^{''}(a)}{2!}(x-a)^2 \ + \ \frac{f^{'''}(a)}{3!}(x-a)^3 \ + \ \dots \  = \ \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n
+$$
+
+
+<div align="center">
+
+<img src="./images/Brooks Taylor.jpg" alt="Taylor">
+
+Nhà toán học người Anh Brooks Taylor
+
+</div>
+
+---
+
+### Viết văn bản trong chế độ toán học:  
 
 Khi viết văn bản trong toán học, chẳng hạn . . . (nên viết lại thành một vấn đề ví dụ mới)
 
@@ -2387,61 +2391,43 @@ $$
 \text{Văn bản trong toán học}
 $$
 
-. . .
+Một số hàm trong toán học chẳng hạn như hàm lượng giác, . . vv . . được khuyến nghị . . . (? bởi ai) soạn thảo ở dạng phông chữ thẳng đứng . . . (viết sau) 
 
----
-
-### Khoảng cách trong chế độ toán học:  [^12]
-
-Khi người dùng viết toán học,  . . . (nêu vấn đề)
-
-Để điều chỉnh khoảng cách giữa các biểu thức, toán tử . . . người dùng chỉ cần thêm lệnh ở bảng sau đây 
-
-| Lệnh LaTeX | Mô tả                                                   | Ví dụ         |
-| :--------- | :------------------------------------------------------ | ------------- |
-| `\quad`    | = 18 mu                                                 | $a \quad b$   |
-| `\qquad`   | $= 2 \cdot$`\quad` (= 36 mu)                            | $a \qquad b$  |
-| `\enskip`  | $= \frac{1}{2} \cdot$`\quad` (= 9 mu)                   | $a \enskip b$ |
-| `\,`       | $= \frac{3}{18} \cdot$`\quad` (= 3 mu)                  | $a \, b$      |
-| `\:`       | $= \frac{4}{18} \cdot$`\quad` (= 4 mu)                  | $a \: b$      |
-| `\;`       | $= \frac{5}{18} \cdot$`\quad` (= 5 mu)                  | $a \; b$      |
-| `\!`       | $= \frac{-3}{18} \cdot$`\quad` (= -3 mu)                | $a \! b$      |
-| `\`        | tương đương với khoảng trắng trong văn bản thông thường | $a \ b$       |
-
-(Bảng tham khảo từ [Overleaf](https://www.overleaf.com/learn/latex/Spacing_in_math_mode)) 
-
-vào ngay bên cạnh . . . 
-
-Ví dụ về khoảng cách trong chế độ toán học với các biểu thức, toán tử trong định lý Taylor[^11]  . . . 
+Chẳng hạn, khi viết công thức . . . , nếu như người dùng chỉ viết hàm $\cos$ thông thường
 
 ```latex
-\documentclass{article}
 
-\usepackage[utf8]{vietnam}
-
-\begin{document}
-
-\[
-f(x) \ = \ f(a) \ + \ \frac{f'(a)}{1!}(x-a) \ + \ \frac{f^{''}(a)}{2!}(x-a)^2 \ + \ \frac{f^{'''}(a)}{3!}(x-a)^3 \ + \ \dots \  = \ \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n 
-\]
-
-\end{document}
 ```
 
-$$
-f(x) \ = \ f(a) \ + \ \frac{f'(a)}{1!}(x-a) \ + \ \frac{f^{''}(a)}{2!}(x-a)^2 \ + \ \frac{f^{'''}(a)}{3!}(x-a)^3 \ + \ \dots \  = \ \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n
-$$
+ thì chúng sẽ bị in nghiêng khi xuất sang trang tài liệu 
+
+. . . (kết quả từ ví dụ)
+
+Để viết hàm $\cos$  . . ., người viết chỉ cần thêm dấu `\` bên cạnh hàm đó như . . . . 
+
+```latex
+
+```
+
+Kết quả lúc này sẽ khác hẳn so với khi ta chưa thêm dấu `\` vào trước hàm $\cos$ đó. 
+
+Điều này, còn được áp dụng với một số hàm khác, chẳng hạn như [giới hạn]() . . .
+
+```latex
+
+```
 
 
-<div align="center">
+Với một số hàm toán học đã được LaTeX cung cấp . . ., nếu người dùng sử dụng dấu `\` để viết cho một . . . khác thì chúng sẽ báo lỗi . . . (? gì)  
 
-<img src="./images/Brooks Taylor.jpg" alt="Taylor">
+```latex
+\nam
+```
 
-Nhà toán học người Anh Brooks Taylor
-
-</div>
+Xem đầy đủ các hàm được LaTeX . . . tại [danh sách các kí hiệu toán học, chữ cái Hy Lạp]().  
 
 ---
+
 ### Màu trong toán học[^15] 
 
 (vì sao đôi khi ta cần màu trong công thức toán học ?) 
@@ -2490,11 +2476,11 @@ Nhà toán học người Thụy Sĩ Leonhard Euler
 
 ---
 
-### Tiên đề, định nghĩa, định lý, định luật, mệnh đề, bổ đề, giả thiết, bằng chứng, hệ quả, ví dụ ...:[^19]
+### Tiên đề, định nghĩa, định lý, định luật, mệnh đề, bổ đề, giả thiết, bằng chứng, hệ quả, ví dụ ... :[^19]
 
 . . .  (Giới thiệu các định nghĩa trên ở phần sau cuốn sách)   
 
-. . .  Để sử dụng được định nghĩa, . . . . (gồm những gì nữa) trước tiên người dùng cần khai báo ...(gì ?) 
+. . .  Để sử dụng được định nghĩa, . . . . (gồm những gì nữa) trước tiên người dùng cần phải khai báo chúng vào lệnh 
 
 ```latex
 \newtheorem{}{}
@@ -2504,128 +2490,501 @@ trong đó:
 + (giải thích hai dấu ngoặc nhọn kia)
 + 
 
-(? lệnh này được đặt ở đâu) 
+(? lệnh này được đặt ở đâu và lệnh mới này có ý nghĩa gì trong xuyên suốt LaTeX) 
 
-Khi biên dịch sang trang tài liệu, các từ định nghĩa, định lý, ..vv.. sẽ được viết sang tiếng Anh. 
+Khi biên dịch sang trang tài liệu, nếu như các từ định nghĩa, định lý, ..vv.. được gõ bằng ngôn ngữ tiếng Anh thì chúng sẽ được xuất sang trang tài liệu các từ đó là tiếng Anh. 
 
-. . . (ví dụ với môi trường tiên đề về tiên đề Peano . . . trong đó từ tiên đề là tiếng Anh) 
-
-```latex
-\documentclass{article}
-\newtheorem{axiom}{axiom} % for theorem vietnamese
-\begin{document}
-\begin{axiom}[Gauss - Wantzel]
-
-\end{axiom}
-
-\end{document}
-```
-
-Để viết các từ ấy sang tiếng Việt người dùng trước tiên cần nhớ phải khai báo package [viết tiếng Việt ](),  và sau đó đổi từ theorem (tiếng Anh) sang từ định lý (tiếng Việt), ..vv.. ở dấu ngoặc nhọn ngoài cùng của lệnh trên
-
-. . . (ví dụ môi trường định nghĩa với từ định nghĩa là tiếng Việt) 
-
-```latex
-\newtheorem{theorem}{Định lý}
-. . . 
-\begin{theorem}
-. . . 
-\end{theorem}
-```
-
-Ví dụ về môi trường định lý với định lý Gauss - Wantzel và môi trường định nghĩa với định nghĩa về số nguyên tố Fermat, trong đó từ định lý và định nghĩa đều được viết sang tiếng Việt 
+Ví dụ với môi trường định lý về định lý  Gauss - Wantzel và môi trường định nghĩa về định nghĩa số nguyên tố Fermat trong lĩnh vực . . . của toán học, trong đó từ định lý và định nghĩa được viết bằng ngôn ngữ tiếng Anh:  
 
 ```latex
 \documentclass{article}
-\usepackage[utf8]{vietnam} % for Vietnamese 
-\newtheorem{theorem}{Định lý} % for theorem vietnamese
-\newtheorem{definition}{Định nghĩa} % for difinition vietnamese
+
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng bảng mã utf8 để gõ tiếng Anh hoặc ký tự đặc biệt bình thường
+\usepackage[utf8]{inputenc}
+
+% Khai báo môi trường "Theorem" (Định lý) và "Definition" (Định nghĩa) trong tiếng Anh
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
 \begin{document}
 
-\begin{theorem}[Gauss - Wantzel]
-Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% ==========================================
+% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
+% ==========================================
+\begin{theorem}[Gauss--Wantzel]
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+The division of a circle into $n$ equal parts using a straightedge and compass is possible if and only if
+% Công thức hiển thị ở dạng khối (display math mode)
 \[
 n = 2^k \cdot p_1 \cdot p_2 \dots p_t
 \]
-trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+% Giải thích các biến trong công thức
+where $k$ is a non-negative integer and $p_1, p_2, \dots, p_t$ are distinct Fermat primes.
 \end{theorem}
 
-\begin{definition}[Số nguyên tố Fermat]
-Số nguyên có dạng là 
+% ==========================================
+% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
+% ==========================================
+\begin{definition}[Fermat prime]
+% Khai báo dạng tổng quát của số Fermat
+An integer of the form 
 \[
 F_n = 2^{2^n}+1 
 \]
-nếu kết quả đầu ra tính được từ $F_n$ là một số nguyên tố, thì nó được gọi là số nguyên tố Fermat. 
+% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
+is called a Fermat prime if the output value calculated from $F_n$ is a prime number.
 \end{definition}
 
 \end{document}
 ```
-. . . 
 
-(? Edit ảnh Gauss - Wantzel - Fermat)
+Điều này cũng được áp dụng tương tự với tất cả với [ngôn ngữ khác](). Chẳng hạn, để viết các từ trên từ tiếng Anh sang tiếng Việt, người dùng trước tiên cần phải khai báo package [ngôn ngữ tiếng Việt ](), và sau đó người dùng chỉ cần gõ lại từ theorem (tiếng Anh) sang định lý (tiếng Việt), ..vv.. ở dấu ngoặc nhọn ngoài cùng của lệnh trên. (? Viết lại phần "...ở dấu ngoặc nhọn ngoài cùng ...") 
 
-Người dùng cũng có thể sử dụng lệnh . . . nhằm để tên . . . thay vì chỉ từ axioms thông thường như các ví dụ định lý, định nghĩa trên khi biên dịch sang trang tài liệu như ở ví dụ dưới đây về tiên đề Euclid cho nền tảng hình học sơ cấp, trong đó từ tiên đề được viết sang tiếng Việt  
-
-```latex
-\documentclass{article}
-\usepackage[utf8]{vietnam} % for Vietnamese
-\newtheorem{axiom}{Tiên đề Peano} % for theorem vietnamese
-\begin{document}
-\begin{axiom}
-. . . (5 tiên đề Peano)
-\end{axiom}
-\end{document}
-```
-
-Cần phải đảm bảo rằng khi người dùng đã định nghĩa môi trường axiom thì từ "axiom" trong dấu ngoặc ở lệnh `\newtheorem` không được lặp lại lần nữa khi người dùng muốn sử dụng chúng để viết một tiên đề khác. 
-
-Sẽ có . . . cách hiểu sau  
-
-Nếu như người dùng sử dụng lại môi trường axiom, thì ở phần tiêu đề . . . vẫn sẽ xuất hiện "Tiên đề Peano": 
+Quay trở lại ví dụ trên, lúc này từ định lý và định nghĩa đều được viết sang ngôn ngữ tiếng Việt 
 
 ```latex
 \documentclass{article}
-\usepackage[utf8]{vietnam} % for Vietnamese
-\newtheorem{axiom}{Tiên đề Peano} % for theorem vietnamese
+
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
+\usepackage[utf8]{vietnam}
+
+% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
+\newtheorem{theorem}{Định lý}
+\newtheorem{definition}{Định nghĩa}
+
 \begin{document}
-\begin{axiom}
-. . .  (tiên đề Hilbert)
-\end{axiom}
+
+% ==========================================
+% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
+% ==========================================
+\begin{theorem}[Gauss--Wantzel]
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% ==========================================
+% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
+% ==========================================
+\begin{definition}[Số nguyên tố Fermat]
+% Khai báo dạng tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
 \end{document}
 ```
 
-Nếu như người dùng định nghĩa tiên đề . . . trùng với . . . thì hệ thống sẽ báo lỗi 
+Người dùng cũng có thể sử dụng lệnh `\newtheorem` nhằm để tên chính định lý, định nghĩa, ..vv.. đó thay vì từ "định nghĩa", "định lý", ..vv.. thông thường như ví dụ trên. 
 
-. . . 
+Cụ thể, ta có thể ghi lại "Định lý Gauss - Wantzel" thay cho "Định lý 1 (Gauss - Wantzel)". 
 
+```latex
+\newtheorem{theorem}{Định lý Gauss - Wantzel}
+```
 
+Tương tự đối với định nghĩa về số nguyên tố Fermat. 
 
-. . . (không muốn có số thứ tự bên cạnh. . . ) 
+```latex
+\newtheorem{theorem}{Số nguyên tố Fermat}
+```
 
-Trước tiên người dùng cần phải khai báo package sau:
+Áp dụng điều này vào lại ví dụ . . . , lúc này ta được: 
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . . 
+\usepackage{amsmath}
+
+% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
+\newtheorem{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{definition}{Số nguyên tố Fermat}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+\end{document}
+```
+
+Trong trường hợp người dùng muốn viết định lý mới, nếu như người dùng sử dụng lại môi trường theorem đã được định nghĩa ban đầu, thì ở phần tiêu đề định lý mới đó vẫn sẽ xuất hiện "Định lý Gauss - Wantzel" như ở hai định lý . . . (? Hai định lý gì nhỉ) 
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . . 
+\usepackage{amsmath}
+
+% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
+\newtheorem{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{definition}{Số nguyên tố Fermat}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{theorem}
+   Số Fermat $F_5$ là hợp số
+\end{theorem} 
+
+% Định lý . . . 
+
+\begin{theorem}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
+    \end{equation*}
+\end{theorem}
+
+\end{document}
+```
+
+Để khắc phục được điều trên, người dùng cần phải định nghĩa một môi trường mới cho định lý. 
+
+Cần phải đảm bảo rằng, nếu như người dùng đã định nghĩa môi trường định lý với từ "theorem" trong dấu ngoặc lệnh `\newtheorem`, thì chúng không được lặp lại lần nữa khi người dùng muốn sử dụng chúng để viết một định lý khác. 
+
+Điều này cũng áp dụng tương tự đối với định nghĩa (definition), ..vv.. 
+
+Nếu như người dùng định nghĩa môi trường định lý với từ **theorem** đã được sử dụng ở môi trường định lý Gauss - Wantzel, thì hệ thống sẽ báo lỗi . . .  như ở ví dụ . . . dưới đây: 
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . . 
+\usepackage{amsmath}
+
+% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
+\newtheorem{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{theorem}{Định lý} % từ theorem ở lệnh đây bị trùng với theorem ở lệnh trên nó. (? Viết lại cmt này)
+\newtheorem{definition}{Số nguyên tố Fermat}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{theorem}
+   Số Fermat $F_5$ là hợp số
+\end{theorem} 
+
+% - - - -
+
+\begin{theorem}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_{n}-1}{2}} \equiv -1 \pmod{F_n}.
+    \end{equation*}
+\end{theorem}
+
+\end{document}
+```
+
+Từ những điều đã nêu ở trên, lúc này để viết một hay nhiều định lý mới khác mà không bị trùng lặp với định lý đã được định nghĩa ban đầu, ta chỉ cần đặt tên . . .(? gì, ở đâu) khác đi. 
+
+Cụ thể, thay vì sử dụng đầy đủ tên gọi **theorem**, lúc này ta chỉ cần viết tắt lại thành **thm**: 
+
+```latex
+\newtheorem{thm}{Định lý}
+```
+
+và ở . . . (? ở đâu trong phần soạn thảo LaTeX)
+
+```latex
+\begin{thm}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+	    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
+    \end{equation*}
+\end{thm}
+```
+
+Từ đây ta viết lại ví dụ . . . như sau:  
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . . 
+\usepackage{amsmath}
+
+% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
+\newtheorem{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{thm}{Định lý} 
+\newtheorem{definition}{Số nguyên tố Fermat}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{theorem}
+   Số Fermat $F_5$ là hợp số
+\end{theorem} 
+
+% . . . .
+
+\begin{thm}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
+    \end{equation*}
+\end{thm}
+
+\end{document}
+```
+
+Người dùng có thể áp dụng tương tự . . . (? Áp dụng tương tự điều gì) để khắc phục đoạn mã định lý "$F_5$ là hợp số" như sau:
+
+Người dùng có thể thấy rằng, bên cạnh các  . . . (? tên định lý đó) vẫn sẽ xuất hiện số thứ tự bên cạnh. 
+
+. . . (Để không muốn có số thứ tự bên cạnh. . . ), trước tiên người dùng cần phải khai báo package sau: 
 
 ```latex
 \usepackage{amsthm} % for theorem environments
 ```
 
-. . . (giải thích đôi chút gói này) 
+. . . (giải thích đôi chút gói amsthm này)  
 
-Sau đó người dùng chỉ cần thêm dấu `*` ở sau lệnh `\newtheorem` và trước hai dấu ngoặc nhọn (? mô tả hơi chán, nên viết lại sau)
+Sau đó người dùng chỉ cần thêm dấu `*` ở sau lệnh `\newtheorem` và trước hai dấu ngoặc nhọn (? mô tả hơi chán, nên viết lại sau): 
 
 ```latex
 \newtheorem*{}{}
 ```
 
-Ví dụ về nhận xét không có đánh số (?). . . với . . . , trong đó từ nhận xét được viết sang tiếng Việt
+Quay lại với ví dụ . . . lúc này đoạn mã có được: 
 
 ```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
 \usepackage[utf8]{vietnam}
-\usepackage{amsthm}
-\newtheorem*{remark}{Nhận xét} 
-. . .
-\begin{remark}
-. . .
-\end{remark} 
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} % for theorem environments
+
+% Đặt tên tiêu đề hiển thị cho định lý, định nghĩa và hệ quả
+\newtheorem*{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{thm}{Định lý}
+\newtheorem*{definition}{Số nguyên tố Fermat}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{thm}
+   Số Fermat $F_5$ là hợp số
+\end{thm} 
+
+% . . . .
+
+\begin{thm}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
+    \end{equation*}
+\end{thm}
+
+\end{document}
+```
+
+Với bài viết chia [mục lục]() . . . ta chỉ cần thêm các lệnh . . .  tương ứng với phần tiêu đề . . .đó vào . . .
+
+Ví dụ . . : Nếu như tiêu đề mục đang được sử dụng là lệnh `\section`, thì ta chỉ cần thêm . . . vào   
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+
+% Đặt tên tiêu đề hiển thị cho định lý, định nghĩa và hệ quả
+\newtheorem*{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{thm}{Định lý}[section] 
+\newtheorem*{definition}{Số nguyên tố Fermat}
+\newtheorem{example}[thm]{Ví dụ}
+
+\begin{document}
+
+% . . . 
+\section{Giới thiệu}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% . . . 
+\section{Một số tính chất về tính nguyên tố của số Fermat}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{thm}
+   Số Fermat $F_5$ là hợp số
+\end{thm} 
+
+% . . . .
+
+\begin{thm}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}
+    \end{equation*}
+\end{thm}
+
+\end{document}
 ```
 
 (? Nêu vấn đề vì sao ta lại phải phân biệt định nghĩa, định lý) Nhằm phân biệt được định nghĩa, định lý, ..vv.. trong trang tài liệu toán học người dùng sử dụng lệnh
@@ -2638,61 +2997,111 @@ trong đó **stylename** gồm các kiểu cơ bản mặc định của hệ th
 
 | stylename  | Đặc điểm và công dụng                                                                                                                                                                                 | Ví dụ                                 |
 | :--------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| definition | Tiêu đề in đậm, nội dung chữ thường. Được sử dùng trong định nghĩa, điều kiện, vấn đề và đưa ra ví dụ.                                                                                                | **Định nghĩa** 1: Nội dung định nghĩa |
+| definition | Tiêu đề in đậm, nội dung chữ thường. Được sử dụng trong định nghĩa, điều kiện, vấn đề và đưa ra ví dụ.                                                                                                | **Định nghĩa** 1: Nội dung định nghĩa |
 | plain      | Tiêu đề in đậm, nội dung in nghiêng. Được sử dụng trong các định lý, bổ đề, hệ quả, mệnh đề và giả thuyết.                                                                                            | **Định lý 2**: *Nội dung định lý*     |
 | remark     | Tiêu đề in nghiêng, nội dung in thường. Được sử dụng trong nhận xét, ghi chú, chú thích (notes), tuyên bố (annotations), trường hợp (claims), lời cảm ơn (acknowledgments) và kết luận (conclusions). | *Nhận xét 3*: Nội dung nhận xét       |
 
-Ở mỗi kiểu **stylename** khác nhau, ta sẽ có những ví dụ khác nhau dưới đây để giúp người dùng dễ dàng hình dung để hiểu các lệnh trên rõ hơn. 
-
-Ví dụ về stylename **definition** với vấn đề bài toán 
-
-Ví dụ về stylename **plain** với bổ đề Bezout [^21]  trong đó từ bổ đề được viết sang tiếng Việt
+Ví dụ về stylename **definition** với định nghĩa số nguyên tố Fermat 
 
 ```latex
 \documentclass{article}
-\usepackage[utf8]{vietnam} % for Vietnamese 
-\usepackage{amssymb} 
-\usepackage{amsthm}
-\theoremstyle{plain} 
-\newtheorem{lemma}{Bổ đề} % for lemma vietnamese
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+
+% . . . 
+\theoremstyle{definition}
+\newtheorem*{definition}{Số nguyên tố Fermat}
+
+
 \begin{document}
-\begin{lemma}
-Cho $a, b \in \mathbb{Z}$ là hai số nguyên tố bất kì, luôn tồn tại $u, v \in \mathbb{Z}$ sao cho 
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
 \[
-a \cdot u + b \cdot v = d
+F_n = 2^{2^n}+1 
 \]
-trong đó d = gcd(a,b) là ước chung lớn nhất của hai số a và b. 
-\end{lemma}
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
 \end{document}
 ```
 
-<div align="center"> 
+Ví dụ về stylename **plain** với các định lý . . . 
 
-<img src="LaTeX-Library-project-v1.0.0/images/Bezout.jpg">
+```latex
+\documentclass{article}
 
-(Nhà toán học người Pháp Étienne Bézout. Nguồn ảnh: https://mathshistory.st-andrews.ac.uk/Biographies/Bezout/poster/lived/)
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
 
-</div>
+% Đặt tên tiêu đề hiển thị cho định lý, định nghĩa và hệ quả
+\theoremstyle{plain}
+\newtheorem*{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{thm}{Định lý}[section] 
 
-Ví dụ về stylename **remark** với . . .:
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% Định lý F_5 là hợp số 
+
+\begin{thm}
+   Số Fermat $F_5$ là hợp số
+\end{thm} 
+
+% . . . .
+
+\begin{thm}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}
+    \end{equation*}
+\end{thm}
+
+\end{document}
+```
+
+Ví dụ về stylename **remark** với nhận xét về các số nguyên tố Fermat :
 
 ```latex
 \documentclass{article}
 \usepackage[utf8]{vietnam} % for Vietnamese 
-\usepackage{amssymb} 
 \usepackage{amsthm}
 \theoremstyle{remark} 
-\newtheorem*{}{} 
+\newtheorem*{remark}{Nhận xét} 
 \begin{document}
-
+\begin{remark}
+Fermat nhận ra 5 số Fermat đầu tiên là $F_0 = 3, F_1 = 5; F_2 = 17, F_3 = 257, F_4 = 65537$ đều là số nguyên tố và ông đã nhận định rằng $F_n$ là số nguyên tố với mọi giá trị của $n$. Tuy nhiên, đến năm 1732, Euler đã tìm thấy F5 là hợp số.
+\end{remark}
 \end{document}
 ```
 
 Bằng chứng (tiếng anh là proof) là . . . 
 
-Để viết bằng chứng trong LaTeX, người dùng sử dụng môi trường `proof`
-
-Với môi trường `proof`, chúng đã được có trong sẵn package `amsthm` mà ta đã khai báo ở . . . (phần bài học nhân xét mà không đánh số ở trên) 
+Để viết bằng chứng trong soạn thảo LaTeX, người dùng sử dụng môi trường `proof`
 
 ```latex
 \begin{proof}
@@ -2700,44 +3109,163 @@ Với môi trường `proof`, chúng đã được có trong sẵn package `amst
 \begin{proof}
 ```
 
-Ví dụ với chứng minh định lý $\sqrt{2}$ không là số hữu tỉ: 
+Với môi trường `proof`, chúng đã được có trong sẵn package `amsthm` mà ta đã khai báo ở . . . (phần bài học nhân xét mà không đánh số ở trên) 
+
+Ví dụ về môi trường `proof` với chứng minh định lý số Fermat $F_5$ là hợp số 
 
 ```latex
-. . . 
+\documentclass{article}
+\usepackage[utf8]{vietnam} % for Vietnamese 
+\usepackage{amsthm}
+\usepackage{amssymb}
+\begin{document}
+\begin{proof}
+Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
+\end{proof}
+\end{document}
 ```
 
-Khi kết thúc phần chứng minh cho định lý, mệnh đề, bổ đề, ..vv.. nào đó trong toán học, chúng ta luôn kết lại bằng câu "điều phải chứng minh".  Điều này bắt nguồn từ . . . được viết tắt ngắn gọn lại là QED[^18]  
+Khi kết thúc phần chứng minh cho định lý, mệnh đề, bổ đề, ..vv.. nào đó trong toán học, chúng ta luôn kết lại bằng câu "điều phải chứng minh".  Điều này bắt nguồn từ . . . (? một chút lịch sử về việc tại sao phải có điều này)
 
-. . . (Để sử dụng từ QED khi kết thúc chứng minh, người dùng sử dụng lệnh sau): 
+và được viết tắt ngắn gọn lại là QED[^18]  
+
+Để sử dụng từ QED khi kết thúc chứng minh, người dùng sử dụng lệnh: 
 
 ```latex
 \renewcommand\qedsymbol{QED}
 ```
 
-Từ QED trên có thể được thay thế bằng một ô vuông đen
-
-```latex
-\renewcommand\qedsymbol{$\blacksquare$}
-```
-
-hoặc là một ô vuông trắng 
+Từ QED trên thông thường được thay thế ngắn gọn lại bằng một [kí hiệu đặc biệt]() ô vuông trắng 
 
 ```latex
 \renewcommand{\qedsymbol}{$\square$} 
 ```
 
-Các lệnh trên đều phải được đặt trước môi trường `proof` như ở ví dụ đoạn mã sau đây  . . .
+hoặc đôi khi là một ô vuông đen 
 
 ```latex
-. . . 
+\renewcommand\qedsymbol{$\blacksquare$}
 ```
 
+Các lệnh trên đều phải được đặt trước môi trường `proof` như ở ví dụ . . . đây
+
+```latex
+\documentclass{article}
+\usepackage[utf8]{vietnam} % for Vietnamese 
+\usepackage{amsthm}
+\usepackage{amssymb}
+\begin{document}
+\renewcommand\qedsymbol{QED}
+\begin{proof}
+Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
+\end{proof}
+\end{document}
+```
+
+Viết lại đầy đủ từ . . . (? từ đâu)
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+
+% Đặt tên tiêu đề hiển thị cho định lý, định nghĩa và hệ quả
+\theoremstyle{plain}
+\newtheorem*{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{thm}{Định lý}[section] 
+\theoremstyle{definition}
+\newtheorem*{definition}{Số nguyên tố Fermat}
+\newtheorem{example}[thm]{Ví dụ}
+\theoremstyle{remark}
+\newtheorem{remark}{Nhận xét} 
+
+\begin{document}
+
+% . . . 
+\section{Giới thiệu}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% Chứng minh định lý Gauss - Wantzel 
+
+\begin{proof}
+Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
+\end{proof}
+
+% . . . 
+\section{Một số tính chất về tính nguyên tố của số Fermat}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{thm}
+   Số Fermat $F_5$ là hợp số
+\end{thm} 
+
+% Chứng minh định lý F_5 là hợp số
+
+\begin{proof}
+Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
+\end{proof}
+
+% Định lý . . . .
+
+\begin{thm}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}
+    \end{equation*}
+\end{thm}
+
+% Chứng minh . . . . 
+
+\begin{proof}
+Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
+\end{proof} 
+
+\end{document}
+```
+
+<div align="center">
+	
+<img src="LaTeX-Library-project-v1.0.0/images/Fermat Gauss Wantzel.jpg" alt="Fermat Gausss Wantzel">
+
+Nhà toán học người Pháp Fermat (trái), nhà toán học người Đức Gauss (giữa) và nhà toán học người Pháp Wantzel (phải)
+
+</div>
 
 ---
 
 ### Các bài học toán khác 
 
 Viết toán học luôn là chủ đề yêu thích của tác giả, vậy nên có lẽ sẽ hợp lý nếu như tác giả vừa giới thiệu phần chủ đề toán học, cũng như là cách viết các kí hiệu toán học đó trên LaTeX thì sẽ một công đôi việc, mang đến cảm giác thú vị đến người đọc.
+
+Trước tiên, người viết cần làm rõ cấu trúc viết . . . 
 
 <div align="center">
 
@@ -2747,21 +3275,122 @@ Keep calm and love math
 
 </div>
 
+
+---
+
+#### Toán tử:  
+
+Là gì ? Như thế nào ? Đọc như nào ?  Khi nào ? 
+
+Các toán tử cơ bản: 
+
+\+ Các dấu +, -, /, = có thể được nhập trực tiếp bàn phím. 
+\+ Dấu $\times$ được viết ở LaTeX sẽ là 
+
+```latex
+\times
+```
+
+\+ Dấu $\cdot$ được viết ở LaTeX là 
+
+```latex
+\cdot
+```
+
+\+ Dấu $\div$ được viết ở LaTeX là 
+
+```latex
+\div
+```
+
+\+ Một số toán tử nhị phân (Binary Operators) 
+
+```latex
+\otimes, \oplus, \cup, \cap
+```
+
+$\otimes, \ \oplus, \ \cup, \ \cap$
+
+\+ Một số toán tử quan hệ (Relation Operators)
+
+Dấu <, > có thể được nhập trực tiếp trên bàn phím 
+
+Dấu $\leq, \ \geq, \ \neq$
+
+```latex
+\leq, \geq, \neq
+```
+
+Dấu $\subset, \ \supset, \ \subseteq, \ \supseteq$
+
+```latex
+\subset, \supset, \subseteq, \supseteq
+```
+
+Dấu $\in, \ \notin$
+
+```latex
+\in, \notin
+```
+
+Dấu $\ \approx, \simeq, \ \cong, \ \equiv, \ \vee, \ \wedge, \ \perp$
+
+```latex
+\approx, \simeq, \cong, \equiv, \vee, \wedge, \perp
+```
+
+Dấu $\boxtimes, \Box$
+
+```latex
+\boxtimes, \Box
+```
+
 ---
 
 #### Liên phân số:  [^13]
 
 Đối với một . . . (ở bài học này chúng ta sẽ học cách viết phân số, liên phân số, ...)
 
+\+ Phân số được định nghĩa là . . .   
+
+Ví dụ: $0.5 = \frac{1}{2}$ trong đó $\frac{1}{2}$ chính là phân số của số thập phân hữu hạn $0.5$  
+
+Để viết được phân số, ta sử dụng lệnh : 
+
+```latex
+\frac{tử số}{mẫu số}
+```
+
+Viết lại phần số $\frac{1}{2}$ bằng lệnh trên 
+
+```latex
+\(\frac{1}{2}\)
+```
+
+\+  Phân số bị thu nhỏ lại khi chúng được viết chúng ở chế độ toán học nội tuyến như ví dụ . . ., để thay đổi kích cỡ phân số đó ta chỉ cần thêm trước lệnh `\frac` bằng lệnh `\displaystyle`
+
+```latex
+\(\displaystyle \frac{1}{2}\) 
+```
+
+Một cách khác để thay đổi kích thước phân số ở chế độ toán học nội tuyến giống với lệnh `\displaystyle` đó là sử dụng lệnh
+
+```latex
+\dfrac{tử số}{phân số}
+```
+
+Để sử dụng được lệnh `\dfrac`, người dùng nhớ cần phải khai báo package `amsmath` trước đó. 
+
+
 ---
 
 #### Giới hạn, đạo hàm, tích phân: 
 
-Đây là một chủ đề toán học thú vị được gọi chung là giải tích . . . 
+\+ Đây là một chủ đề toán học thú vị được gọi chung là giải tích . . . 
 
-Khi viết kí hiệu tổng . . .  nếu viết thông thường bằng lệnh `\sum` thì kết quả cho ra được là $\sum$ (đọc là sigma) 
+\+ Khi viết kí hiệu tổng . . .  nếu viết thông thường bằng lệnh `\sum` thì kết quả cho ra được là $\sum$ (đọc là sigma) 
 
-Để thay đổi kích thước các kí hiệu toán học khi viết toán học ở chế độ `inline math` người dùng có thể sử dụng thêm bốn lệnh ở bảng sau đây: 
+\+ Để thay đổi kích thước các kí hiệu toán học khi viết toán học ở chế độ `inline math` người dùng có thể sử dụng thêm bốn lệnh ở bảng sau đây: 
 
 | Lệnh                 | Ví dụ                     | Kết quả từ ví dụ          |
 | :------------------- | ------------------------- | ------------------------- |
@@ -2770,7 +3399,31 @@ Khi viết kí hiệu tổng . . .  nếu viết thông thường bằng lệnh 
 | `\scriptstyle`       | `\scriptstyle(123)`       | $\scriptstyle (123)$      |
 | `\scriptscriptstyle` | `\scriptscriptstyle(123)` | $\scriptscriptstyle(123)$ |
 
-vào trước lệnh `\sum` . . . kết quả cho ra được lúc này là $\displaystyle \sum$ 
+vào trước lệnh `\sum` . . . kết quả cho ra được lúc này sẽ là $\displaystyle \sum$ 
+
+\+ Một số kí hiệu khác trong bộ môn giải tích này: 
+
+```latex
+\int \oint \prod \coprod
+```
+
+$\int, \ \oint, \ \prod, \ \coprod$
+
+$$
+\sum_{i = 0}^n 
+$$
+
+\+ Đạo hàm của hàm $y = x^2$  sẽ là $y^{'} = 2x$
+
+```latex
+$y^{'}$
+```
+
+\+ Đạo hàm $y^{'} = 2x$ sẽ là $y^{''} = 2$
+
+```latex
+$y^{''}$
+```
 
 . . . 
 
@@ -2778,26 +3431,110 @@ vào trước lệnh `\sum` . . . kết quả cho ra được lúc này là $\di
 
 #### Vector, ma trận: 
 
-(phương pháp biến đổi sơ cấp) 
+(Quan trọng của phần này là cách viết phương pháp biến đổi sơ cấp) 
+
+\+ Vector từ điểm A đến điểm B: $\overrightarrow{AB}$  
+
+```latex
+\overrightarrow{AB}
+```
+
+\+ Vector cơ sở $e$: $\vec a$
+
+```latex
+$\vec a$
+```
+
+\+ Ma trận $A$ cấp $1 \times n$ 
+
+$$
+\begin{bmatrix} 
+a_{11} & a_{12} & \dots & a_{1n} 
+\end{bmatrix}
+$$
+
+```latex
+\[
+\begin{bmatrix} 
+a_{11} & a_{12} & \dots & a_{1n} 
+\end{bmatrix}
+\]
+```
 
 ---
 
 #### Số phức:  
 
-. . .
+\+ Viết tính chất cộng hai số phức liên hợp 
+
+$\overline{z_1} + \overline{z_2} = \overline{z_1 + z_2}$
+
+Để viết dấu . . . ta sử dụng lệnh 
+
+```latex 
+\overline{}
+```
+
+Áp dụng điều này  . . . ta được
+
+```latex 
+\overline{z_1} + \overline{z_2} = \overline{z_1 + z_2} 
+```
+
+\+ Mũ hai số phức dạng lượng giác 
+$z\cdot z = z^2 = [r \cdot (\cos(\phi) + i\sin(\phi))]^2 = r^2 \cdot (\cos(\phi)^2 + 2 \cdot \cos(\phi) \cdot i\sin(\phi) + (i\sin(\phi)^2) = r^2 \cdot (\cos(2\phi) + i \sin(2\phi))$ 
+\+ Mũ $n$ số phức dạng lượng giác 
+
+$\underbrace{z \cdot z \cdot \ldots \cdot z}_{n} = z^n = [r \cdot (\cos(\phi) + i\sin(\phi))]^n = r^n \cdot [\cos(n \phi) + i \sin (n \phi)]$
+
+Công thức này còn được gọi là công thức De Moivre. 
+
+Để viết được $\underbrace{z \cdot z \dots z}_{n}$ ta sử dụng lệnh: 
+```latex
+\underbrace{. . .}_{. . .}
+```
+
+trong đó: 
++  `{...}` . . .
++ `{...}` . . .
+
+
+\+ Căn bậc 2 của 2 được kí hiệu là $\sqrt{2}$  
+
+Để viết được căn bậc 2 của một số bất kì ta sử dụng lệnh 
+
+```latex
+\sqrt{}
+```
+
+Viết lại . . . 
+
+```latex
+\sqrt{2}
+```
+
+\+ Căn bậc 3 của 2 được kí hiệu là $\sqrt[3]{2}$
+
+```latex
+\sqrt[3]{2}
+```
+
+\+ Căn bậc $n$ của số phức 
+
+$$
+\sqrt[n]{z} = \sqrt[n]{r} \left[\cos\left(\frac{a}{n} + \frac{k2\pi}{n}\right) + i\sin\left(\frac{a}{n} + \frac{k2\pi}{n}\right) \right], \ k = \{1, 2, \dots, n\}
+$$
+
+```latex
+\sqrt[n]{z} = \sqrt[n]{r} . . .
+```
+
 
 ---
 
-#### Thuật toán Euclid: 
+### Danh sách các kí hiệu toán học, chữ cái Hy Lạp[^22]
 
-. . . 
-
-
----
-
-### Danh sách các kí hiệu toán học, chữ cái Hy Lạp
-
-Tham khảo trang 70 tài liệu đây: **Một tài liệu ngắn gọn giới thiệu về LATEX 2ε - hay LATEX 2ε trong 155 phút**,  https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf cũng như là **LaTeX Formal Methods Reference**  https://www.cs.put.poznan.pl/ksiek/latexmath.html#id2
+Tham khảo trang 70 tài liệu đây: **Một tài liệu ngắn gọn giới thiệu về LATEX 2ε - hay LATEX 2ε trong 155 phút**,  https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf, https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf, cũng như là **LaTeX Formal Methods Reference**  https://www.cs.put.poznan.pl/ksiek/latexmath.html#id2
 
 #### Các dấu trọng âm trong chế độ soạn thảo toán học: 
 
@@ -2832,7 +3569,285 @@ Tham khảo trang 70 tài liệu đây: **Một tài liệu ngắn gọn giới 
 
 
 ---
-# b. Footnote 
+
+## Tham chiếu chéo:  
+
+\+ Trong các tài liệu viết về LaTeX, người viết thấy rằng phần tham chiếu chéo thường được viết chung, đầy đủ với phần bài học đó. Chẳng hạn như, khi người dùng học về phần toán học ta sẽ được giới thiệu luôn việc người dùng tham chiếu chéo đến phương trình toán học, định lý, định nghĩa như thế nào ? Điều này tương tự với các bài học như hình ảnh, bảng, ..vv.. 
+
+\+ Tuy vậy, trong . . .(? nhược điểm của cách trình bày đó là gì)
+
+\+ Theo quan điểm của người viết là nên giới thiệu người dùng các vấn đề đó trước và tổng hợp các tham chiếu đó chung một bài học sau. 
+
+\+ Cách trình bày này có vẻ sẽ gây ra khó hiểu rất nhiều với người dùng mới bắt đầu tiếp cận đến LaTeX, tuy vậy với một tài liệu mà người viết cố gắng sắp xếp và trình bày một cách tuyến tính thì điều này sẽ rất hợp lí (? hợp lí chỗ nào chỉ ra nhé). 
+
+\+ Tham chiếu chéo là . . . .? Chúng có tác dụng gì . . . ? 
+
+\+ Tham chiếu bao gồm: 
++ Chương, mục, .. (chapter, section, ..vv..)
++ Số trang (page)
++ Danh sách đánh số  
++ Hình ảnh 
++ Bảng 
++ Thuật toán và mã nguồn 
++ Định lý, định nghĩa, ..vv..
++ Phương trình 
++ Tài liệu tham khảo (Bib)
+
+\+ Quy tắc đặt tên tham chiếu chéo  
+
+---
+
+### Tham chiếu chéo phương trình toán học:
+
+Trong một số trường hợp, khi người dùng viết tài liệu toán học cần [tham chiếu]() từ đoạn văn bản này đến phương trình toán học ở chế độ `display math`, mà không cần phải viết lặp lại, cũng như sẽ bị tràn ra khỏi văn bản đối với các [phương trình dài]() (? của phương trình đó ở chế độ `inline math` . . . (? viết tiếp đê)    
+
+Để làm được điều này, trước tiên người dùng cần phải khai báo package ở bài học [liên kết thông thường]() 
+
+```latex 
+\usepackage{hyperref}
+```
+
+Tiếp theo, để tham chiếu chéo đến phương trình toán học đó, người dùng sử dụng lệnh 
+
+```latex
+\label
+```
+
+cần phải được đặt vào trong môi trường `equation`. 
+
+Cuối cùng là lệnh
+
+```latex
+\ref{}
+```
+
+hoặc lệnh 
+
+```latex
+\eqref{}
+```
+
+được đặt ở trong đoạn văn mà người dùng mong muốn để được tham chiếu đến phương trình có lệnh `\label` tương ứng.  
+
+> [!NOTE]  
+>  Người dùng nên để lệnh `\label` ở bên cạnh `\begin{equation}`, vì . . . (? vì sao thế nhỉ ?)
+
+. . . .(? viết ví dụ mới yéeeeeeee)
+
+```latex
+\documentclass{article} % 
+\usepackage{hyperref} % . . .
+\begin{document} \label{eq:1} %
+\begin{equation} % Sử dụng môi trường equation để đánh số thứ tự ở phương trình logarit
+\log_b{xy} = \log_b{x} + \log_b{y} 
+\end{equation}
+. . . \ref{}
+\end{document}
+```
+
+Điểm khác biệt giữa lệnh `\ref` và lệnh `\eqref`, đó là lệnh `\eqref` sẽ được hệ thống tự động thêm dấu ngoặc tròn `()` cho số thứ tự tương ứng với phương trình được tham chiếu ở đoạn văn, còn lệnh `\ref` thì không.  
+
+```latex
+\documentclass{article}
+\begin{document}
+\begin{equation} \label{eq:1} % . . .
+\log_b{xy} = \log_b{x} + \log_b{y}
+\end{equation}
+
+. . . (\ref{eq:1}) % lệnh \ref không được hệ thống tự động đóng ngoặc tròn, mà người dùng phải tự chủ động thêm vào nếu cần.    
+. . . \eqref{eq:1} % lệnh \eqref được hệ thống tự động đóng ngoặc tròn, mà người dùng không cần phải tự chủ động thêm vào. 
+
+\end{document}
+```
+
+> [!WARNING]  
+>  Nếu như người dùng để nội dung bên trong dấu ngoặc nhọn `{}` của lệnh `\ref`, cũng như là lệnh `\eqref` khác với nội dung bên trong dấu ngoặc nhọn của lệnh `\label`, thì hệ thống sẽ báo lỗi `Undefined reference`. Lúc này, ở trong trang tài liệu, đoạn văn có lệnh`\ref` (hoặc lệnh `\eqref`) sẽ xuất hiện hai lần dấu chấm hỏi `??` thay vì được hiện thị số thứ tự tương ứng với lệnh `\label` của phần toán học cần được trỏ đến. 
+
+```latex
+\documentclass{article}
+
+\usepackage{hyperref}
+
+\begin{document} 
+
+\begin{equation} \label{eq:1}
+\log_b{xy} = \log_b{x} + \log_b{y}
+\end{equation}
+
+. . . \eqref{eq:2} . . .\ref{eq:1}
+
+\end{document}
+```
+
+Vậy nên, nội dung bên trong dấu ngoặc nhọn của lệnh `\label` và lệnh `\ref` (hoặc `\eqref`) đều phải được giống nhau. 
+
+```latex
+\documentclass{article}
+
+\usepackage{hyperref}
+
+\begin{document} 
+
+\begin{equation} \label{eq:1}
+\log_b{xy} = \log_b{x} + \log_b{y}
+\end{equation}
+
+. . . \eqref{eq:1} . . .\ref{eq:1}
+
+\end{document}
+```
+
+> [!WARNING]  
+> Nếu như người dùng để nội dung bên trong dấu ngoặc nhọn `{}` của nhiều lệnh `\label` là giống hệt nhau, thì hệ thống sẽ báo lỗi `multiply-defined labels`. 
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\begin{equation} % 
+\log_b{xy} = \log_b{x} + \log_b{y}
+\label{eq:1} % 
+\end{equation}
+
+\begin{equation} % 
+\log_b{\frac{x}{y}} = \log_b{x} - \log_b{y} 
+\label{eq:1} % 
+\end{equation}
+
+\end{document}
+```
+
+>[!WARNING]
+>Hơn nữa, nếu lệnh `\label` bị trùng nội dung với nhau bên trong dấu ngoặc nhọn, thì lệnh `\ref` cũng như là lệnh `\eqref` sẽ được hệ thống mặc định trỏ đến vị trí có lệnh `\label` xuất hiện gần nhất.
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\begin{equation} % 
+\log_b{xy} = \log_b{x} + \log_b{y}
+\label{eq:1} % 
+\end{equation}
+
+\begin{equation} % 
+\log_b{\frac{x}{y}} = \log_b{x} - \log_b{y} 
+\label{eq:1} % 
+\end{equation}
+
+. . . \ref{eq:1} . . . 
+
+\end{document}
+```
+
+ Vậy nên, nội dung bên trong dấu ngoặc nhọn của mỗi lệnh `\label` là phải khác nhau nhằm phân biệt các phương trình toán học.  
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\begin{equation} % 
+\log_b{xy} = \log_b{x} + \log_b{y}
+\label{eq:1} % 
+\end{equation}
+
+\begin{equation} % 
+\log_b{\frac{x}{y}} = \log_b{x} - \log_b{y} 
+\label{eq:2} % 
+\end{equation}
+
+. . . \ref{eq:1} . . . 
+
+\end{document}
+```
+
+Các chú ý trên cũng được áp dụng tương tự với các bài học tham chiếu chéo [hình ảnh](), [bảng](), ..vv..   
+
+---
+### Tham chiếu định lý, định nghĩa ..vv..: 
+
+Để tham chiếu đến định lý, định nghĩa, trước tiên ta cần đặt lệnh 
+
+```latex
+\label{}
+```
+
+vào môi trường định nghĩa "định lý", "định nghĩa" ...vv... đó.
+
+Để tham chiếu đến môi trường đó ta cần đặt lệnh 
+
+```latex
+\ref{}
+```
+
+vào . . . 
+
+Ví dụ: . . .
+
+```latex
+\documentclass{article}
+
+\usepackage[utf8]{vietnam}
+
+% Useful packages
+
+%  Khai báo màu đường link
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Định lý}[section]
+
+\begin{document}
+
+\begin{theorem}[Định lý Rolle]
+    Cho hàm số $f$ liên tục trên đoạn $[a;b]$ có đạo hàm trên khoảng $(a;b)$ và $f(a) < f(b)$ khi đó tồn tại $c \in (a;b)$ sao cho $f^{'}(c) = 0$
+    \label{thm:0.1}
+\end{theorem}
+
+\begin{proof}
+    Xem ở đây: \url{https://artofproblemsolving.com/wiki/index.php?title=Rolle%27s_Theorem}
+\end{proof}
+
+\begin{theorem}[Định lý giá trị trung bình Lagrange]
+    Cho hàm số $f$ liên tục trên đoạn $[a;b]$  có đạo hàm trên khoảng $(a;b)$ khi đó tồn tại $c \in (a;b)$ sao cho 
+    \[
+    f^{'}(c) = \frac{f(b) - f(a)}{b - a} 
+    \]
+    \label{thm:0.2}
+\end{theorem}
+
+\begin{proof}
+    . . . 
+\end{proof}
+
+Như vậy, định lý \ref{thm:0.2} chính là trường hợp tổng quát của định lý \ref{thm:0.1}.
+
+\end{document}
+```
+
+(?) Có hai vấn đề mà mình chưa giải quyết trong phần này
+
+(1) Khi định lý bị thay đổi số thì hệ thống sẽ không được tự cập nhật dẫn đến đôi khi tham chiếu không được hợp lí. Ví dụ khi "định lý 1.1" bị thay đổi thành "định lý 1.2" thì nếu ta để `\label{1.1}` thì `\ref{1.1}` vẫn sẽ để 1.1. 
+
+(2) Với định lý có tên dài, chẳng hạn "định lý Gauss - Wantzel" thì làm sao để `\ref` có đầy đủ tên định lý đó để tham chiếu đến tiêu đề định lý Gauss - Wantzel. 
+
+(Ảnh Lagrange và Rolle) 
+
+---
+# c. Các bài học bên lề khác 
+
+Đây là những bài học mở rộng khác liên quan đến LaTeX. 
+
+## Viết mã LaTeX sao cho đẹp và sạch ? 
+
+---
+
+# d. Footnote 
 
 [^1]: Nguồn tham khảo viết ở Overleaf: https://www.overleaf.com/learn/latex/Brackets_and_Parentheses 
 
@@ -2870,8 +3885,10 @@ Tham khảo trang 70 tài liệu đây: **Một tài liệu ngắn gọn giới 
 
 [^18]: Không nên nhầm lẫn với định nghĩa QED ở các lĩnh vực khác: https://en.wikipedia.org/wiki/QED
 
-[^19]: Tham khảo viết từ: https://paulwintz.com/mathematical-writing/theorem-like-environments-in-latex/
+[^19]: Tham khảo viết từ: https://paulwintz.com/mathematical-writing/theorem-like-environments-in-latex/ và bài viết về "Số Fermat" của các tác giả 
 
 [^20]: Nguồn viết: https://www.overleaf.com/learn/latex/Theorems_and_proofs#Reference_guide + https://en.wikibooks.org/wiki/LaTeX/Theorems#Theorem_styles
 
 [^21]: Nguồn tham khảo viết: https://mathworld.wolfram.com/BezoutsTheorem.html
+
+[^22]: Tham khảo và chỉnh sửa từ: https://sg.mirrors.cicku.me/ctan/info/symbols/comprehensive/symbols-a4.pdf

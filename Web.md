@@ -1,11 +1,11 @@
-Mục tiêu căn bản là tạo web để chứa các bài học LaTeX đây: https://namlete.github.io/LaTeX-Library-web/ 
+Mục tiêu căn bản là tạo web để chứa các bài học LaTeX đây: . . 
 
-Mã nguồn: https://github.com/Namlete/LaTeX-Library-web
+Mã nguồn: https://github.com/Namlete102/LaTeX-Library-project
 
-Để tạo được web, tự học HTML, CSS, [[Git and Github]], Visual Studio Code cơ bản. (JS mình ăn cắp trên mạng hehe :>)
+Để tạo được web, tự học HTML, CSS, Git and Github, Visual Studio Code cơ bản. (JS mình ăn cắp trên mạng hehe :>)
 
 Trang tham khảo mẫu thiết kế: 
-+ https://bellard.org/index.html 
++ https://bellard.org/index.html  (trang web của Fabrice Bellard)
 + https://www.learnlatex.org/vi/lesson-03 
 + https://github.com/davidcarlisle/latexcgi (TeXlive.net) 
 

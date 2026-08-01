@@ -4,9 +4,32 @@ Tôi nghĩ ngợi và bắt tay làm dự án này trong lúc tôi nghỉ học 
 
 # 13/06/2026: 
 
-Tôi nghĩ mình nên viết đôi ba dòng gì đó ở phần giới thiệu dự án này về việc chúng ta nên sử dụng soạn thảo Overleaf trong trường hợp nào ? 
+Tôi nghĩ mình nên viết đôi ba dòng gì đó ở phần giới thiệu dự án này về việc bản chất của LaTeX. Chúng là gì ? Được tạo ra bởi ai ? Mục đích ra đời của chúng là gì ? ..vv..
 
-Nếu như là tôi thì việc viết ra các ý tưởng ban đầu chạy trong đầu nên được viết ra nháp ở giấy trắng truyền thống, cho đến việc tổng hợp những ý tưởng nháp đó vào một phần mềm khác như Obsidian, Notion chẳng hạn, rồi sản phẩm cuối cùng được soạn thảo lại đầy đủ bằng LaTeX thì quả là tuyệt vời. 
+Nếu như là tôi thì việc viết ra các ý tưởng ban đầu chạy trong tâm trí nên được viết ra nháp ở giấy trắng truyền thống trước, cho đến việc tổng hợp những ý tưởng nháp đó vào một phần mềm khác như Obsidian, Notion chẳng hạn, rồi sản phẩm cuối cùng được soạn thảo chỉnh chu lại đầy đủ bằng LaTeX thì quả là tuyệt vời. (đây là thắc mắc Nên sử dụng LaTeX trong quá trình nào của viết lách ? (When) ngày 22/07/2026)
 
-Tiếp theo là đến việc tạo web tôi nghĩ mình có thể mượn ý tưởng (hoặc lấy luôn ý tưởng đó) việc tạo một web như wikipedia, vì mục đích dự án của tôi là đóng gói lại kiến thức học LaTeX cho mọi người có thể dễ dàng tìm được điểm bắt đầu tự học trình soạn thảo này, cũng như là giúp mọi người có thể đôi khi quên mất các câu lệnh đó có thể quay lại tra cứu một cách vô cùng dễ dàng. 
+Cuối cùng đến việc tạo web tôi nghĩ mình có thể mượn ý tưởng (hoặc lấy luôn ý tưởng đó) việc tạo một web như wikipedia, vì mục đích dự án của tôi là đóng gói lại kiến thức học LaTeX cho mọi người có thể dễ dàng tìm được điểm bắt đầu tự học trình soạn thảo này, cũng như là giúp mọi người có thể đôi khi quên mất các câu lệnh đó có thể quay lại tra cứu một cách vô cùng dễ dàng. 
 
+# 22/07/2026: 
+
+Dự án này viết về gì ? Dành cho đối tượng nào ? Mục tiêu của dự án này là gì ? Ưu và nhược hiện tại của phiên bản 1.0.0 này ? 
+
+LaTeX là gì ? (What) Ngôn ngữ đánh dấu là gì ? Cần phân biệt đâu là ngôn ngữ lập trình và đâu là ngôn ngữ đánh dấu ? Sự khác biệt giữa LaTeX và Word ? 
+
+Nên sử dụng LaTeX trong quá trình nào của viết lách ? (When) 
+
+Lời khuyên cho người học LaTeX: 
++ Học đến đâu thực hành tốt đến đấy, xây dựng trực giác sử dụng các lệnh để nếu quên ta cũng có thể biết bắt đầu lại từ đâu để tra khảo, nên không nhất thiết phải ghi nhớ toàn bộ, nếu nhớ được thì tốt, không thì như đã trình bày thế thôi.  
++ Tôi nghĩ chúng ta không nên qua chú trọng việc chạy nhảy (fomo) phần mềm soạn thảo, vì theo tôi người dùng vẫn có thể sử dụng word để soạn thảo thay vi LaTeX, vậy nên điều mọi người nên làm trong quá trình hoàn thiện con đường tạo ra sản phẩm tri thức là vẫn cứ viết những suy nghĩ, những hiểu biết của bản thân hiện tại về chủ đề đó ra nháp trang giấy, sau đó tổng hợp và bắt đầu sâu chuỗi tri thức lại (obsidian, notion), trước khi có thể hoàn thiện các ý tưởng của mình một cách trau chuốt đến những nhà xuất bản, học thuật, hay với nhiều người khác hơn để họ đọc thành phẩm của bạn mà không phải quan tâm, chê chữ viết của bạn là không thể nhận dạng nỗi.  
+
+Ở mỗi phần bài học toán học dài dòng về việc trình bày một ý tưởng toán học nào đó thú vi bên cạnh việc chỉ ra cách viết chúng ở soạn thảo LaTeX, tôi nghĩ luôn nên có phần cuối của bài học toán học đó được gọi là "tóm tắt bài học".  
+
+Ở các từ cần được tra khảo để tìm hiểu rõ hơn, tôi nghĩ mình nên làm thêm một web trình bày về các kiến thức bổ sung đó nữa như ở [[Dictionary]]. 
+
+Câu hỏi nữa tôi muốn viết đến với độc giả là "Chúng ta nên bắt đầu từ đâu với tài liệu LaTeX 1.0.0 này ?"   
+
+# 31/07/2026: 
+
+Phần khó nhất trong soạn thảo LaTeX này: 
++ Chèn ảnh
++ Chèn bảng 
