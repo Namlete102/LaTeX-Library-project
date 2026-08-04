@@ -1538,7 +1538,7 @@ Phép tính 1 + 1 = 2 là một phép tính sơ khai trong lịch sử phát tri
 \end{document}
 ```
 
-người dùng có thể dễ dàng nhập trực tiếp toán tử (+, -), quan hệ (? dấu =, < > trong toán học được gọi thống nhất là gì nhỉ) và các số thực cơ bản (như 1, -1 ) trong phần soạn thảo văn LaTeX. 
+người dùng có thể dễ dàng nhập trực tiếp toán tử (+, -), quan hệ (? dấu =, < > trong toán học được gọi thống nhất là gì nhỉ) và các số thực cơ bản (như 1, -1 ) vào trong phần soạn thảo văn LaTeX. 
 
 (? Ảnh các nhà toán học Peano, Russell, Whitehead)
 
@@ -1566,9 +1566,15 @@ khoảng cách
 10 m 
 ```
 
+biến 
+
+```latex
+y = ax + b
+```
+
 Tập hợp các kí hiệu toán tử ... (? gồm gì nữa) có thể được gõ trực tiếp trên bàn phím, người dùng có thể xem lại bài . . . (? bài học nào trong đây)
 
-Tuy vậy, để người dùng có thể viết toán học ở mức độ phức tạp hơn có các [kí hiệu toán học, chữ cái Hy Lạp] . . .vv. . . không thể được gõ trực tiếp trên bàn phím, chẳng hạn như ví dụ sau 
+Tuy vậy, để người dùng có thể viết toán học ở mức độ phức tạp hơn có các [kí hiệu toán học, chữ cái Hy Lạp] . . .vv. . . thì không thể  nhập được trực tiếp trên bàn phím, chẳng hạn như ví dụ sau 
 
 ```latex
 Phương trình toán học từ nguyên lý bất định Heisenberg trong cơ học lượng tử . . . 
@@ -1580,13 +1586,14 @@ So với 1 + 1 = 2, 99%, 70kg, 5 cm/s, 10 m trên, việc viết trực tiếp [
 
 (? Ảnh báo lỗi) 
 
-Hơn nữa, phương trình đó không được căn ở một dòng riêng biệt như bài báo 
+Hơn nữa, phương trình đó không được căn ở một dòng riêng biệt như bài báo . . . (? bài báo nào)
 
 (https://ntrs.nasa.gov/citations/19840008978)
 
-Từ hai điều cơ bản trên, người dùng có thể thấy rằng, để viết được một hai hai nhiều (hệ) phương trình toán học phức tạp (? lặp từ quá nhỉ), chúng cần được đặt vào một môi trường, lệnh riêng biệt khác, nhằm phân tách việc đâu là văn bản chữ thông thường (? đúng ko nhỉ ?), đâu là văn bản toán học, để hệ thống có thể dễ dàng phân loại, xác nhận . . . (? đúng ko nhỉ ?), giúp hiển thị chính xác các kí hiệu mà người dùng mong muốn trên trang tài liệu, khi xuất ra từ phần soạn thảo LaTeX. 
+Từ hai điều cơ bản trên, người dùng có thể thấy rằng, để viết được một hay hai nhiều (hệ) phương trình toán học phức tạp (? lặp từ quá nhỉ), chúng cần được đặt vào một môi trường, lệnh riêng biệt khác, nhằm phân tách việc đâu là văn bản chữ thông thường (? đúng ko nhỉ ?), đâu là văn bản toán học, để hệ thống có thể dễ dàng phân loại, xác nhận . . . (? đúng ko nhỉ ?), giúp hiển thị chính xác các kí hiệu mà người dùng mong muốn trên trang tài liệu, khi xuất ra từ phần soạn thảo LaTeX. 
 
 ---
+
 #### `inline math`, `display math`: 
 
 . . . (? Giới thiệu) với 1+1 = 2 ở ví dụ . . . chúng được gọi là `inline math` còn nguyên lý bất định hải sơn bắc là `displaymath`. 
@@ -1772,11 +1779,17 @@ Trong một số tài liệu toán học, đôi khi người dùng cũng thế t
 
 <img src="LaTeX-Library-project-v1.0.0/images/Kakeya.jpg" alt="John Napier">
 
-Ảnh được cắt từ trang 1 bài báo toán học <a src="https://drive.google.com/file/d/1dlpgd5Q5AAOsaCFQK5MGRisJNUPmgxFu/view?usp=sharing" target="_blank">"A STREAMLINED PROOF OF THE KAKEYA SET CONJECTURE IN \(\mathbb{R^3}\)</a> của ba nhà toán học <a src="https://math.mit.edu/~lguth/" target="_blank">Larry Guth</a>, <a src="https://sites.google.com/view/hongwang/home" target="_blank">Hong Wang]</a>, <a src="https://jzahl.github.io/" target="_blank">Joshua Zahl</a>
+Ảnh được cắt từ trang 1 bài báo toán học <a src="https://drive.google.com/file/d/1dlpgd5Q5AAOsaCFQK5MGRisJNUPmgxFu/view?usp=sharing" target="_blank">"A STREAMLINED PROOF OF THE KAKEYA SET CONJECTURE IN \(\mathbb{R^3}\)</a> của ba nhà toán học <a src="https://math.mit.edu/~lguth/" target="_blank">Larry Guth</a>, <a src="https://sites.google.com/view/hongwang/home" target="_blank">Vương Hồng</a>, <a src="https://jzahl.github.io/" target="_blank">Joshua Zahl</a>
 
 </div>
 
-(? ảnh ba nhà toán học trên)  
+<div align="center">
+
+<img src="LaTeX-Library-project-v1.0.0/images/Guth Hong Zahl.jpg" alt="Guth Hong Zahl">
+
+Nhà toán học Lary Guth, nhà toán học Vương Hồng và nhà toán học Joshua Zahl
+
+</div>
 
 Để chuyển số thứ tự đó nằm từ bên phải như mặc định sang bên trái như hình . . ., người dùng chỉ cần thêm options 
 
@@ -3094,7 +3107,7 @@ Ví dụ về stylename **remark** với nhận xét về các số nguyên tố
 \newtheorem*{remark}{Nhận xét} 
 \begin{document}
 \begin{remark}
-Fermat nhận ra 5 số Fermat đầu tiên là $F_0 = 3, F_1 = 5; F_2 = 17, F_3 = 257, F_4 = 65537$ đều là số nguyên tố và ông đã nhận định rằng $F_n$ là số nguyên tố với mọi giá trị của $n$. Tuy nhiên, đến năm 1732, Euler đã tìm thấy F5 là hợp số.
+Fermat nhận ra 5 số Fermat đầu tiên là \(F_0 = 3, F_1 = 5; F_2 = 17, F_3 = 257, F_4 = 65537\) đều là số nguyên tố và ông đã nhận định rằng $F_n$ là số nguyên tố với mọi giá trị của $n$. Tuy nhiên, đến năm 1732, nhà toán học người Thụy Sĩ là Leohard Euler đã tìm thấy F5 là hợp số.
 \end{remark}
 \end{document}
 ```
@@ -3127,13 +3140,15 @@ Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
 
 Khi kết thúc phần chứng minh cho định lý, mệnh đề, bổ đề, ..vv.. nào đó trong toán học, chúng ta luôn kết lại bằng câu "điều phải chứng minh".  Điều này bắt nguồn từ . . . (? một chút lịch sử về việc tại sao phải có điều này)
 
-và được viết tắt ngắn gọn lại là QED[^18]  
+và được viết tắt ngắn gọn lại là QED[^18] . 
 
 Để sử dụng từ QED khi kết thúc chứng minh, người dùng sử dụng lệnh: 
 
 ```latex
 \renewcommand\qedsymbol{QED}
 ```
+
+được đặt ở {? ở đâu}
 
 Từ QED trên thông thường được thay thế ngắn gọn lại bằng một [kí hiệu đặc biệt]() ô vuông trắng 
 
@@ -3837,6 +3852,12 @@ Như vậy, định lý \ref{thm:0.2} chính là trường hợp tổng quát c�
 (2) Với định lý có tên dài, chẳng hạn "định lý Gauss - Wantzel" thì làm sao để `\ref` có đầy đủ tên định lý đó để tham chiếu đến tiêu đề định lý Gauss - Wantzel. 
 
 (Ảnh Lagrange và Rolle) 
+
+<div align="center">
+
+<img src="LaTeX-Library-project-v1.0.0/images/Theorem environments.jpg"> 
+
+</div>
 
 ---
 # c. Các bài học bên lề khác 
