@@ -6,7 +6,7 @@
 		{"id":"08ab17cb4035cb60","type":"file","file":"LaTeX-Library-project-1.0.0/About.md","x":-720,"y":60,"width":250,"height":260},
 		{"id":"faa9dcd6ca4c8e91","type":"text","text":"__ Thư viện này được tạo ra nhằm cố gắng tổng hợp các bài học của LaTeX nhằm giúp người học dễ dàng xác định những bước đi cơ bản khi học về ngôn ngữ đánh dấu này để phục vụ cho công việc của mỗi người dùng. ","x":-720,"y":480,"width":250,"height":260,"color":"5"},
 		{"id":"940546116ce95852","type":"text","text":"Thư viện LaTeX 1.0.0","x":-720,"y":-800,"width":250,"height":60,"color":"2"},
-		{"id":"a1b01c44b3bb81bc","type":"text","text":"Viết các bài học (Reading) ","x":-80,"y":-800,"width":250,"height":60,"color":"6"},
+		{"id":"a1b01c44b3bb81bc","type":"text","text":"Viết các bài học (Lecture notes) ","x":-80,"y":-800,"width":250,"height":60,"color":"6"},
 		{"id":"9cb75dc86c49c61a","type":"file","file":"LaTeX-Library-project-v1.0.0/Lecture notes.md","x":220,"y":-833,"width":220,"height":126},
 		{"id":"e9a1ba7c17f572fc","type":"text","text":"Thiết kế trang web (sách)","x":-80,"y":-640,"width":250,"height":60,"color":"5"},
 		{"id":"e0d7f97c17f8bf23","type":"text","text":"Thiết kế bìa dự án","x":-80,"y":-500,"width":250,"height":60,"color":"3"},

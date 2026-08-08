@@ -30,6 +30,18 @@ Câu hỏi nữa tôi muốn viết đến với độc giả là "Chúng ta nê
 
 # 31/07/2026: 
 
-Phần khó nhất trong soạn thảo LaTeX này: 
+Phần khó nhất trong phần soạn thảo LaTeX này: 
 + Chèn ảnh
 + Chèn bảng 
++ Tikz (sẽ dành hẳn một chuyên đề riêng)
++ Lập trình Macro
+
+# 04/08/2026: 
+
+Câu hỏi đề ra để xác định việc trả lời khi viết: 
++ Là gì ? (bản chất)
++ Như thế nào ? 
++ Ví dụ 
++ Khi nào ? 
+
+

@@ -1,6 +1,14 @@
 ![](./images/banner.jpg)
 
-Dự án phiên bản 1.0.0 này tôi chỉ mới tâp trung vào giới thiệu LaTeX, soạn thảo qua LaTeX với các lớp tài liệu (documentclass) là bài báo (article) và thư (letter).
+Dự án phiên bản 1.0.0 này tôi chỉ mới tâp trung vào giới thiệu LaTeX, soạn thảo qua LaTeX với các lớp tài liệu (documentclass) là report (báo cáo), bài báo (article) và thư (letter).
+
+Các lớp tài liệu dự kiến trong tương lai (tính sau): 
++ beamer
++ book 
+
+Các chuyên đề sâu thú vị LaTeX: 
++ Tikz 
++ Macro
 
 Phần giới thiệu LaTeX, mục tiêu của thư viện này: [[About]]
 

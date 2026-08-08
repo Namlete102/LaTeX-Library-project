@@ -1524,7 +1524,7 @@ Nhà vật lý người Pháp Charles-Augustin de Coulomb
 
 Một trong những động lực lớn nhất thúc đẩy [Donald Knuth]() khi bắt đầu phát triển hệ thống TeX ban đầu là tạo ra một công cụ cho phép xây dựng các công thức toán học một cách đơn giản, đồng thời trông chuyên nghiệp khi in ấn. Việc ông thành công có lẽ là lý do tại sao TeX (và sau này là LaTeX) trở nên phổ biến trong cộng đồng khoa học. Việc trình bày toán học là một trong những thế mạnh lớn nhất của LaTeX. Đây cũng là một chủ đề rộng lớn do sự tồn tại của rất nhiều ký hiệu toán học.[^6] 
 
-. . . . 
+. . . . (? viết tiếp)
 
 Đối với phép tính thông thường chẳng hạn như phép toán cộng 1+1 = 2 
 
@@ -1538,7 +1538,7 @@ Phép tính 1 + 1 = 2 là một phép tính sơ khai trong lịch sử phát tri
 \end{document}
 ```
 
-người dùng có thể dễ dàng nhập trực tiếp toán tử (+, -), quan hệ (? dấu =, < > trong toán học được gọi thống nhất là gì nhỉ) và các số thực cơ bản (như 1, -1 ) vào trong phần soạn thảo văn LaTeX. 
+người dùng có thể dễ dàng nhập trực tiếp toán tử (+, -), quan hệ (? dấu =, < > trong toán học được gọi thống nhất là gì nhỉ) và các số tự nhiên cơ bản (1, 2) vào trong phần soạn thảo văn LaTeX. 
 
 (? Ảnh các nhà toán học Peano, Russell, Whitehead)
 
@@ -1566,31 +1566,31 @@ khoảng cách
 10 m 
 ```
 
-biến 
+biến x, y, z, ..vv.., ẩn số a, b, ...vv... là các chữ cái thông thường
 
 ```latex
 y = ax + b
 ```
 
-Tập hợp các kí hiệu toán tử ... (? gồm gì nữa) có thể được gõ trực tiếp trên bàn phím, người dùng có thể xem lại bài . . . (? bài học nào trong đây)
+Tập hợp các kí hiệu toán tử ... (? gồm gì nữa) có thể được gõ trực tiếp trên bàn phím, người dùng có thể xem lại bài . . . (? bài học nào trong đây) 
 
-Tuy vậy, để người dùng có thể viết toán học ở mức độ phức tạp hơn có các [kí hiệu toán học, chữ cái Hy Lạp] . . .vv. . . thì không thể  nhập được trực tiếp trên bàn phím, chẳng hạn như ví dụ sau 
+Tuy vậy, để người dùng có thể viết toán học ở mức độ phức tạp hơn có các [kí hiệu toán học, chữ cái Hy Lạp] . . .vv. . . thì không thể nhập được trực tiếp trên bàn phím, chẳng hạn như ví dụ sau 
 
 ```latex
-Phương trình toán học từ nguyên lý bất định Heisenberg trong cơ học lượng tử . . . 
+Phương trình toán học từ nguyên lý bất định Heisenberg trong cơ học lượng tử . . . (? trình bày tiếp)
 
 \Delta x \cdot \Delta p \ge \frac{\hbar}{2} 
 ```
 
-So với 1 + 1 = 2, 99%, 70kg, 5 cm/s, 10 m trên, việc viết trực tiếp [toán tử]() nhân ($\cdot$), [kí hiệu Hy Lạp]() $\Delta$, [quan hệ so sánh]() $\geq$, [phân số]()  $\frac{\hbar}{2}$  từ phương trình nguyên lý bất định của Heisenberg vào soạn thảo LaTeX, khi xuất sang trang tài liệu, liền hệ thống sẽ lập tức báo lỗi `! Missing $ inserted`. 
+So với 1 + 1 = 2, 99%, 70kg, 5 cm/s, 10 m trên, việc người dùng viết trực tiếp [toán tử]() nhân ($\cdot$), [kí hiệu Hy Lạp]() $\Delta$, [quan hệ so sánh]() $\geq$, [phân số]()  $\frac{\hbar}{2}$  từ phương trình nguyên lý bất định của Heisenberg vào soạn thảo LaTeX, khi xuất sang trang tài liệu, hệ thống sẽ lập tức báo lỗi `! Missing $ inserted`. 
 
 (? Ảnh báo lỗi) 
 
-Hơn nữa, phương trình đó không được căn ở một dòng riêng biệt như bài báo . . . (? bài báo nào)
+Hơn nữa, phương trình đó không được căn ở một dòng riêng biệt như bài báo . . . (? bài báo nào) 
 
 (https://ntrs.nasa.gov/citations/19840008978)
 
-Từ hai điều cơ bản trên, người dùng có thể thấy rằng, để viết được một hay hai nhiều (hệ) phương trình toán học phức tạp (? lặp từ quá nhỉ), chúng cần được đặt vào một môi trường, lệnh riêng biệt khác, nhằm phân tách việc đâu là văn bản chữ thông thường (? đúng ko nhỉ ?), đâu là văn bản toán học, để hệ thống có thể dễ dàng phân loại, xác nhận . . . (? đúng ko nhỉ ?), giúp hiển thị chính xác các kí hiệu mà người dùng mong muốn trên trang tài liệu, khi xuất ra từ phần soạn thảo LaTeX. 
+Từ hai điều cơ bản trên, người dùng có thể thấy rằng, để viết được một hay hai nhiều (hệ) phương trình toán học phức tạp (? lặp từ quá nhỉ), chúng cần được đặt vào một môi trường, lệnh riêng biệt khác, để hệ thống có thể dễ dàng phân loại, xác nhận . . . (? đúng ko nhỉ ?) phân tách việc đâu là văn bản chữ thông thường, đâu là văn bản toán học, , giúp hiển thị chính xác các kí hiệu, chữ cái toán học mà người dùng mong muốn xuất hiện trên trang tài liệu, khi xuất ra từ phần soạn thảo LaTeX. 
 
 ---
 
@@ -1647,8 +1647,9 @@ hay cũng thể là bằng môi trường `math`
 % --- Cấu hình ngôn ngữ tiếng Việt ---
 \usepackage[utf8]{vietnam}
 \begin{document}
+Phương trình định lý Pythagoras: 
 \begin{math} 
-Phương trình định lý Pythagoras: x^2 + y^2 = z^2
+x^2 + y^2 = z^2
 \end{math}
 \end{document}
 ```
@@ -1657,17 +1658,12 @@ mà kết quả cho ra được đều sẽ là giống nhau:
 
 Phương trình định lý Pythagoras:  $x^2 + y^2 =z^2$ 
 
-<div align="center">
-<img src="./images/Pythagoras.jpg" alt="Pythagoras">
-<p>Triết gia và nhà toán học người Hy Lạp cổ đại xứ Samos Pythagoras</p>
-</div>
-
 Việc lựa chọn một trong ba cách trên để viết **inline math** tùy thuộc vào sở thích, thói quen cá nhân của người dùng.  
 
 > [!WARNING]  
 > Nếu như người dùng không viết các dấu gạch dưới `_`, dấu mũ `^` và các [kí hiệu, chữ cái toán học]() khác vào một trong ba cách viết toán học ở chế độ **inline math** trên, thì hệ thống sẽ báo lỗi `! Missing $ inserted.`
 
-Người dùng có thể thấy ở đoạn mã dưới đây, các dấu mũ `^` khi không được viết vào trong chế độ **inline math** ở phần soạn thảo LaTeX 
+Người dùng có thể thấy ở đoạn mã dưới đây, các dấu mũ `^` của phương trình khi không được viết vào trong chế độ **inline math** ở phần soạn thảo LaTeX 
 
 ```latex
 \documentclass{article}
@@ -1682,7 +1678,12 @@ khi xuất sang trang tài liệu, lập tức hệ thống sẽ tự động b�
 
 (? Ảnh báo lỗi đoạn mã trên)
 
-Chú ý trên cũng được áp dụng tương tự đối với việc người dùng viết toán học ở chế độ [display math]()  ngay sau đây.
+Chú ý trên cũng được áp dụng tương tự đối với việc người dùng viết toán học ở chế độ [display math]().
+
+<div align="center">
+<img src="./images/Pythagoras.jpg" alt="Pythagoras">
+<p>Triết gia và nhà toán học người Hy Lạp cổ đại xứ Samos Pythagoras</p>
+</div>
 
 ---
 
@@ -1702,9 +1703,9 @@ Chú ý trên cũng được áp dụng tương tự đối với việc ngườ
 
 Tương tự như **inline math**, tùy thuộc vào sở thích, thói quen cá nhân của người dùng để có thể chọn một trong ba cách trên để viết toán học ở chế độ **display math**, mà vẫn đảm bảo kết quả cho ra được vẫn là giống nhau. (? Quan điểm này cũng sẽ được thay đổi chút ít khi học lập trình [marco]())
 
-Ví dụ về việc viết toán học ở chế độ `display math` với phương trình logarithm của một tích là tổng của logarit của các thừa số: 
+Ví dụ về việc viết toán học ở chế độ `display math` với phương trình logarithm của một tích là tổng của logarit của các thừa số. Trong đó:
 
-+ Với phương trình được viết bên trong `$$...$$`
++ Phương trình được viết bên trong `$$...$$`
 
 ```latex
 \documentclass{article}
@@ -1713,7 +1714,7 @@ $$\log_b{xy} = \log_b{x} + \log_b{y}$$
 \end{document}
 ```
 
-+  Với phương trình được viết bên trong `\[...\]`
++  Phương trình được viết bên trong `\[...\]`
 
 ```latex
 \documentclass{article} % Sử dụng cặp dấu \[\] để viết phương trình logarithm
@@ -1729,7 +1730,7 @@ $$\log_b{xy} = \log_b{x} + \log_b{y}$$
 \begin{document}
 \begin{displaymath} % Sử dụng môi trường displaymath để viết phương trình logarithm
 \log_b{xy} = \log_b{x} + \log_b{y}\
-\end{displaymath}s
+\end{displaymath}
 \end{document}
 ```
 
@@ -1747,7 +1748,7 @@ Nhà toán học người Scotland John Napier
 
 </div>
 
-. . .  
+Để viết các phương trình có số được đánh ở bên cạnh theo thứ tự tăng dần, nhằm về sau giúp người dùng [tham chiếu chéo phương trình] , người dùng sử môi trường `equation`
 
 ```latex
 \begin{equation} 
@@ -1755,7 +1756,8 @@ Nhà toán học người Scotland John Napier
 \end{equation}
 ```
 
-Khác với ba cách ở trên khi người dùng viết toán học ở chế độ `display math`, nếu như người dùng thay các cặp dấu, môi trường `displaymath` ở ví dụ . . . trên bằng môi trường `equation`, thì người dùng có thể thấy rằng phần toán học được đặt bên trong môi trường đó sẽ được LaTeX tự động đánh thêm một số thứ tự từ 1 đến số lượng cuối cùng . . .(? số lượng cuối cùng gì) có trong phần soạn thảo và mặc định số đó được nằm ở bên phải phần toán học đó có trong trang tài liệu.   
+Để dễ hình dung môi trường `equation`, nếu như người dùng thay các cặp dấu, môi trường `displaymath` ở ví dụ . . . bằng môi trường `equation`, thì người dùng có thể thấy rằng phương trình logarithm được đặt bên trong môi trường đó sẽ được LaTeX tự động đánh thêm một số thứ tự từ (1) đến số lượng cuối cùng . . . (? số lượng cuối cùng gì) có trong phần soạn thảo và mặc định số đó được nằm ở bên phải phần toán học đó có trong trang tài liệu.  
+
 ```latex
 \documentclass{article}
 \begin{document}
@@ -1773,7 +1775,7 @@ $$
 \end{equation}
 $$
 
-Trong một số tài liệu toán học, đôi khi người dùng cũng thế thấy rằng số thứ tự được đánh bên cạnh phần toán học đó nằm ở bên trái thay vì bên phải như ở hình dưới đây
+Trong một số tài liệu toán học, đôi khi người dùng cũng thế thấy rằng số thứ tự được đánh bên cạnh phần toán học đó nằm ở bên trái thay vì bên phải mặc định như ở hình dưới đây 
 
 <div align="center"> 
 
@@ -1791,7 +1793,7 @@ Nhà toán học Lary Guth, nhà toán học Vương Hồng và nhà toán học
 
 </div>
 
-Để chuyển số thứ tự đó nằm từ bên phải như mặc định sang bên trái như hình . . ., người dùng chỉ cần thêm options 
+Để chuyển số thứ tự đó nằm từ bên phải sang bên trái như hình . . ., người dùng chỉ cần thêm `options` 
 
 ```latex
 leqno
@@ -1802,28 +1804,37 @@ leqno
 ```latex
 \documentclass[leqno]{article} % 
 \begin{document}
-\begin{equation} % Sử dụng môi trường equation để đánh số thứ tự ở phương trình logarit
+\begin{equation} % 
 \log_b{xy} = \log_b{x} + \log_b{y}
 \end{equation}
 \end{document}
 ```
 
+Kết quả cho ra được lúc này sẽ là 
+
+$$
+\log_b{xy} = \log_b{x} + \log_b{y}
+$$
+
 Nếu như người dùng không muốn xuất hiện số thứ tự bên cạnh phương trình toán học khi viết chúng bằng môi trường `equation`, thì người dùng có thể quay lại ba cách đầu tiên mà người viết đã hướng dẫn ban đầu khi viết toán học ở chế độ [`display math`](), hoặc người dùng cũng có thể sử dụng một cách mới sau.  
 
-Trước tiên người dùng cần phải khai báo package sau
+Trước tiên người dùng nhớ cần phải khai báo package
 
 ```latex
 \usepackage{amsmath}
 ```
 
+ở phần . . . (? vị trí đặt lệnh `amsmath`)
+
 Package `amsmath` còn cung cấp cho người dùng một số tùy chọn để sắp xếp và hiển thị bố cục phương trình toán học sao cho phù hợp với tài liệu người dùng, ngay cả khi các phương trình rất dài hoặc nếu người dùng phải đưa nhiều phương trình vào cùng một dòng, để tránh việc viết phương trình có thể thiếu tính linh hoạt, dẫn đến việc chồng chéo hoặc thậm chí cắt bớt một phần phương trình khi nó quá dài [?].  
 
 . . . (*viết sau*) https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath
 
-Tiếp đến, người dùng chỉ cần thêm dấu `*` vào bên trong dấu ngoặc nhọn `{}` của lệnh môi trường `equation` là phương trình logarit ở ví dụ . . . sẽ không còn xuất hiện số thứ tự bên cạnh ở trong trang tài liệu nữa:  
+Tiếp đến, người dùng chỉ cần thêm dấu `*` vào bên trong dấu ngoặc nhọn `{}` của lệnh môi trường `equation` là phương trình logarithm ở ví dụ . . . sẽ không còn xuất hiện số thứ tự bên cạnh ở trong trang tài liệu nữa:  
 
 ```latex
 \documentclass{article}
+\usepackage{amsmath}
 \begin{document}
 \begin{equation*} % Sử dụng môi trường equation* để viết phương trình logarit
 \log_b{xy} = \log_b{x} + \log_b{y}
@@ -1837,27 +1848,30 @@ $$
 \log_b{xy} = \log_b{x} + \log_b{y}
 $$
 
-Việc thêm dấu `*` như trên cũng được áp dụng tương tự đối với các môi trường khác như môi trường `aligned` (xem ở bài học . . .), . . . (viết tiếp)  
+Việc thêm dấu `*` vào trong dấu ngoặc nhọn của môi trường, cũng được áp dụng tương tự đối với các môi trường khác như môi trường `aligned` (xem ở bài học . . .), . . . (viết tiếp)  
 
 **(?)** Điểm khác biệt của môi trường `equation*` và `displaymath` là gì ? Nên sử dụng chúng trong trường hợp nào ? (xem qua issues đây https://github.com/Namlete102/LaTeX-Library-project/issues/1) 
 
 > [!WARNING]
 > Khi người dùng viết toán học dù ở chế độ `inline math` hay `display math`, người dùng không được phép để các biểu thức,  toán tử, kí hiệu, chữ cái toán học có các khoảng trống ở mỗi dòng. Nếu không, thì hệ thống sẽ báo lỗi  `Missing $ inserted`
 
-Để dễ hình dung lưu ý trên, người dùng hãy xem qua ví dụ sau đây với phương trình Clapeyron-Mendeleev thiết lập mối liên hệ giữa các đại lượng áp suất, thể tích, và nhiệt độ của một khối khí lý tưởng: 
+. . . . 
 
 ```latex
 \documentclass{article}
 \begin{document}
 \[
-P \cdot V 
+\log_b{xy} 
 
-= n \cdot T \cdot R
+= 
+\log_b{x} + \log_b{y}
 \]
 \end{document}
 ```
 
-Có thể thấy ở đoạn mã trên, nếu người dùng vô tình để khoảng trống giữa các dòng biểu thức $P \cdot V$  và $= n \cdot T \cdot R$, thì hệ thống sẽ lập tức báo lỗi `Missing $ inserted`:  
+Có thể thấy ở đoạn mã trên, nếu người dùng vô tình để khoảng trống giữa các dòng biểu thức $\log_b{xy}$  và $= \log_b{x} + \log_b{y}$, thì hệ thống sẽ lập tức báo lỗi `Missing $ inserted:  
+
+. . . (? ảnh báo lỗi) 
 
 Ta khắc phục lỗi ở đoạn mã ở ví dụ . . . (? đánh số ví dụ) bằng cách xóa đi khoảng trắng giữa hai biểu thức đó
 
@@ -1865,13 +1879,14 @@ Ta khắc phục lỗi ở đoạn mã ở ví dụ . . . (? đánh số ví d�
 \documentclass{article}
 \begin{document}
 \[
-P \cdot V 
-= n \cdot T \cdot R
+\log_b{xy} 
+= 
+\log_b{x} + \log_b{y}
 \]
 \end{document}
 ```
 
-hoặc thêm [chú thích]() vào  khoảng trống giữa hai biểu thức đó
+hoặc thêm [chú thích]() vào khoảng trống giữa hai biểu thức đó
 
 ```latex
 \documentclass{article}
@@ -1884,15 +1899,15 @@ P \cdot V
 \end{document}
 ```
 
-mà kết quả cho ra được đều sẽ là như sau
+mà kết quả cho ra được đều sẽ là như sau:
 
-$$P \cdot V = n \cdot T \cdot R$$
+$$\log_b{xy} = \log_b{x} + \log_b{y}$$
 
-<div align="center">
+<div align="center"> 
 
-<img src="./images/Clapeyron-Mendeleev.jpg" alt="Clapeyron-Mendeleev">
+<img src="./images/John Napier.jpg" alt="John Napier">
 
-Nhà vật lý người Pháp Émile Clapeyron (Bên trái) và nhà hóa học người Nga Dmitry Mendeleev (Bên phải) (Ảnh lụm được đâu đó trên mạng)
+Nhà toán học người Scotland John Napier
 
 </div>
 
@@ -1926,19 +1941,11 @@ Triết gia, nhà toán học người Đức Gottfried Wilhelm Leibniz
 
 </div>
 
-Người dùng có thể tham khảo thêm ở [danh sách các kí hiệu toán học, chữ cái Hy Lạp](), nếu như người dùng chưa biết hoặc là quên cách ghi các kí hiệu, chữ cái toán học trong lúc thực hành soạn thảo LaTeX. 
+Người dùng có thể tham khảo đầy đủ ở [danh sách các kí hiệu toán học, chữ cái Hy Lạp](), nếu như người dùng chưa biết hoặc là nếu quên cách ghi các kí hiệu, chữ cái toán học đó trong lúc soạn thảo LaTeX. 
 
 Một số yếu tố toán học cần được trình bày bằng các kiểu phông chữ khác chẳng hạn các ký tự/ký hiệu theo một kiểu nhất định, khác nhau khi trình bày toán học. [^14] (?)
 
-Ví dụ, người dùng có thể viết kí hiệu toán học của các tập số theo kiểu chữ đậm bảng đen (?) như tập các số tự nhiên $\mathbb{N}$, tập các số nguyên $\mathbb{Z}$, tập các số thực $\mathbb{R}$, $\dots vv \dots$ 
-
-<div align="center">
-
-<img src="./images/Setnumber.jpg" alt="Hành tím">
-
-Ảnh lụm được ở <a href="https://www.facebook.com/photo.php?fbid=488758739928398&set=pb.100063828282373.-2207520000&type=3">Mathtasy Toán học thú vị</a>
-
-</div>
+Ví dụ . . .: Người dùng có thể viết kí hiệu toán học của các tập số theo kiểu chữ đậm bảng đen (?) như tập các số tự nhiên $\mathbb{N}$, tập các số nguyên $\mathbb{Z}$, tập các số thực $\mathbb{R}$, $\dots vv \dots$ 
 
 Để viết được các kiểu phông chữ khác nhau dành cho kí hiệu toán học, trước tiên người dùng cần phải khai báo package sau: 
 
@@ -1948,7 +1955,7 @@ Ví dụ, người dùng có thể viết kí hiệu toán học của các tậ
 
 Package `amssymb` . . . (? Giới thiệu và giải thích đôi điều gói này)
 
-Để viết được phông chữ các kí hiệu về tập số ở ví dụ trên, người dùng cần để chữ cái thường đó vào lệnh
+Để viết được phông chữ các kí hiệu về tập số ở ví dụ . . . trên, người dùng cần để chữ cái thường được nhập trực tiếp bàn phím đó vào lệnh
 
 ```latex
 \mathbb{}
@@ -1958,13 +1965,40 @@ Với kí hiệu tập số tự nhiên ta viết như sau
 
 ```latex
 \documentclass{article}
+\usepackage[utf8]{vietnam}
 \usepackage{amssymb}
 \begin{document}
-$\mathbb{N}$
+Tập hợp các số tự nhiên được kí hiệu là $\mathbb{N}$
 \end{document}
 ```
 
-Người dùng có thể đọc thêm [các kiểu phông chữ khác nhau dành cho kí hiệu toán học]() đây để tham khảo. 
+Áp dụng tương tự điều này lại với các tập số khác. 
+
+```latex
+\documentclass{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amssymb}
+\begin{document}
+Tập hợp các số mà người dùng từng được học ở phổ thông, bao gồm: 
+\begin{itemize}
+	\item Tập hợp các số nguyên được kí hiệu là $\mathbb{Z}$
+	\item Tập hợp các số hữu tỉ được kí hiệu là $\mathbb{Q}$
+	\item Tập hợp các số thực được kí hiệu là $\mathbb{R}$
+	\item Tập hợp các số phức được kí hiệu là $\mathbb{C}$
+\end{itemize} 
+Với . . . (? giới thiệu thêm các tập số khác như H, O)
+\end{document}
+```
+
+<div align="center">
+
+<img src="./images/Setnumber.jpg" alt="Hành tím">
+
+Ảnh lụm được ở <a href="https://www.facebook.com/photo.php?fbid=488758739928398&set=pb.100063828282373.-2207520000&type=3">Mathtasy Toán học thú vị</a>
+
+</div>
+
+Ví dụ . . . chỉ là một phần nhỏ trong một số [kiểu phông chữ khác nhau dành cho kí hiệu toán học]() mà người dùng nên tham khảo thêm.
 
 https://www.overleaf.com/learn/latex/Mathematical_fonts 
 
@@ -1973,71 +2007,56 @@ https://www.overleaf.com/learn/latex/Mathematical_fonts
 
 Dấu ngoặc rất phổ biến trong việc bao quát các biểu thức, toán tử trong toán học. Một số dấu ngoặc thông dụng được sử dụng, đi kèm với lệnh của chúng trong LaTeX được trình bày ở bảng dưới đây: 
 
-|      Ký hiệu      | Tên tiếng Việt                      | Tên tiếng Anh                     | Lệnh LaTeX                                             |
-| :---------------: | :---------------------------------- | :-------------------------------- | :----------------------------------------------------- |
-|       $( )$       | Dấu ngoặc đơn                       | Parentheses (or Round brackets)   | `(...)` (nhập dấu ngoặc tròn trên bàn phím)            |
-|       $[ ]$       | Dấu ngoặc vuông                     | Brackets (or Square brackets)     | `[...]` (nhập dấu ngoặc vuông trên bàn phím)           |
-|      $\{ \}$      | Dấu ngoặc nhọn                      | Braces (or Curly brackets)        | `\{...\}` (nhập dấu ngoặc nhọn trên bàn phím)          |
-| $\langle \rangle$ | Dấu ngoặc nhọn góc / Ngoặc nhọn dẹt | Angle brackets                    | `\langle ... \rangle`                                  |
-|   $\vert \vert$   | Dấu trị tuyệt đối / Dấu gạch đứng   | Vertical bars (or Absolute value) | `\vert...\vert` hoặc `\|...\|` (nhập \| trên bàn phím) |
-|   $\Vert \Vert$   | Dấu chuẩn (Toán học) / Dấu gạch đôi | Double vertical bars (or Norm)    | `\Vert...\Vert` hoặc `\|\| ...\|\|`                    |
-| $\lfloor \rfloor$ | Dấu hàm sàn / Ngoặc dưới            | Floor brackets                    | `\lfloor...\rfloor`                                    |
-|  $\lceil \rceil$  | Dấu hàm trần / Ngoặc trên           | Ceiling brackets                  | `\lceil...\rceil`                                      |
-|        ...        |                                     |                                   |                                                        |
+|       Ký hiệu        | Tên tiếng Việt                      | Tên tiếng Anh                     | Lệnh LaTeX                                             |
+| :------------------: | :---------------------------------- | :-------------------------------- | :----------------------------------------------------- |
+|       $(...)$        | Dấu ngoặc đơn                       | Parentheses (or Round brackets)   | `(...)` (nhập dấu ngoặc tròn trên bàn phím)            |
+|       $[...]$        | Dấu ngoặc vuông                     | Brackets (or Square brackets)     | `[...]` (nhập dấu ngoặc vuông trên bàn phím)           |
+|      $\{... \}$      | Dấu ngoặc nhọn                      | Braces (or Curly brackets)        | `\{...\}` (nhập dấu ngoặc nhọn trên bàn phím)          |
+| $\langle... \rangle$ | Dấu ngoặc nhọn góc / Ngoặc nhọn dẹt | Angle brackets                    | `\langle ... \rangle`                                  |
+|   $\vert... \vert$   | Dấu trị tuyệt đối / Dấu gạch đứng   | Vertical bars (or Absolute value) | `\vert...\vert` hoặc `\|...\|` (nhập \| trên bàn phím) |
+|   $\Vert... \Vert$   | Dấu chuẩn (Toán học) / Dấu gạch đôi | Double vertical bars (or Norm)    | `\Vert...\Vert` hoặc `\|\| ...\|\|`                    |
+| $\lfloor... \rfloor$ | Dấu hàm sàn / Ngoặc dưới            | Floor brackets                    | `\lfloor...\rfloor`                                    |
+|  $\lceil... \rceil$  | Dấu hàm trần / Ngoặc trên           | Ceiling brackets                  | `\lceil...\rceil`                                      |
+|         ...          |                                     |                                   |                                                        |
 
 Để viết toán học ở chế độ `inline math` hoặc `display math` được bao quát bởi dấu ngoặc, người dùng chỉ cần đặt phần toán học đó vào bên trong các dấu ngoặc ở bảng trên một cách bình thường. 
 
-Ví dụ về phần toán học được đặt trong dấu ngoặc tròn với công thức De Moivre dùng để nâng một số phức dưới dạng lượng giác lên lũy thừa bậc $n$ một cách nhanh chóng.
+Ví dụ về dấu ngoặc tròn với định lý Taylor[^23] . . . (? viết tiếp phần định lý Taylor này)
 
 ```latex
 \documentclass{article}
 \begin{document}
-\[( \cos \theta + i\sin \theta )^n = \cos n \theta + i\sin n \theta\]
-\end{document}
-```
-
-Kết quả cho ra được sẽ là
-
-$$
-( \cos \theta + i\sin \theta )^n = \cos n \theta + i\sin n \theta 
-$$
-
-<div align="center">
-
-<img src="./images/Abraham de Moivre.jpg" alt="Moivre">
-
-Nhà toán học người Pháp Abraham de Moivre
-
-</div>
-
-Bên cạnh đó, người dùng cần lưu tâm đến một số lưu ý quan trọng sau đây khi sử dụng dấu ngoặc trong LaTeX. 
-#### 1. Quy tắc tự động thay đổi kích thước (Auto-resizing)
-
-Nếu công thức bên trong dấu ngoặc có chứa phân số ($\frac{a}{b}$), dấu tích phân ($\int$) hoặc số mũ cao ($a^x$) , các dấu ngoặc thông thường sẽ bị quá nhỏ và mất cân đối. Để dấu ngoặc tự động co giãn và bao quát trọn vẹn phần công thức bên trong, người dùng hãy thêm lệnh `\left` và `\right` vào ngay trước dấu ngoặc tương ứng.
-
-Ví dụ về phương trình Friedmann thứ nhất . . . : 
-
-```latex
-\documentclass{article}
-\usepackage{amsmath}
-\begin{document}
-\[ 
-\text{H}^2 = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+\[
+f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f^{''}(a)}{2!}(x-a)^2 + \frac{f^{'''}(a)}{3!}(x-a)^3 + \dots = \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n
 \]
 \end{document}
 ```
 
-Kết quả cho ra được sẽ là: 
+Kết quả cho ra được sẽ là 
 
 $$
-\text{H}^2 = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f^{''}(a)}{2!}(x-a)^2 + \frac{f^{'''}(a)}{3!}(x-a)^3 + \dots = \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n
 $$
 
-Nếu như người dùng không thêm lệnh `\left` và `\right` vào mỗi bên trước dấu ngoặc như ở ví dụ trên 
+<div align="center">
+
+<img src="./images/Brooks Taylor.jpg" alt="Taylor">
+
+Nhà toán học người Anh Brooks Taylor
+
+</div>
+
+Bên cạnh đó, người dùng cần lưu tâm đến một số lưu ý quan trọng sau đây khi sử dụng dấu ngoặc trong LaTeX.  
+
+---
+
+#### 1. Quy tắc tự động thay đổi kích thước (Auto-resizing)
+
+Nếu công thức bên trong dấu ngoặc có chứa phân số ($\frac{a}{b}$), dấu tích phân ($\int$) hoặc số mũ ($a^x$)  . . . (?như thế nào đó so với dấu các dấu ngoặc), các dấu ngoặc thông thường sẽ bị quá nhỏ và mất cân đối như ở ví dụ về phương trình Friedmann thứ nhất . . .  : 
 
 ```latex
 \documentclass{article}
-\usepackage{amsmath}
+\usepackage{amsmath} 
 \begin{document}
 % . . . 
 \[ 
@@ -2054,6 +2073,63 @@ $$
 
 Người dùng có thể thấy, dấu ngoặc tròn `()` ở mỗi bên phân số $\dfrac{\dot{a}}{a}$ không được tự điều chỉnh kích thước sao cho phù hợp với kích thước của phân số đó. 
 
+Để dấu ngoặc tự động co giãn và bao quát trọn vẹn phần công thức bên trong, người dùng hãy thêm lệnh `\left` và `\right` vào ngay trước dấu ngoặc tương ứng.
+
+Quay lại ví dụ, ta để lệnh `\left` vào trước dấu `(` và lệnh `\right` vào trước dấu `)`: 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[ 
+\text{H}^2 = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+\]
+\end{document}
+```
+
+Kết quả cho ra được lúc này sẽ là: 
+
+$$
+\text{H}^2 = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+$$
+
+>[!WARNING]
+>Nếu như người dùng cố ý thay đổi vị trí xuất hiện hai lệnh `\left` và `\right`, nghĩa là lệnh `\right` vào trước dấu `(` và lệnh `\right` vào trước dấu `)` ở ví dụ . . ., thì hệ thống sẽ báo lỗi **Missing \right inserted**
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[ 
+\text{H}^2 = \right( \frac{\dot{a}}{a} \left)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+\]
+\end{document}
+```
+
+(? . . . Ảnh báo lỗi) 
+
+>[!WARNING]
+>Nếu như người dùng viết thiếu một trong hai lệnh `\left` hoặc `\right`, thì hệ thống cũng sẽ báo lỗi **Missing \right. inserted.**
+
+Viết thiếu lệnh `\right` vào trước dấu `)`: 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[ 
+\text{H}^2 = \left( \frac{\dot{a}}{a})^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+\]
+\end{document}
+```
+
+hoặc viết thiếu lệnh `\left` vào trước dấu `)`: 
+
+(? . . . Ảnh báo lỗi)
+
+Hai chú ý trên cũng được áp dụng tương tự với các dấu ngoặc khác. 
+
+
 <div align="center">
 
 <img src="./images/Friedmann.jpg" alt="Friedmann">
@@ -2061,6 +2137,8 @@ Người dùng có thể thấy, dấu ngoặc tròn `()` ở mỗi bên phân s
 Nhà vũ trụ học và nhà toán học người Nga Alexander Friedmann
 
 </div>
+
+---
 
 #### 2. Nguyên tắc hiển thị dấu ngoặc nhọn `\{ \}`
 
@@ -2092,9 +2170,13 @@ Nhà toán học và triết gia người Pháp René Descartes
 
 </div>
 
+---
+
 #### 3. Cú pháp dấu ngoặc một bên 
 
-Trong nhiều trường hợp viết toán học như biểu diễn hệ phương trình, điều kiện xét hàm số,  $\dots vv \dots$ , người dùng sẽ cần một dấu ngoặc lớn mở ở bên trái nhưng lại không có ở bên phải. Hoặc ngược lại là người dùng sẽ cần một dấu ngoặc lớn mở ở bên phải nhưng lại không có ở bên trái như khi gom nhiều điều kiện giả thiết độc lập trong chứng minh hình học/đại số để suy ra một kết luận chung, hoặc khi định nghĩa hàm số phân nhánh theo chiều ngược $\dots vv \dots$
+Trong nhiều trường hợp viết toán học như biểu diễn hệ phương trình, điều kiện xét hàm số,  $\dots vv \dots$ , người dùng sẽ cần một dấu ngoặc lớn mở ở bên trái nhưng lại không có ở bên phải. 
+
+Hoặc ngược lại là người dùng sẽ cần một dấu ngoặc lớn mở ở bên phải nhưng lại không có ở bên trái như khi gom nhiều điều kiện giả thiết độc lập trong chứng minh hình học/đại số để suy ra một kết luận chung, hoặc khi định nghĩa hàm số phân nhánh theo chiều ngược $\dots vv \dots$
 
 Để xử lý cấu trúc này, người dùng vẫn sẽ dùng cặp lệnh `\left` và `\right`, nhưng ở phía không cần hiển thị dấu ngoặc nhọn, người dùng hãy thay ký hiệu dấu ngoặc bằng một dấu chấm `.` 
 
@@ -2114,7 +2196,6 @@ Trường hợp 2 với việc hiển thị dấu ngoặc lớn mở ở bên ph
 \right \}
 ```
 
-
 Và bên trong lệnh của cả hai trường hợp đó, người dùng cần thêm môi trường `matrix` sau
 
 ```latex
@@ -2133,7 +2214,7 @@ Ví dụ . . .  với dãy số Fibonacci được xác định bởi hệ thứ
     \begin{matrix}
 		u_1 = 1 \\ 
 		u_2 = 1 \\ 
-		u_{n+1} = u_n + u_{n-1}, \forall n \geq 2  
+		u_{n} = u_{n-1} + u_{n-2}, \ \forall n \geq 3  
     \end{matrix}
 \right.
 \]
@@ -2291,7 +2372,7 @@ $$
 R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R + g_{\mu\nu}\Lambda = \frac{8\pi G}{c^4}T_{\mu\nu} 
 $$
 
-Người dùng có thể thấy, để viết được bao quát chỉ số dưới $\mu\nu$, chúng cần được viết vào trong bởi dấu ngoặc nhọn `{}`. 
+Người dùng có thể thấy, để viết được bao quát chỉ số dưới $\mu\nu$, chúng cần được viết đấy đủ vào trong dấu ngoặc nhọn `{}`. 
 
 <div align="center">
 
@@ -2300,13 +2381,6 @@ Người dùng có thể thấy, để viết được bao quát chỉ số dư�
 Nhà vật lý người Đức Albert Einstein
 
 </div>
-
----
-
-### Căn chỉnh phương trình:  
-
-Gợi ý viết ví dụ: 
-+ Thuật toán Euclid
 
 ---
 
@@ -2333,32 +2407,9 @@ vào ngay bên cạnh . . . (? bên cạnh gì)
 
 Với các [toán tử quan hệ]()  
 
-Ví dụ về khoảng cách trong chế độ toán học với các biểu thức, toán tử trong định lý Taylor[^11] (? Viết tiếp một tí về định lý Taylor)
+Ví dụ về khoảng cách trong chế độ toán học với 
 
-```latex
-\documentclass{article}
-
-\begin{document}
-
-\[
-f(x) \ = \ f(a) \ + \ \frac{f'(a)}{1!}(x-a) \ + \ \frac{f^{''}(a)}{2!}(x-a)^2 \ + \ \frac{f^{'''}(a)}{3!}(x-a)^3 \ + \ \dots \  = \ \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n 
-\]
-
-\end{document}
-```
-
-$$
-f(x) \ = \ f(a) \ + \ \frac{f'(a)}{1!}(x-a) \ + \ \frac{f^{''}(a)}{2!}(x-a)^2 \ + \ \frac{f^{'''}(a)}{3!}(x-a)^3 \ + \ \dots \  = \ \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n
-$$
-
-
-<div align="center">
-
-<img src="./images/Brooks Taylor.jpg" alt="Taylor">
-
-Nhà toán học người Anh Brooks Taylor
-
-</div>
+. . .
 
 ---
 
@@ -2404,7 +2455,7 @@ $$
 \text{Văn bản trong toán học}
 $$
 
-Một số hàm trong toán học chẳng hạn như hàm lượng giác, . . vv . . được khuyến nghị . . . (? bởi ai) soạn thảo ở dạng phông chữ thẳng đứng . . . (viết sau) 
+Một số hàm trong toán học chẳng hạn như hàm lượng giác, . . vv . . được khuyến nghị . . . (? bởi ai, điều gì) soạn thảo ở dạng phông chữ thẳng đứng . . . (viết sau) 
 
 Chẳng hạn, khi viết công thức . . . , nếu như người dùng chỉ viết hàm $\cos$ thông thường
 
@@ -2443,15 +2494,15 @@ Xem đầy đủ các hàm được LaTeX . . . tại [danh sách các kí hiệ
 
 ### Màu trong toán học[^15] 
 
-(vì sao đôi khi ta cần màu trong công thức toán học ?) 
+(? vì sao đôi khi ta cần màu trong công thức toán học) 
 
-Để viết các kí hiệu toán học có màu, người dùng có thể sử dụng lệnh `\textcolor` ở bài học [màu chữ]() hoặc cũng có thể thay thế lệnh đó bằng lệnh sau
+Để viết các kí hiệu toán học có màu, người dùng có thể sử dụng lệnh `\textcolor` ở bài học [màu chữ]() hoặc cũng có thể thay thế lệnh đó bằng lệnh mới sau
 
 ```latex
 \mathcolor{color}{text}
 ```
 
-Tương tự như lệnh `textcolor`, người dùng có thể sử dụng các màu khác nhau ngoài 19 màu cơ bản cũng đã nêu ở bài học [màu chữ]() cho lệnh `mathcolor`  
+Tương tự như lệnh `textcolor`, người dùng có thể sử dụng các màu mặc định hoặc khác ngoài 19 màu cơ bản như đã nêu ở bài học [màu chữ]() cho lệnh `mathcolor`  
 
 Ví dụ . . .  với công thức Euler về mối liên hệ giữa đỉnh, cạnh, mặt của khối đa diện lồi. Cụ thể, với mọi khối đa diện lồi nào, số đỉnh trừ đi số cạnh cộng với số mặt luôn cho ra kết quả là bằng 2: [^16]
 
@@ -2486,6 +2537,92 @@ $$
 Nhà toán học người Thụy Sĩ Leonhard Euler
 
 </div>
+
+---
+
+### Viết phương trình dài: 
+
++ Sử dụng môi trường multline 
+
+```latex
+\begin{multline*}
+p(x) = 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3\\ 
+- 12x^2y^4 - 12xy^5 + 2y^6 - a^3b^3
+\end{multline*}
+```
+
+$$
+\begin{multline*}
+p(x) = 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3\\ 
+- 12x^2y^4 - 12xy^5 + 2y^6 - a^3b^3
+\end{multline*}
+$$
+
+
+---
+
+### Căn chỉnh phương trình:  
+
+Gợi ý viết ví dụ: 
++ Thuật toán Euclid để tìm UCLN 
++ Môi trường split giúp khai triển chẳng hạn như ví dụ ở overleaf đây
+
+```latex
+\begin{split}
+A & = \frac{\pi r^2}{2} \\
+ & = \frac{1}{2} \pi r^2
+\end{split}
+```
+
+$$
+\begin{split}
+A & = \frac{\pi r^2}{2} \\
+ & = \frac{1}{2} \pi r^2
+\end{split}
+$$
++ Môi trường gather giúp khai triển các phương trình liên tiếp, căn giữa mà không cần quan tâm đến bất kỳ sự căn chỉnh nào 
+
+```latex
+\begin{gather*} 
+2x - 5y =  8 \\ 
+3x^2 + 9y =  3a + c
+\end{gather*}
+```
+
+$$
+\begin{gather*} 
+2x - 5y =  8 \\ 
+3x^2 + 9y =  3a + c
+\end{gather*}
+$$
+
+
+--- 
+
+### Viết nhiều phương trình toán học cùng lúc (? đặt lại tên tiêu đề)
+
+Với việc viết một phương trình toán học, người dùng có thể sử dụng các lệnh, môi trường mà người viết đã trình bày ở hai bài học . . . một cách dễ dàng.  
+
+Tuy vậy, trong trường hợp người dùng cần viết nhiều hơn nhiều phương trình cùng một lúc, chẳng hạn như phương trình Maxwell được trích từ tài liệu học MIT sau https://web.mit.edu/8.02t/www/802TEAL3D/visualizations/coursenotes/modules/guide13.pdf . . (? lấy mẫu ví dụ nào đó ở đâu đó để giúp người dùng hình dung ban đầu) 
+
+Để làm được điều này, trước tiên người dùng nhớ cần phải khai báo package `amsmath`.  Nếu như người dùng không khai báo package đó, thì hệ thống sẽ báo lỗi . . .  
+
+Sau đó, người dùng chỉ cần đặt các lệnh, môi trường . . . (? đặt gì) vào trong môi trường `subequations` 
+
+```latex
+\begin{subequations}
+. . .
+\end{subequations}
+```
+
+Người dùng có thể để cũng như chọn tùy ý bao nhiêu . . . (? bao nhiêu về cái gì) vào trong môi trường `subequation` đó.   
+
+Ví dụ: (với phương trình Maxwell)
+
+```latex
+. . .  
+```
+
 
 ---
 
@@ -3502,7 +3639,7 @@ $z\cdot z = z^2 = [r \cdot (\cos(\phi) + i\sin(\phi))]^2 = r^2 \cdot (\cos(\phi)
 
 $\underbrace{z \cdot z \cdot \ldots \cdot z}_{n} = z^n = [r \cdot (\cos(\phi) + i\sin(\phi))]^n = r^n \cdot [\cos(n \phi) + i \sin (n \phi)]$
 
-Công thức này còn được gọi là công thức De Moivre. 
+Công thức này còn được gọi là công thức De Moivre dùng để nâng một số phức dưới dạng lượng giác lên lũy thừa bậc $n$ một cách nhanh chóng.
 
 Để viết được $\underbrace{z \cdot z \dots z}_{n}$ ta sử dụng lệnh: 
 ```latex
@@ -3513,7 +3650,6 @@ trong đó:
 +  `{...}` . . .
 + `{...}` . . .
 
-
 \+ Căn bậc 2 của 2 được kí hiệu là $\sqrt{2}$  
 
 Để viết được căn bậc 2 của một số bất kì ta sử dụng lệnh 
@@ -3521,6 +3657,8 @@ trong đó:
 ```latex
 \sqrt{}
 ```
+
+Bên trong dấu ngoặc nhọn của lệnh `\sqrt` là số . . .(? viết lại)
 
 Viết lại . . . 
 
@@ -3890,8 +4028,6 @@ Như vậy, định lý \ref{thm:0.2} chính là trường hợp tổng quát c�
 
 [^10]: Nguồn tham khảo tử Overleaf: https://www.overleaf.com/learn/latex/Inserting_Images%23Positioning
 
-[^11]: Công thức tham khảo từ: https://mathworld.wolfram.com/TaylorSeries.html 
-
 [^12]: Tham khảo từ bài học Overleaf: https://www.overleaf.com/learn/latex/Spacing_in_math_mode
 
 [^13]: Tham khảo từ bài tạp chí Epsilon: https://epsilonvn.github.io/archives/epsilon_vol01_2015February.pdf
@@ -3913,3 +4049,5 @@ Như vậy, định lý \ref{thm:0.2} chính là trường hợp tổng quát c�
 [^21]: Nguồn tham khảo viết: https://mathworld.wolfram.com/BezoutsTheorem.html
 
 [^22]: Tham khảo và chỉnh sửa từ: https://sg.mirrors.cicku.me/ctan/info/symbols/comprehensive/symbols-a4.pdf
+
+[^23]: Công thức tham khảo từ: https://mathworld.wolfram.com/TaylorSeries.html 
