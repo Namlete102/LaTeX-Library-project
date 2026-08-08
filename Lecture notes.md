@@ -1740,14 +1740,6 @@ $$
 \log_b{xy} = \log_b{x} + \log_b{y}
 $$
 
-<div align="center"> 
-
-<img src="./images/John Napier.jpg" alt="John Napier">
-
-Nhà toán học người Scotland John Napier
-
-</div>
-
 Để viết các phương trình có số được đánh ở bên cạnh theo thứ tự tăng dần, nhằm về sau giúp người dùng [tham chiếu chéo phương trình] , người dùng sử môi trường `equation`
 
 ```latex
@@ -1892,9 +1884,9 @@ hoặc thêm [chú thích]() vào khoảng trống giữa hai biểu thức đó
 \documentclass{article}
 \begin{document}
 \[
-P \cdot V 
+\log_b{xy} 
 % Chú thích này sẽ lấp lại dòng trống
-= n \cdot T \cdot R
+= \log_b{x} + \log_b{y}
 \]
 \end{document}
 ```
@@ -1916,28 +1908,28 @@ Nhà toán học người Scotland John Napier
 
 Để viết kí hiệu, chữ cái toán học ở chế độ là `inline math`, cũng như là `display math`, người dùng chỉ cần viết chúng ở bên trong các các cặp kí hiệu, môi trường mà người viết đã trình bày ở [`inline math`, `display math`](). 
 
-Ví dụ về công thức tính định thức tổng quát của một ma trân vuông $A$ cấp $n$ được chứng minh bởi nhà toán học Leibniz  
+Ví dụ về . . . 
 
 ```latex
 \documentclass{article}
 \begin{document}
 \[
-\mathrm{det}(A) = \sum_{\sigma \in S_n} sgn(\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right )
+(i \gamma^\mu \partial_\mu - m) \psi = 0
 \]
 \end{document}
 ```
 
-Người dùng có thể thấy, trong công thức tính định thức của Leibniz có chữ cái Hy Lạp là $\sigma$ (đọc là sigma) được dùng để quy ước về khái niệm phép thế (?) trong lĩnh vực đại số của toán học. 
+Người dùng có thể thấy, trong phương trình tính . . . của nhà vật lý Paul Dirac, có chữ cái Hy Lạp lần lượt là $\gamma$ (đọc là gamma) và $\mu$ (đọc là mu) được dùng để . . .(? để làm gì trong phương trình đó)
 
 $$
-    \det(A) = \sum_{\sigma \in S_n} sgn(\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right )
+(i \gamma^\mu \partial_\mu - m) \psi = 0
 $$
 
 <div align="center">
 
-<img src="./images/Leibniz.jpg" alt="Leibniz">
+<img src="LaTeX-Library-project-v1.0.0/images/Paul Dirac.jpg" alt="Paul Dirac">
 
-Triết gia, nhà toán học người Đức Gottfried Wilhelm Leibniz
+Nhà vật lý lý thuyết người Anh Paul DIrac
 
 </div>
 
@@ -1998,7 +1990,7 @@ Với . . . (? giới thiệu thêm các tập số khác như H, O)
 
 </div>
 
-Ví dụ . . . chỉ là một phần nhỏ trong một số [kiểu phông chữ khác nhau dành cho kí hiệu toán học]() mà người dùng nên tham khảo thêm.
+Ví dụ . . . chỉ là một phần nhỏ trong một số [kiểu phông chữ khác nhau dành cho kí hiệu toán học]() mà người dùng có thể tham khảo thêm.
 
 https://www.overleaf.com/learn/latex/Mathematical_fonts 
 
@@ -2007,17 +1999,18 @@ https://www.overleaf.com/learn/latex/Mathematical_fonts
 
 Dấu ngoặc rất phổ biến trong việc bao quát các biểu thức, toán tử trong toán học. Một số dấu ngoặc thông dụng được sử dụng, đi kèm với lệnh của chúng trong LaTeX được trình bày ở bảng dưới đây: 
 
-|       Ký hiệu        | Tên tiếng Việt                      | Tên tiếng Anh                     | Lệnh LaTeX                                             |
-| :------------------: | :---------------------------------- | :-------------------------------- | :----------------------------------------------------- |
-|       $(...)$        | Dấu ngoặc đơn                       | Parentheses (or Round brackets)   | `(...)` (nhập dấu ngoặc tròn trên bàn phím)            |
-|       $[...]$        | Dấu ngoặc vuông                     | Brackets (or Square brackets)     | `[...]` (nhập dấu ngoặc vuông trên bàn phím)           |
-|      $\{... \}$      | Dấu ngoặc nhọn                      | Braces (or Curly brackets)        | `\{...\}` (nhập dấu ngoặc nhọn trên bàn phím)          |
-| $\langle... \rangle$ | Dấu ngoặc nhọn góc / Ngoặc nhọn dẹt | Angle brackets                    | `\langle ... \rangle`                                  |
-|   $\vert... \vert$   | Dấu trị tuyệt đối / Dấu gạch đứng   | Vertical bars (or Absolute value) | `\vert...\vert` hoặc `\|...\|` (nhập \| trên bàn phím) |
-|   $\Vert... \Vert$   | Dấu chuẩn (Toán học) / Dấu gạch đôi | Double vertical bars (or Norm)    | `\Vert...\Vert` hoặc `\|\| ...\|\|`                    |
-| $\lfloor... \rfloor$ | Dấu hàm sàn / Ngoặc dưới            | Floor brackets                    | `\lfloor...\rfloor`                                    |
-|  $\lceil... \rceil$  | Dấu hàm trần / Ngoặc trên           | Ceiling brackets                  | `\lceil...\rceil`                                      |
-|         ...          |                                     |                                   |                                                        |
+|         Ký hiệu          | Tên tiếng Việt                      | Tên tiếng Anh                     | Lệnh LaTeX                                             |
+| :----------------------: | :---------------------------------- | :-------------------------------- | :----------------------------------------------------- |
+|         $(...)$          | Dấu ngoặc đơn                       | Parentheses (or Round brackets)   | `(...)` (nhập dấu ngoặc tròn trên bàn phím)            |
+|         $[...]$          | Dấu ngoặc vuông                     | Brackets (or Square brackets)     | `[...]` (nhập dấu ngoặc vuông trên bàn phím)           |
+|        $\{... \}$        | Dấu ngoặc nhọn                      | Braces (or Curly brackets)        | `\{...\}` (nhập dấu ngoặc nhọn trên bàn phím)          |
+|   $\langle... \rangle$   | Dấu ngoặc nhọn góc / Ngoặc nhọn dẹt | Angle brackets                    | `\langle ... \rangle`                                  |
+|     $\vert... \vert$     | Dấu trị tuyệt đối / Dấu gạch đứng   | Vertical bars (or Absolute value) | `\vert...\vert` hoặc `\|...\|` (nhập \| trên bàn phím) |
+|     $\Vert... \Vert$     | Dấu chuẩn (Toán học) / Dấu gạch đôi | Double vertical bars (or Norm)    | `\Vert...\Vert` hoặc `\|\| ...\|\|`                    |
+|   $\lfloor... \rfloor$   | Dấu hàm sàn / Ngoặc dưới            | Floor brackets                    | `\lfloor...\rfloor`                                    |
+|    $\lceil... \rceil$    | Dấu hàm trần / Ngoặc trên           | Ceiling brackets                  | `\lceil...\rceil`                                      |
+| $\ulcorner... \urcorner$ |                                     |                                   | `\ulcorner... \urcorner`                               |
+|   $/...\textbackslash$   |                                     |                                   | `/...\textbackslash`                                   |
 
 Để viết toán học ở chế độ `inline math` hoặc `display math` được bao quát bởi dấu ngoặc, người dùng chỉ cần đặt phần toán học đó vào bên trong các dấu ngoặc ở bảng trên một cách bình thường. 
 
@@ -2038,6 +2031,7 @@ $$
 f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f^{''}(a)}{2!}(x-a)^2 + \frac{f^{'''}(a)}{3!}(x-a)^3 + \dots = \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n
 $$
 
+
 <div align="center">
 
 <img src="./images/Brooks Taylor.jpg" alt="Taylor">
@@ -2052,7 +2046,7 @@ Bên cạnh đó, người dùng cần lưu tâm đến một số lưu ý quan 
 
 #### 1. Quy tắc tự động thay đổi kích thước (Auto-resizing)
 
-Nếu công thức bên trong dấu ngoặc có chứa phân số ($\frac{a}{b}$), dấu tích phân ($\int$) hoặc số mũ ($a^x$)  . . . (?như thế nào đó so với dấu các dấu ngoặc), các dấu ngoặc thông thường sẽ bị quá nhỏ và mất cân đối như ở ví dụ về phương trình Friedmann thứ nhất . . .  : 
+Nếu công thức bên trong dấu ngoặc có chứa [phân số]() ($\frac{a}{b}$), [tích phân]()($\int$), [số mũ]() ($a^x$) . . . vv. . . (? như thế nào đó so với dấu các dấu ngoặc), các dấu ngoặc thông thường sẽ bị quá nhỏ và mất cân đối như ở ví dụ về phương trình Friedmann thứ nhất . . .  : 
 
 ```latex
 \documentclass{article}
@@ -2276,7 +2270,7 @@ Tham khảo: https://gemini.google.com/app/4475fd095760fba9?hl=vi
 
 Để viết chỉ số trên người dùng sử dụng kí hiệu `^`, còn với chỉ số dưới người dùng sử dụng kí hiệu `_` . 
 
-Các kí hiệu chỉ số trên và chỉ số dưới được đặt ở sau kí hiệu, chữ cái toán học. 
+Các kí hiệu chỉ số trên và chỉ số dưới được đặt ở sau kí hiệu, chữ cái toán học. (? viết chưa hợp lí lắm, cần viết lại)
 
 Ví dụ về chỉ số trên với phương trình từ định lý cuối cùng của Fermat được chứng minh bởi nhà toán học Andrew Wiles 
 
@@ -2372,7 +2366,7 @@ $$
 R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R + g_{\mu\nu}\Lambda = \frac{8\pi G}{c^4}T_{\mu\nu} 
 $$
 
-Người dùng có thể thấy, để viết được bao quát chỉ số dưới $\mu\nu$, chúng cần được viết đấy đủ vào trong dấu ngoặc nhọn `{}`. 
+Người dùng có thể thấy, để viết được bao quát chỉ số dưới $\mu\nu$, chúng cần được viết đấy đủ vào trong dấu ngoặc nhọn `{}` ở sau kí hiệu chỉ số dưới. 
 
 <div align="center">
 
@@ -2407,7 +2401,7 @@ vào ngay bên cạnh . . . (? bên cạnh gì)
 
 Với các [toán tử quan hệ]()  
 
-Ví dụ về khoảng cách trong chế độ toán học với 
+Ví dụ về khoảng cách trong chế độ toán học với . . . 
 
 . . .
 
