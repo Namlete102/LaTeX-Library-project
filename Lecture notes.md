@@ -2044,9 +2044,61 @@ Bên cạnh đó, người dùng cần lưu tâm đến một số lưu ý quan 
 
 ---
 
-#### 1. Quy tắc tự động thay đổi kích thước (Auto-resizing)
+#### 1. Nguyên tắc hiển thị dấu ngoặc nhọn `\{ \}`
 
-Nếu công thức bên trong dấu ngoặc có chứa [phân số]() ($\frac{a}{b}$), [tích phân]()($\int$), [số mũ]() ($a^x$) . . . vv. . . (? như thế nào đó so với dấu các dấu ngoặc), các dấu ngoặc thông thường sẽ bị quá nhỏ và mất cân đối như ở ví dụ về phương trình Friedmann thứ nhất . . .  : 
+Trong cú pháp của LaTeX, dấu ngoặc nhọn `{}` được mặc định nhằm sử dụng để nhóm các tham số hoặc tập lệnh lại với nhau. 
+
+. . . 
+
+Nếu như người dùng viết trực tiếp chúng vào phần soạn thảo LaTeX, thì dấu ngoặc nhọn đó sẽ không được hiển thị trực tiếp khi người dùng xuất bản trang tài liệu, vì hệ thống sẽ không thể phân biệt được . . . (? vì sao thế nhỉ)   
+
+Để dễ hình dung, người dùng hãy xem qua ví dụ sau đây với tích Descartes của hai tập hợp $A$ và $B$, kí hiệu là $A \times B$ là tập hợp của các cặp $(a,b)$ trong đó $a \in A$, $b \in B$ theo thứ tự $a$ trước, $b$ sau:
+
+```latex
+\documentclass{article}
+\begin{document}
+\[
+A \times B = { (a,b)|a \in A, b \in B }
+\]
+\end{document}
+```
+
+Kết quả cho ra được sẽ là 
+
+$$A \times B = { (a,b)|a \in A, b \in B }$$
+
+Người dùng có thể thấy, dấu ngoặc nhọn sẽ không xuất hiện nhằm bao quát thành một tập hợp. (? viết lại đoạn "nhằm bao quát thành ...")
+
+Do đó, để hiển thị được dấu ngoặc nhọn trong trang tài liệu, người dùng bắt buộc cần phải thêm dấu gạch chéo ngược `\`, mà người viết đã đề cập ở bài học [kí tự đặc biệt]() vào ngay trước chúng.
+
+```latex
+\documentclass{article}
+\begin{document}
+\[
+A \times B = \{(a,b)|a \in A, b \in B\}
+\]
+\end{document}
+```
+
+Kết quả nhận được từ ví dụ trên lúc này sẽ là: 
+
+$$
+A \times B = \{(a,b) | a \in A, b \in B\}
+$$
+
+<div align="center">
+
+<img src="./images/Rene Descartes.jpg" alt="Descartes">
+
+Nhà toán học và triết gia người Pháp René Descartes
+
+</div>
+
+---
+
+#### 2. Quy tắc tự động thay đổi kích thước (Auto-resizing)
+
+Nếu phương trình toán học có các biểu thức được chứa bên trong dấu ngoặc là [phân số]() ($\frac{a}{b}$), [tích phân]()($\int$), [số mũ]() ($a^x$) . . . vv. . . (? như thế nào đó so với dấu các dấu ngoặc), các dấu ngoặc thông thường sẽ bị quá nhỏ và mất cân đối như ở ví dụ về phương trình Friedmann thứ nhất . . .  : 
 
 ```latex
 \documentclass{article}
@@ -2067,16 +2119,30 @@ $$
 
 Người dùng có thể thấy, dấu ngoặc tròn `()` ở mỗi bên phân số $\dfrac{\dot{a}}{a}$ không được tự điều chỉnh kích thước sao cho phù hợp với kích thước của phân số đó. 
 
-Để dấu ngoặc tự động co giãn và bao quát trọn vẹn phần công thức bên trong, người dùng hãy thêm lệnh `\left` và `\right` vào ngay trước dấu ngoặc tương ứng.
+Để dấu ngoặc có thể tự động co giãn và bao quát trọn vẹn đều hai bên theo chiều cao của phần công thức bên trong, người dùng hãy thêm lệnh `\left` và `\right` vào ngay trước mỗi bên của dấu ngoặc tương ứng. Trong đó, lệnh `\left` phải được viết trước lệnh `\right`. 
 
-Quay lại ví dụ, ta để lệnh `\left` vào trước dấu `(` và lệnh `\right` vào trước dấu `)`: 
+Để người dùng dễ hình dung, người viết giả sử rằng người dùng muốn dấu ngoặc nhọn được tự động co giãn đều hai bên . Người dùng cần phải đặt lệnh `\left` vào trước dấu `{`, rồi sau đó mới đến lệnh `\right` vào trước dấu `}`, trong đó lệnh `\left` viết trước lệnh `\right` :  
+
+```latex
+\left{ . . . \right}
+```
+
+Hai lệnh `\left`, `\right` chỉ có thể được sử dụng ở bên trong lệnh và môi trường viết toán học. 
+
+```latex
+\[\left{ . . . \right}\]
+```
+
+Áp dụng các điều trên vào lại ví dụ . . ., ta được :
 
 ```latex
 \documentclass{article}
-\usepackage{amsmath}
+\usepackage{amsmath} % 
 \begin{document}
 \[ 
-\text{H}^2 = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+\text{H}^2 
+= \left ( \frac{\dot{a}}{a} \right)^2 % . . .
+= \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
 \]
 \end{document}
 ```
@@ -2088,79 +2154,91 @@ $$
 $$
 
 >[!WARNING]
->Nếu như người dùng cố ý thay đổi vị trí xuất hiện hai lệnh `\left` và `\right`, nghĩa là lệnh `\right` vào trước dấu `(` và lệnh `\right` vào trước dấu `)` ở ví dụ . . ., thì hệ thống sẽ báo lỗi **Missing \right inserted**
+>Nếu như người dùng đã viết lệnh `\left` mà thiếu lệnh `\right`, thì hệ thống LaTeX sẽ báo lỗi **Missing \right. inserted.** 
+
+Giả sử, người dùng viết thiếu lệnh `\right` vào trước dấu `)` 
 
 ```latex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
 \[ 
-\text{H}^2 = \right( \frac{\dot{a}}{a} \left)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+\text{H}^2 
+= \left( \frac{\dot{a}}{a})^2 %  
+= \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+\]
+\end{document}
+```
+
+(? . . . Ảnh báo lỗi)
+
+>[!WARNING]
+>Nếu như người dùng đã viết lệnh `\right` mà viết thiếu lệnh `\left`, thì hệ thống LaTeX sẽ báo lỗi **Extra \right** 
+
+Viết thiếu lệnh `\left` vào trước dấu `)`: 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[ 
+\text{H}^2 
+= ( \frac{\dot{a}}{a})^2 \right) %  
+= \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+\]
+\end{document}
+```
+
+(? . . . Ảnh báo lỗi)
+
+>[!WARNING]
+>Nếu như người dùng cố ý hoán đổi vị trí xuất hiện trước sau của hai lệnh `\left` và `\right`, nghĩa là lệnh `\right` được viết trước lệnh `\left`, thì hệ thống sẽ báo hai lỗi là **Missing \right inserted** và **Extra \right** cùng lúc. 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[ 
+\text{H}^2 
+= \right( \frac{\dot{a}}{a} \left)^2  % 
+= \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
 \]
 \end{document}
 ```
 
 (? . . . Ảnh báo lỗi) 
 
->[!WARNING]
->Nếu như người dùng viết thiếu một trong hai lệnh `\left` hoặc `\right`, thì hệ thống cũng sẽ báo lỗi **Missing \right. inserted.**
+Vì hệ thống lúc này đang hiểu lệnh `\right` ở dòng . . . đang thiếu lệnh `\left` nên sẽ báo lỗi ở chú ý . . .. Còn lệnh `\left` ở dòng . . .  đang thiếu lệnh `\right` nên sẽ báo lỗi ở chú ý . . . .
 
-Viết thiếu lệnh `\right` vào trước dấu `)`: 
+Các chú ý trên cũng được áp dụng tương tự với tất cả các dấu ngoặc khác. 
+
+Một cách chỉnh các dấu ngoặc khác . . . . 
 
 ```latex
-\documentclass{article}
-\usepackage{amsmath}
-\begin{document}
-\[ 
-\text{H}^2 = \left( \frac{\dot{a}}{a})^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+\big \Big \bigg \Bigg
+```
+. . .  
+$\big{$
+
+```latex
+\[
+\text{H}^2 = \bigg( \frac{\dot{a}}{a} \bigg)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
 \]
-\end{document}
 ```
 
-hoặc viết thiếu lệnh `\left` vào trước dấu `)`: 
+Kết quả lúc này nhận được cũng sẽ tương tự với việc người dùng sử dụng hai lệnh `\left` và `\right` lần lượt vào trước mỗi bên dấu ngoặc tròn `()` của phân số $\dfrac{\dot{a}}{a}$: 
 
-(? . . . Ảnh báo lỗi)
+$$
+\text{H}^2 = \Big( \frac{\dot{a}}{a} \Big)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+$$
 
-Hai chú ý trên cũng được áp dụng tương tự với các dấu ngoặc khác. 
-
+Nhược điểm của cách này nằm ở việc người dùng . . . .(? nhược điểm của cách này là gì ? vì sao ?). Tuy vậy, các lệnh `\big`, `\Big`, `\biggg`, `\Bigg` cũng rất hữu ích trong việc người dùng sử dụng chúng để canh chỉnh dấu ngoặc trong khi viết . . . (? viết gì) vào trong kí hiệu [đạo hàm](), có thể thay thế rất tốt hai lệnh `\left` và `\right`.  
 
 <div align="center">
 
 <img src="./images/Friedmann.jpg" alt="Friedmann">
 
 Nhà vũ trụ học và nhà toán học người Nga Alexander Friedmann
-
-</div>
-
----
-
-#### 2. Nguyên tắc hiển thị dấu ngoặc nhọn `\{ \}`
-
-Trong cú pháp của LaTeX, ngoặc nhọn `{..}` được mặc định sử dụng để nhóm các tham số hoặc tập lệnh lại với nhau nên không hiển thị khi xuất bản trang tài liệu.  Do đó, để hiển thị được dấu ngoặc nhọn hiển thị ra trang tài liệu, người dùng bắt buộc cần phải thêm dấu gạch chéo ngược `\` mà người viết đề cập ở bài học [kí tự đặc biệt]() vào ngay trước chúng.
-
-Ví dụ điều này với tích Descartes của hai tập hợp $A$ và $B$, kí hiệu là $A \times B$ là tập hợp của các cặp $(a,b)$ trong đó $a \in A$, $b \in B$ theo thứ tự $a$ trước $b$ sau:
-
-```latex
-\documentclass{article}
-\usepackage{amsmath}
-\begin{document}
-\[
-A \times B = \{(a,b)|a \in A, b \in B\}
-\]
-\end{document}
-```
-
-Kết quả nhận được từ ví dụ trên sẽ là: 
-
-$$
-A \times B = \{ \ (a,b) \ | \ a \ \in \ A, \ b \ \in \ B\}
-$$
-
-<div align="center">
-
-<img src="./images/Rene Descartes.jpg" alt="Descartes">
-
-Nhà toán học và triết gia người Pháp René Descartes
 
 </div>
 
@@ -2218,11 +2296,13 @@ Ví dụ . . .  với dãy số Fibonacci được xác định bởi hệ thứ
 Kết quả cho ra được sẽ chỉ xuất hiện một dấu ngoặc nhọn lớn duy nhất che phủ ở bên trái của .  .  .
 
 $$
-\begin{cases}
-u_1 = 1 \\ 
-u_2 = 1 \\ 
-u_{n} = u_{n-1} + u_{n-2}, \ \forall n \geq 3  
-\end{cases}
+\left\{
+    \begin{matrix}
+		u_1 = 1 \\ 
+		u_2 = 1 \\ 
+		u_{n} = u_{n-1} + u_{n-2}, \ \forall n \geq 3  
+    \end{matrix}
+\right.
 $$
 
 Hoặc người dùng cũng có thể sử dụng môi trường `cases` sau:
