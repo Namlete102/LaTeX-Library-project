@@ -1,16 +1,103 @@
+##  Bổ sung bài học dấu ngoặc 
 
-\+ Tập hợp các kí hiệu có thể được nhập trực tiếp trên bàn phím 
+. . . 
 
 ```latex
-+ - = ! / ( ) [ ] < > | ' : *
+\big( \Big( \bigg( \Bigg( 
+```
+
+$\big( \Big( \bigg( \Bigg($ 
+
+```latex
+\big) \Big) \bigg) \Bigg) 
+```
+
+$\big) \Big) \bigg) \Bigg)$
+
+. . . 
+
+
+Khi viết tập hợp các số hữu tỉ $\mathbb{Q}$ được biểu diễn bằng cách chỉ rõ tính chất đặc trưng của mỗi phần tử: 
+
+```latex
+\documentclass{article}
+\usepackage{amssymb}
+\begin{document}
+\[\mathbb{Q} = \left\{\frac{a}{b}|a, b \in \mathbb{Z}, b \ne 0 \right\}\]
+\end{document}
+```
+
+$$\mathbb{Q} = \left\{\frac{a}{b}|a, b \in \mathbb{Z}, b \ne 0 \right\}$$
+
+Người dùng có thể thấy, tuy hai bên dấu ngoặc nhọn đã được tự động canh chỉnh bởi hai lệnh lần lượt là `\left` và `\right`, nhưng [kí hiệu]() `|` không được tự động căn chỉnh sao cho phù hợp với kích thước của phân số $\dfrac{a}{b}$. 
+
+Để khắc phục được điều này, người dùng chỉ cần thêm lệnh 
+
+```latex
+\middle
+```
+
+vào trước dấu `|` đó. 
+
+```latex
+\documentclass{article}
+\usepackage{amssymb}
+\begin{document}
+\[\mathbb{Q} = \left\{\frac{a}{b} \middle|a, b \in \mathbb{Z}, b \ne 0 \right\}\]
+\end{document}
+```
+
+$$\mathbb{Q} = \left\{\frac{a}{b} \middle|a, b \in \mathbb{Z}, b \ne 0 \right\}$$
+
+Lệnh `\middle` này chỉ được sử dụng trong việc giúp các kí hiệu nhằm mục đích phân cách . . . (?) có thể được tự động co giãn chiêu cao sao cho phù hợp, vừa vặn với kích thước với cặp dấu ngoặc bao quanh các phân số (như ở ví dụ trên), tích phân, tổng chuỗi, ma trận, căn thức, ..vv.. 
+
+>[!WARNING]
+>Lệnh `\middle` không thể được hoạt động một cách độc lập.  Để sử dụng được lệnh này, chúng cần được đặt vào trong hai lệnh là `\left` và `\right`. Nếu không, thì hệ thống sẽ báo lỗi **Extra \middle.**  
+
+Giả sử, nếu ta bỏ hai lệnh `\left` và `\right` ở hai bên dấu ngoặc nhọn: 
+ 
+```latex
+\documentclass{article}
+\usepackage{amssymb}
+\begin{document}
+\[\mathbb{Q} = \{\frac{a}{b} \middle|a, b \in \mathbb{Z}, b \ne 0\]
+\end{document}
+```
+
+(? Ảnh báo lỗi)
+
+>[!WARNING]
+> Ngay sau lệnh `\middle` là phải có các kí hiệu có khả năng co giãn với chiều cao tương ứng . . .(? với gì đó). Nếu không, hệ thống sẽ báo lỗi **Missing delimiter (. inserted).**
+
+Nếu ta thay kí hiệu `|` bằng kí hiệu nằm ngang như $\rightarrow$ (? chắc phải làm một ví dụ mới)
+
+```latex
+\documentclass{article}
+\usepackage{amssymb}
+\begin{document}
+\[\mathbb{Q} = \left\{\frac{a}{b} \middle \rightarrow a, b \in \mathbb{Z}, b \ne 0 \right\}\]
+\end{document}
+```
+
+$$
+\mathbb{Q} = \left\{\frac{a}{b} \middle \rightarrow a, b \in \mathbb{Z}, b \ne 0 \right\} 
+$$
+
+Việc người viết thay kí hiệu `|` bằng $\rightarrow$ ở ví dụ này không thật sự có ý nghĩa về mặt toán học, tuy vậy điều người viết muốn trình bày là ở chú ý . . .(? viết như c). 
+
+---
+
+## Tập hợp các kí hiệu có thể được nhập trực tiếp trên bàn phím 
+
+```latex
++ - = ! / ( ) [ ] < > | ' : * 
 ```
 
 $+ \ - \ = \ ! \ / \ ( \ ) \ [ \ ] \ < \ > \ | \ ' \ : \ *$
 
 ---
 
-
-\+ Toán tử lượng giác 
+## Toán tử lượng giác 
 
 ```latex
 \documentclass{article}
@@ -28,7 +115,7 @@ Tảng băng chìm toán tử lượng giác
 
 ---
 
-\+ Toán tử hàm mũ 
+## Toán tử hàm mũ 
 
 ```latex
 \documentclass{article}
@@ -74,7 +161,7 @@ $y = \exp(x)$
 
 ---
 
-\+ Toán tử giới hạn 
+## Toán tử giới hạn 
 
 ```latex
 \documentclass{article}
@@ -98,8 +185,222 @@ $\lim\limits_{x \to \infty}$
 
 ---
 
+## Ma trận 
 
-\+ Định thức của ma trận 
+Khai báo package 
+
+```latex
+\usepackage{amsmath}
+```
+
+Các môi trường sau đây phải được đặt viết trong các lệnh và môi trường **inline math**, **display math**. 
+
+Sử dụng môi trường `bmatrix`
+
+```latex
+\begin{bmatrix}
+. . .
+\end{bmatrix} 
+```
+
+Ma trận $2 \times 2$ 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{bmatrix}
+  1 & 2 \\
+  3 & 4
+\end{bmatrix}
+\]
+\end{document}
+```
+
+
+$$
+\begin{bmatrix}
+1 & 2 \\
+3 & 4 
+\end{bmatrix}
+$$
+
+Kí hiệu `&` dùng để phân cách (? sử dụng từ khác) các phân tử bên trong ma trận. Nếu ta không sử dụng dấu `&` ở hàng đầu tiên của ma trận, nhằm 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{bmatrix}
+  1  2 \\
+  3 & 4
+\end{bmatrix}
+\]
+\end{document}
+```
+
+$$
+\begin{bmatrix}
+  1  2 \\
+  3 & 4
+ \end{bmatrix}
+$$
+
+Người dùng có thể thấy, phần tử đầu tiên của hàng đầu ma trận lúc này là 12 thay vì 1, còn hàng thứ hai bị bỏ trống thay vì là 2. 
+
+Còn kí hiệu `\\` được dùng để xuống hàng mới. 
+. . . 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{bmatrix}
+  1 & 2 
+  3 & 4
+\end{bmatrix}
+\]
+\end{document}
+```
+
+Đoạn mã trên cũng tương đồng với đoạn mã sau
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{bmatrix}
+  1 & 23 & 4
+\end{bmatrix}
+\]
+\end{document}
+```
+
+Kết quả hiện thị ma trận trong trang tài liệu ở hai đoạn mã trên đều là như nhau: 
+
+$$
+\begin{bmatrix}
+  1 & 2 
+  3 & 4
+ \end{bmatrix}
+$$
+
+Lúc này ta sẽ hiểu đây là một ma trận $1 \times 3$ (hay còn được gọi là một ma trận dòng). Có phần tử thứ nhất là 1, phần tử thứ 2 là 23 và cuối cùng phần tử thứ 3 là 4.  
+
+Một số tài liệu toán học viết các ma trận thay vì được bao quát bởi dấu ngoặc vuông, chúng lại được bao quát bởi dấu ngoặc tròn như hình dưới đây: 
+
+(? Ảnh minh họa cho ma trận được bao quát bởi dấu ngoặc tròn)
+
+. . . 
+
+```latex
+\begin{pmatrix}
+. . .
+\end{pmatrix} 
+```
+
+. . . 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{pmatrix}
+  1 & 2 \\
+  3 & 4
+\end{pmatrix}
+\]
+\end{document}
+```
+
+$$
+\begin{pmatrix}
+  1 & 2 \\
+  3 & 4
+ \end{pmatrix}
+$$
+. . . (định thức của một ma trận) 
+
+```latex
+\begin{vmatrix}
+. . .
+\end{vmatrix}
+```
+
+. . . 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{vmatrix}
+  1 & 2 \\
+  3 & 4
+\end{vmatrix}
+ \]
+\end{document}
+```
+
+. . . 
+
+$$
+\begin{vmatrix}
+  1 & 2 \\
+  3 & 4
+ \end{vmatrix}
+$$
+
+. . . (ma trận chuẩn (matrix norm))
+
+```latex
+\begin{Vmatrix}
+. . .
+\end{Vmatrix}
+```
+
+. . . 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{Vmatrix}
+  1 & 2 \\
+  3 & 4
+\end{Vmatrix}
+ \]
+\end{document}
+```
+
+. . . 
+
+$$
+\begin{Vmatrix}
+  1 & 2 \\
+  3 & 4
+\end{Vmatrix}
+$$
+
+
+$$
+\begin{bmatrix}
+       \frac{5}{6} & \frac{1}{6} & 0           \\
+       \frac{5}{6} & 0           & \frac{1}{6} \\
+       0           & \frac{5}{6} & \frac{1}{6}
+\end{bmatrix}
+$$
+
+
+---
+
+## Định thức của ma trận 
 
 Ví dụ . . .  về công thức tính định thức tổng quát của một ma trân vuông $A$ cấp $n$ được chứng minh bởi nhà toán học Leibniz  
 
@@ -122,7 +423,7 @@ Ta thấy kí hiệu "det" và "sgn" bị nghiêng. LaTeX đã định nghĩa l�
 
 dùng để viết kí hiệu định thức. 
 
-Còn kí hiệu "sgn" phải được chứa trong lệnh `\operatorname`
+Còn kí hiệu "sgn" phải được viết trong lệnh `\operatorname`
 
 ```latex
 \operatorname{sgn}
@@ -152,7 +453,7 @@ $\operatorname{tr}(A)$
 
 ---
 
-\+ Toán tử mô-đun (thường thấy ở bài học toán đồng dư thức) 
+## Toán tử mô-đun (thường thấy ở bài học toán đồng dư thức) 
 
 Nếu chỉ viết `\mod`
 
@@ -180,7 +481,7 @@ $x \equiv a \pmod { b }$
 
 ---
 
-\+ Viết công thức tính tổ hợp chập $k$ của của $n$ 
+## Viết công thức tính tổ hợp chập $k$ của của $n$ 
 
 ```latex
 \[\binom{n}{k} = \frac{n!}{k!(n-k)!}\]
@@ -212,7 +513,33 @@ $\dbinom{n}{k} = \frac{n!}{k!(n-k)!}$
 
 ---
 
-\+ Phân số 
+## Đạo hàm 
+
+
+
+. . . 
+
+```latex
+\[\frac{\mathrm d}{\mathrm d x} \left( k g(x) \right)\]
+```
+
+$$
+\frac{\mathrm d}{\mathrm d x} \left( k g(x) \right)
+$$
+. . . 
+
+```latex
+\[\frac{\mathrm d}{\mathrm d x} \big( k g(x) \big)\]
+```
+
+$$
+\frac{\mathrm d}{\mathrm d x} \big( k g(x) \big)
+$$
+
+
+---
+
+## Phân số 
 
 Để viết phân số ta sử dụng lệnh 
 
@@ -234,20 +561,25 @@ Ví dụ phân số ở **display math**
 \[\frac{1}{2}\]
 ```
 
+$$
+\frac{1}{2}
+$$
+
 Khai báo package: 
 
 ```latex
 \usepackage{amsmath}
 ```
 
-$$
-\frac{1}{2}
-$$
+Lệnh `\tfrac` này được dùng để thu nhỏ lại phân số khi viết phân số ở **display math**
+
 ```latex
 \[\tfrac{1}{2}\]
 ```
 
 $$\tfrac{1}{2}$$
+Lệnh `\dfrac` này được dùng để phóng to phân số khi viết phân số ở **inline mathmath**
+
 ```latex
 \(\dfrac{1}{2}\)
 ```
@@ -255,7 +587,18 @@ $$\tfrac{1}{2}$$
 $\dfrac{1}{2}$
 
 
-Một cách viết phân số khác 
+Để viết được hỗn số ta chỉ cần viết số nguyên đó đứng trước lệnh viết phân số: 
+
+```latex
+\[5 \frac{1}{2} = \frac{11}{2}\]
+```
+
+
+$$
+5 \frac{1}{2} = \frac{11}{2}
+$$
+
+Một cách khác để viết phân số mà người dùng thường hay thấy ở các công thức nấu ăn (? đại loại những vấn đề như thế)
 
 ```latex
 \(^1/_2\)
@@ -263,15 +606,39 @@ Một cách viết phân số khác
 
 $^1/_2$ 
 
+Người dùng có thể khai báo package 
+
+```latex
+\usepackage{xfrac}
+```
+
+rồi sau đó sử dụng lệnh 
+
+```latex
+\sfrac{}{}
+```
+
+để viết lại $^1/_2$. 
+
+```latex
+\documentclass{article}
+\usepackage{xfrac} 
+\begin{document}
+ $\sfrac{1}{2}$ 
+\end{document}
+```
+
 ---
 
-\+  Tổng và tích phân 
+##  Tổng và tích phân 
+
+### Tổng 
 
 Vào năm lớp 6 THCS (theo chương trình học Việt Nam ...), chúng ta đã quen thuộc với bài toán đếm tổng dãy từ 1 đến 100 huyền thoại mà ở đó nhà toán học người Đức Carl Gauss đã giải bằng một phương pháp thú vị . . . mà tổng tính được từ dãy đó là 5050
 
-Nếu ta viết lại đáp án bài toán  
+Nếu ta viết lại đáp án bài toán lại như sau
 
-$$1+2+ .... + 100 = 5050$$ 
+$$1+2+3+4+5+.... + 100 = 5050$$ 
 thì sẽ rất dài. 
 
 Kí hiệu tổng: 
@@ -290,14 +657,6 @@ $\sum$
 <img src="LaTeX-Library-project-v1.0.0/Draft/draft img/1.1.jpg" alt="1.1">
 Nguồn: https://thomaskojar.wordpress.com/2021/05/13/history-of-math-symbols/
 </div>
-
-Viết gọn lại ta được: 
-
-```latex
-\(\displaystyle\sum_{n = 1}^{100} = 5050\)
-```
-
-$\displaystyle\sum_{n = 1}^{100} = 5050$
 
 **inline math**
 
@@ -339,6 +698,16 @@ $$
 $$
 . . . (đọc đầy đủ định lý ở đây https://pkg.yihui.org/bookdown/markdown-extensions-by-bookdown#theorems) 
 
+Từ những kiến thức đã trình bày về cách viết kí hiệu tổng trên, ta viết gọn lại bài toán tổng ở đầu bài như  sau: 
+
+```latex
+\[\sum_{n = 1}^{100} = 5050\]
+```
+
+$$\sum_{n = 1}^{100} = 5050$$
+
+### Tích phân 
+
 Kí hiệu tích phân: 
 
 ```latex
@@ -349,10 +718,10 @@ $\int$
 
 Cách viết tương tự như viết tổng. 
 
-**inline math** (sau thay bằng mẹo tính tích phân của nhà vật lý học Richard Feynman)
+**inline math** (sau thay bằng bài học mẹo tính tích phân của nhà vật lý học Richard Feynman)
 
 ```latex
-\(\displaystyle\int_a^b f(x) \mathrm{d}x = F(b) - F(a)\)
+\(\int_a^b f(x) \mathrm{d}x = F(b) - F(a)\)
 ```
 
 $\int_a^b f(x) \mathrm{d}x = F(b) - F(a)$
@@ -369,9 +738,9 @@ $$
 \int_a^b f(x) \mathrm{d}x = F(b) - F(a)
 $$
 
-Một cách khác để viết tích phân. 
+Một cách khác để viết tích phân. (thật ra là rất quen thuộc)
 
-Trước tiên cần khai báo package `amsmath` và để tùy chọn (options) là `intlimits`
+Trước tiên cần khai báo package `amsmath` và để thêm tùy chọn (options) là `intlimits`:
 
 ```latex
 \usepackage[intlimits]{amsmath}
@@ -402,7 +771,7 @@ $\displaystyle\int\limits_a^bb f(x) \mathrm{d}x = F(b) - F(a)$
 $$
 \int\limits_a^b f(x) \mathrm{d}x = F(b) - F(a)
 $$
-
+Khai triển tích phân của một hàm số: 
 . . . 
 
 ```latex
@@ -415,28 +784,22 @@ $$
 
 . . .
 
+```latex
+\[\int\limits_2^3 x^2 \mathrm{d}x = \left.\frac{x^3}{3}\right|^3_2 = \frac{3^3}{3} - \frac{2^3}{3} = \frac{19}{3}\]
+```
 $$
 \int\limits_2^3 x^2 \mathrm{d}x = \left.\frac{x^3}{3}\right|^3_2 = \frac{3^3}{3} - \frac{2^3}{3} = \frac{19}{3}
-$$
-. . . 
-
-$$
-\frac{\mathrm d}{\mathrm d x} \left( k g(x) \right)
-$$
-
-$$
-\frac{\mathrm d}{\mathrm d x} \big( k g(x) \big)
 $$
 
 --- 
 
-\+ Đơn vị Angstrom 
+## Đơn vị Angstrom 
 
 $\mathring{A}$ 
 
 ---
 
-\+ Sai số 
+## Sai số 
 
 ```latex
 \(a \pm b\)

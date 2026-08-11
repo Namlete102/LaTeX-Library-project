@@ -2156,7 +2156,7 @@ $$
 >[!WARNING]
 >Nếu như người dùng đã viết lệnh `\left` mà thiếu lệnh `\right`, thì hệ thống LaTeX sẽ báo lỗi **Missing \right. inserted.** 
 
-Giả sử, người dùng viết thiếu lệnh `\right` vào trước dấu `)` 
+Giả sử, người dùng viết thiếu lệnh `\right` vào trước dấu `)`: 
 
 ```latex
 \documentclass{article}
@@ -2175,7 +2175,7 @@ Giả sử, người dùng viết thiếu lệnh `\right` vào trước dấu `)
 >[!WARNING]
 >Nếu như người dùng đã viết lệnh `\right` mà viết thiếu lệnh `\left`, thì hệ thống LaTeX sẽ báo lỗi **Extra \right** 
 
-Viết thiếu lệnh `\left` vào trước dấu `)`: 
+Giả sử người dùng viết thiếu lệnh `\left` vào trước dấu `)`: 
 
 ```latex
 \documentclass{article}
@@ -2212,13 +2212,14 @@ Vì hệ thống lúc này đang hiểu lệnh `\right` ở dòng . . . đang th
 
 Các chú ý trên cũng được áp dụng tương tự với tất cả các dấu ngoặc khác. 
 
-Một cách chỉnh các dấu ngoặc khác . . . . 
+Một cách khác để chỉnh các dấu ngoặc là bằng các lệnh thủ công sau: 
 
 ```latex
 \big \Big \bigg \Bigg
 ```
 . . .  
-$\big{$
+
+$\big{ \frac{1}{2} \big}$
 
 ```latex
 \[
@@ -2241,6 +2242,8 @@ Nhược điểm của cách này nằm ở việc người dùng . . . .(? như
 Nhà vũ trụ học và nhà toán học người Nga Alexander Friedmann
 
 </div>
+
+
 
 ---
 
