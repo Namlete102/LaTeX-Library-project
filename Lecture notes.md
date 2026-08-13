@@ -2208,18 +2208,16 @@ Giả sử người dùng viết thiếu lệnh `\left` vào trước dấu `)`:
 
 (? . . . Ảnh báo lỗi) 
 
-Vì hệ thống lúc này đang hiểu lệnh `\right` ở dòng . . . đang thiếu lệnh `\left` nên sẽ báo lỗi ở chú ý . . .. Còn lệnh `\left` ở dòng . . .  đang thiếu lệnh `\right` nên sẽ báo lỗi ở chú ý . . . .
+Vì hệ thống lúc này đang hiểu lệnh `\right` ở dòng . . . đang thiếu lệnh `\left` nên sẽ báo lỗi ở chú ý . . .. Còn lệnh `\left` ở dòng . . .  đang thiếu lệnh `\right` nên hệ thống sẽ báo lỗi ở chú ý . . . .
 
 Các chú ý trên cũng được áp dụng tương tự với tất cả các dấu ngoặc khác. 
 
-Một cách khác để chỉnh các dấu ngoặc là bằng các lệnh thủ công sau: 
+Một cách khác để chỉnh các dấu ngoặc,  bằng các lệnh thủ công sau: 
 
 ```latex
 \big \Big \bigg \Bigg
 ```
 . . .  
-
-$\big{ \frac{1}{2} \big}$
 
 ```latex
 \[
@@ -2233,7 +2231,7 @@ $$
 \text{H}^2 = \Big( \frac{\dot{a}}{a} \Big)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
 $$
 
-Nhược điểm của cách này nằm ở việc người dùng . . . .(? nhược điểm của cách này là gì ? vì sao ?). Tuy vậy, các lệnh `\big`, `\Big`, `\biggg`, `\Bigg` cũng rất hữu ích trong việc người dùng sử dụng chúng để canh chỉnh dấu ngoặc trong khi viết . . . (? viết gì) vào trong kí hiệu [đạo hàm](), có thể thay thế rất tốt hai lệnh `\left` và `\right`.  
+Nhược điểm của cách này nằm ở việc người dùng . . . .(? nhược điểm của cách này là gì ? vì sao ?). Tuy vậy, các lệnh `\big`, `\Big`, `\biggg`, `\Bigg` rất hữu ích trong việc người dùng sử dụng chúng để canh chỉnh dấu ngoặc trong khi viết . . . (? viết gì) vào trong kí hiệu [đạo hàm](), . . . có thể thay thế rất tốt hai lệnh `\left` và `\right`.  
 
 <div align="center">
 

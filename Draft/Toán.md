@@ -14,10 +14,9 @@ $\big( \Big( \bigg( \Bigg($
 
 $\big) \Big) \bigg) \Bigg)$
 
-. . . 
+. . .  (? đang viết dang dở ở phần lecture notes)
 
-
-Khi viết tập hợp các số hữu tỉ $\mathbb{Q}$ được biểu diễn bằng cách chỉ rõ tính chất đặc trưng của mỗi phần tử: 
+Khi viết tập hợp các số hữu tỉ $\mathbb{Q}$ được biểu diễn bằng cách chỉ rõ tính chất đặc trưng của mỗi phần tử:  
 
 ```latex
 \documentclass{article}
@@ -29,7 +28,7 @@ Khi viết tập hợp các số hữu tỉ $\mathbb{Q}$ được biểu diễn 
 
 $$\mathbb{Q} = \left\{\frac{a}{b}|a, b \in \mathbb{Z}, b \ne 0 \right\}$$
 
-Người dùng có thể thấy, tuy hai bên dấu ngoặc nhọn đã được tự động canh chỉnh bởi hai lệnh lần lượt là `\left` và `\right`, nhưng [kí hiệu]() `|` không được tự động căn chỉnh sao cho phù hợp với kích thước của phân số $\dfrac{a}{b}$. 
+Người dùng có thể thấy rằng, tuy hai bên dấu ngoặc nhọn đã được . . . (? điều gì tự động căn chỉnh) tự động căn chỉnh bởi hai lệnh lần lượt là `\left` và `\right`, nhưng [kí hiệu]() `|` không được tự động co giãn sao cho phù hợp với kích thước chiều cao của phân số $\dfrac{a}{b}$. 
 
 Để khắc phục được điều này, người dùng chỉ cần thêm lệnh 
 
@@ -49,7 +48,7 @@ vào trước dấu `|` đó.
 
 $$\mathbb{Q} = \left\{\frac{a}{b} \middle|a, b \in \mathbb{Z}, b \ne 0 \right\}$$
 
-Lệnh `\middle` này chỉ được sử dụng trong việc giúp các kí hiệu nhằm mục đích phân cách . . . (?) có thể được tự động co giãn chiêu cao sao cho phù hợp, vừa vặn với kích thước với cặp dấu ngoặc bao quanh các phân số (như ở ví dụ trên), tích phân, tổng chuỗi, ma trận, căn thức, ..vv.. 
+Lệnh `\middle` này chỉ được sử dụng trong việc giúp các kí hiệu nhằm mục đích phân cách . . . (?) có thể được tự động co giãn chiêu cao sao cho phù hợp, vừa vặn kích thước với cặp dấu ngoặc bao quanh các phân số (như ở ví dụ trên), tích phân, tổng chuỗi, ma trận, căn thức, ..vv.. 
 
 >[!WARNING]
 >Lệnh `\middle` không thể được hoạt động một cách độc lập.  Để sử dụng được lệnh này, chúng cần được đặt vào trong hai lệnh là `\left` và `\right`. Nếu không, thì hệ thống sẽ báo lỗi **Extra \middle.**  
@@ -83,7 +82,7 @@ $$
 \mathbb{Q} = \left\{\frac{a}{b} \middle \rightarrow a, b \in \mathbb{Z}, b \ne 0 \right\} 
 $$
 
-Việc người viết thay kí hiệu `|` bằng $\rightarrow$ ở ví dụ này không thật sự có ý nghĩa về mặt toán học, tuy vậy điều người viết muốn trình bày là ở chú ý . . .(? viết như c). 
+Việc người viết thay kí hiệu `|` bằng $\rightarrow$ ở ví dụ này không thật sự có ý nghĩa về mặt toán học, tuy vậy điều người viết muốn trình bày là ở chú ý . . . (? viết như c), người dùng có thể thấy các kí hiệu nằm ngang như $\rightarrow$ sẽ bị hệ thống lỗi. (? trình bày lại) 
 
 ---
 
@@ -117,6 +116,7 @@ Tảng băng chìm toán tử lượng giác
 
 ## Toán tử hàm mũ 
 
+. . . (định nghĩa hàm số mũ) 
 ```latex
 \documentclass{article}
 \begin{document}
@@ -324,37 +324,6 @@ $$
   3 & 4
  \end{pmatrix}
 $$
-. . . (định thức của một ma trận) 
-
-```latex
-\begin{vmatrix}
-. . .
-\end{vmatrix}
-```
-
-. . . 
-
-```latex
-\documentclass{article}
-\usepackage{amsmath}
-\begin{document}
-\[
-\begin{vmatrix}
-  1 & 2 \\
-  3 & 4
-\end{vmatrix}
- \]
-\end{document}
-```
-
-. . . 
-
-$$
-\begin{vmatrix}
-  1 & 2 \\
-  3 & 4
- \end{vmatrix}
-$$
 
 . . . (ma trận chuẩn (matrix norm))
 
@@ -388,6 +357,21 @@ $$
 \end{Vmatrix}
 $$
 
+Khi viết các phần tử bên trong ma trận là các số hữu tỉ, chẳng hạn như ở ví dụ sau: 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{bmatrix}
+       \frac{5}{6} & \frac{1}{6} & 0           \\
+       \frac{5}{6} & 0           & \frac{1}{6} \\
+       0           & \frac{5}{6} & \frac{1}{6}
+\end{bmatrix}
+ \]
+\end{document}
+```
 
 $$
 \begin{bmatrix}
@@ -396,11 +380,185 @@ $$
        0           & \frac{5}{6} & \frac{1}{6}
 \end{bmatrix}
 $$
+Người dùng có thể thấy, tử số của phân số phần tử $a_{21} = \dfrac{5}{6}$ là 5, bị dính với mẫu số của phân số phần tử $a_{12} = \dfrac{5}{6}$. Và điều này cũng xảy ra tương tự ở phần tử $a_{33} = \dfrac{2}{3}$ với phần tử $a_{23} = \dfrac{2}{3}$. 
 
+Để khắc phục được điều trên, người dùng chỉ cần viết dính liền, ngay sau dấu ngăn cách các hàng trong ma trận `\\` với dấu ngoặc vuông `[]`. 
+
+Và bên trong dấu ngoặc vuông đó chứa thông số . . . .(? thông số gì) để co giãn hai phân tử cùng cột mà khác hàng . . .(? viết lại)
+
+Chẳng hạn, người viết muốn . . . 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{bmatrix}
+       \frac{5}{6} & \frac{1}{6} & 0           \\[0.5em]
+       \frac{5}{6} & 0           & \frac{1}{6} \\[0.5em]
+       0           & \frac{5}{6} & \frac{1}{6}
+\end{bmatrix}
+ \]
+\end{document}
+```
+
+
+$$
+\begin{bmatrix}
+       \frac{5}{6} & \frac{1}{6} & 0           \\[0.5em]
+       \frac{5}{6} & 0           & \frac{1}{6} \\[0.5em]
+       0           & \frac{5}{6} & \frac{1}{6}
+\end{bmatrix}
+$$
+
+Nếu như người dùng viết cách dấu `\\` và `[]`: (? viết chưa rõ ý)
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{bmatrix}
+       \frac{5}{6} & \frac{1}{6} & 0           \\ [0.5em]
+       \frac{5}{6} & 0           & \frac{1}{6} \\[0.5em]
+       0           & \frac{5}{6} & \frac{1}{6}
+\end{bmatrix}
+ \]
+\end{document}
+```
+
+thì hệ thống sẽ hiểu `[]` . . . (? hiểu gì)
+
+$$
+\begin{bmatrix}
+       \frac{5}{6} & \frac{1}{6} & 0           \\ [0.5em]
+       \frac{5}{6} & 0           & \frac{1}{6} \\[0.5em]
+       0           & \frac{5}{6} & \frac{1}{6}
+\end{bmatrix}
+$$
+
+. . . .
+
+Đối với gói `amsmath` để viết ma trận ở **inline math** ta sẽ sử dụng môi trường `smallmatrix`
+
+```latex
+\begin{smallmatrix}
+. . . 
+\end{smallmatrix}
+```
+
+Ta cần phải thêm . . . 
+
+Ví dụ: 
+
+```latex
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment \(\left(\begin{smallmatrix}1 & 2 \\ 3 & 4\end{smallmatrix}\right)\) that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . . 
+```
+
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\left(\begin{smallmatrix}1 & 2 \\ 3 & 4\end{smallmatrix}\right)$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . . 
+
+Cách này chỉ phù hợp với việc người dùng viết ma trận được bao quanh bởi dấu ngoặc tròn cơ bản. Trong trường hợp ma trận đó được kí hiệu là định thức, ma trận chuẩn thì . . . (? thì sao em nhỉ)
+
+Để làm được điều này, trước tiên người dùng cần phải sử dụng gói `mathtools`.
+
+Môi trường `bsmailmatrix`
+
+```latex
+\begin{bsmailmatrix}
+. . . 
+\begin{bsmailmatrix}
+```
+
+Ví dụ: 
+
+```latex
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment \(\begin{bsmallmatrix}1 & 2 \\ 3 & 4\end{bsmallmatrix}\) that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
+```
+
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{bsmallmatrix}1 & 2 \\ 3 & 4\end{bsmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
+
+Môi trường `Bsmailmatrix`
+
+```latex
+\begin{Bsmailmatrix}
+. . . 
+\begin{Bsmailmatrix}
+```
+
+Ví dụ: 
+
+```latex
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment \(\begin{Bsmallmatrix}1 & 2 \\ 3 & 4\end{Bsmallmatrix}\) that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
+```
+
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{Bsmallmatrix}1 & 2 \\ 3 & 4\end{Bsmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
+
+Môi trường `vsmailmatrix` . . . 
+
+Ví dụ: 
+
+```latex
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment \(\begin{vsmallmatrix}1 & 2 \\ 3 & 4\end{vsmallmatrix}\) that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
+```
+
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{vsmallmatrix}1 & 2 \\ 3 & 4\end{vsmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
+
+Môi trường `Vsmallmatrix` . . . 
+
+Ví dụ: 
+
+```latex
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{Vsmallmatrix}1 & 2 \\ 3 & 4\end{Vsmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
+```
+
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{Vsmallmatrix}1 & 2 \\ 3 & 4\end{Vsmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
+
+Ta còn có thể thay cách thủ công . . . (? ở phần giới thiệu gói `amsmath`) . . . bằng môi trường `psmailmatrix` . . .
+
+Ví dụ: 
+
+```latex
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{psmallmatrix}1 & 2 \\ 3 & 4\end{psmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
+```
+
+To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{psmallmatrix}1 & 2 \\ 3 & 4\end{psmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . . 
 
 ---
 
 ## Định thức của ma trận 
+
+. . . (định thức của một ma trận) 
+
+```latex
+\begin{vmatrix}
+. . .
+\end{vmatrix}
+```
+
+. . . 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{vmatrix}
+  1 & 2 \\
+  3 & 4
+\end{vmatrix}
+ \]
+\end{document}
+```
+
+. . . 
+
+$$
+\begin{vmatrix}
+  1 & 2 \\
+  3 & 4
+ \end{vmatrix}
+$$
+Ngoài ra, định thức của một ma trận vuông $A$ cấp $n$ còn được kí hiệu là $\det(A)$. 
 
 Ví dụ . . .  về công thức tính định thức tổng quát của một ma trân vuông $A$ cấp $n$ được chứng minh bởi nhà toán học Leibniz  
 
@@ -415,7 +573,7 @@ Ví dụ . . .  về công thức tính định thức tổng quát của một 
 
 $$det(A) = \sum_{\sigma \in S_n} sgn(\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right )$$
 
-Ta thấy kí hiệu "det" và "sgn" bị nghiêng. LaTeX đã định nghĩa lệnh
+Ta thấy hai kí hiệu từ công thức trên là "det" và "sgn" bị nghiêng. LaTeX đã định nghĩa lệnh
 
 ```latex
 \det
@@ -423,7 +581,7 @@ Ta thấy kí hiệu "det" và "sgn" bị nghiêng. LaTeX đã định nghĩa l�
 
 dùng để viết kí hiệu định thức. 
 
-Còn kí hiệu "sgn" phải được viết trong lệnh `\operatorname`
+Còn kí hiệu "sgn", người dùng cần phải viết chúng vào trong dấu ngoặc nhọn của lệnh `\operatorname`
 
 ```latex
 \operatorname{sgn}
@@ -442,6 +600,8 @@ Từ những điều ở trên, đoạn mã lúc này được sửa có đượ
 $$
 \det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right)
 $$
+
+
 
 \+ Vết của ma trận  
 
@@ -578,7 +738,8 @@ Lệnh `\tfrac` này được dùng để thu nhỏ lại phân số khi viết 
 ```
 
 $$\tfrac{1}{2}$$
-Lệnh `\dfrac` này được dùng để phóng to phân số khi viết phân số ở **inline mathmath**
+
+Lệnh `\dfrac` này được dùng để phóng to phân số khi viết phân số ở **inline math**
 
 ```latex
 \(\dfrac{1}{2}\)
@@ -627,6 +788,9 @@ rồi sau đó sử dụng lệnh
  $\sfrac{1}{2}$ 
 \end{document}
 ```
+
+
+
 
 ---
 
@@ -817,3 +981,73 @@ $a \mp b$
 
 --- 
 
+## Chữ cái Hy Lạp
+
+Để in đậm chữ cái Hy Lạp, trước tiên người dùng cần phải khai báo gói `bm`
+
+```latex
+\usepackage{bm}
+```
+
+Sau đó, người dùng chỉ cần viết các chữ cái Hy Lạp vào trong dấu ngoặc nhọn của lệnh `\bm`. 
+
+```latex
+\bm
+```
+
+Lệnh này chỉ được sử dụng bên trong . . . 
+
+Ví dụ: 
+
+```latex
+\(\bm{\alpha}\)
+```
+
+
+---
+
+## Các dấu chấm trong LaTex
+
+Các dấu chấm này được sử dụng cả trong văn bản thông thường, lẫn trong văn bản toán học. 
+
+| . . .            | Lệnh           |
+| :--------------- | -------------- |
+| a $\dots$ b      | `\dots`        |
+| a $\cdots$ b     | `\cdots`       |
+| a $\vdots$ b     | `\vdots`       |
+| a $\ddots$ b     | `\ddots`       |
+
+Ở bảng . . . trên, chỉ riêng dấu ba chấm "$\dots$" là không cần nhất thiết được đặt vào các lệnh và môi trường viết chế độ toán học. Còn lại là bắt buộc . . . , nếu không thì hệ thống sẽ báo lỗi **Missing $ inserted.** 
+
+Ví dụ: 
+
+. . . (ví dụ với hai dấu ba chấm đầu tiên) 
+
+. . . (giới thiệu dấu $\vdots$) 
+
+Ví dụ: Dấu $\vdots$ thường được thấy nhiều ở việc người dùng sử dụng chúng để viết một ma trận tổng quát có kích thước $m \times n$. 
+
+. . . (ma trận tổng quát)
+
+Ngoài ra dấu $\vdots$ còn được sử dụng để làm quan hệ chia hết giữa hai số. 
+
+Ví dụ: Với bổ đề Euclid trong lý thuyết số  
+
+Bổ đề Euclid: Cho  $a, b \in \mathbb{N}$ và $p \in \mathbb{P}$: 
+
+Nếu $p \ \vdots \ (a \cdot b)$, thì $p \ \vdots \ a$ hoặc $p \vdots b$. 
+
+Tuy vậy, đôi khi . . . thường sử dụng dấu $|$ để biểu diễn quan hệ chia hết giữa hai số. 
+
+Đọc thêm ở . . . (? phần viết lý thuyết số cơ bản trên) 
+
+. . . (giới thiệu dấu `\hdotsfor{n}`) 
+
+Dấu này được sử dụng chính chỉ trong việc viết . . . (? dùng cho điều gì cơ)
+
+. . . . (? giải thích lệnh này) 
+
+
+---
+
+## Gói `mathtools` 
