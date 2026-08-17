@@ -1,6 +1,6 @@
-Mục tiêu căn bản là tạo web để chứa các bài học LaTeX đây: . . 
+Mục tiêu căn bản là tạo web để chứa các bài học LaTeX đây. 
 
-Mã nguồn dự án: https://github.com/Namlete102/LaTeX-Library-project
+Mã nguồn tạo web (đang trong quá trình thử nghiệm): https://github.com/Namlete102/README-markdown-web 
 
 Để tạo được web, tự học HTML, CSS, Git and Github, Visual Studio Code cơ bản. (JS mình ăn cắp trên mạng hehe :>)
 
@@ -19,8 +19,8 @@ Thiết kế banner bằng Figma dựa trên ý tưởng làm thumbnail từ vid
 </center>
 
 Trong trang web đó cần chứa: 
-+ Chắc chằn phải có tài liệu học [[Lecture notes]] (bao gồm phiên bản web và phiên bản pdf (được viết ở lớp report thô sơ trước))
++ Chắc chắn phải có tài liệu học [[Lecture notes]] (bao gồm phiên bản web và phiên bản pdf (được viết ở lớp report thô sơ trước))
 + Giới thiệu tài liệu học và cảm ơn (Introduction and Thank you)
 + Giới thiệu ông tác giả: Ngắn gọn thoi (About)
 	Nguyễn Lê Nam (Namlete) một thằng lông bông sinh năm 2007. 
-+ Giới thiệu sơ qua các web chính chứa những phần trên (bổ sung thêm có news để chứa những cập nhật mới nhất về dự án) 
++ Giới thiệu sơ qua các web chính chứa những phần trên (bổ sung thêm có news để chứa những cập nhật mới nhất về dự án)  

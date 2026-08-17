@@ -1,3 +1,9 @@
+
+## Gói `mathtools` 
+
+
+---
+
 ##  Bổ sung bài học dấu ngoặc 
 
 . . . 
@@ -28,7 +34,7 @@ Khi viết tập hợp các số hữu tỉ $\mathbb{Q}$ được biểu diễn 
 
 $$\mathbb{Q} = \left\{\frac{a}{b}|a, b \in \mathbb{Z}, b \ne 0 \right\}$$
 
-Người dùng có thể thấy rằng, tuy hai bên dấu ngoặc nhọn đã được . . . (? điều gì tự động căn chỉnh) tự động căn chỉnh bởi hai lệnh lần lượt là `\left` và `\right`, nhưng [kí hiệu]() `|` không được tự động co giãn sao cho phù hợp với kích thước chiều cao của phân số $\dfrac{a}{b}$. 
+Người dùng có thể thấy rằng, tuy hai bên dấu ngoặc nhọn đã được . . . (? điều gì tự động căn chỉnh) tự động căn chỉnh bởi hai lệnh lần lượt là `\left` và `\right`, nhưng [kí hiệu]() `|` không được tự động co giãn sao cho phù hợp với kích thước chiều cao của phân số $\dfrac{a}{b}$.  
 
 Để khắc phục được điều này, người dùng chỉ cần thêm lệnh 
 
@@ -161,7 +167,7 @@ $y = \exp(x)$
 
 ---
 
-## Toán tử giới hạn 
+## Giới hạn 
 
 ```latex
 \documentclass{article}
@@ -935,6 +941,7 @@ $\displaystyle\int\limits_a^bb f(x) \mathrm{d}x = F(b) - F(a)$
 $$
 \int\limits_a^b f(x) \mathrm{d}x = F(b) - F(a)
 $$
+
 Khai triển tích phân của một hàm số: 
 . . . 
 
@@ -959,6 +966,10 @@ $$
 
 ## Đơn vị Angstrom 
 
+```latex
+\(\mathring{A}\)
+```
+
 $\mathring{A}$ 
 
 ---
@@ -981,32 +992,7 @@ $a \mp b$
 
 --- 
 
-## Chữ cái Hy Lạp
-
-Để in đậm chữ cái Hy Lạp, trước tiên người dùng cần phải khai báo gói `bm`
-
-```latex
-\usepackage{bm}
-```
-
-Sau đó, người dùng chỉ cần viết các chữ cái Hy Lạp vào trong dấu ngoặc nhọn của lệnh `\bm`. 
-
-```latex
-\bm
-```
-
-Lệnh này chỉ được sử dụng bên trong . . . 
-
-Ví dụ: 
-
-```latex
-\(\bm{\alpha}\)
-```
-
-
----
-
-## Các dấu chấm trong LaTex
+## Các dấu chấm dài trong LaTex
 
 Các dấu chấm này được sử dụng cả trong văn bản thông thường, lẫn trong văn bản toán học. 
 
@@ -1017,7 +1003,7 @@ Các dấu chấm này được sử dụng cả trong văn bản thông thườ
 | a $\vdots$ b     | `\vdots`       |
 | a $\ddots$ b     | `\ddots`       |
 
-Ở bảng . . . trên, chỉ riêng dấu ba chấm "$\dots$" là không cần nhất thiết được đặt vào các lệnh và môi trường viết chế độ toán học. Còn lại là bắt buộc . . . , nếu không thì hệ thống sẽ báo lỗi **Missing $ inserted.** 
+Ở bảng . . . (số bảng ...) trên, chỉ riêng dấu ba chấm "$\dots$" là không cần nhất thiết được đặt vào các lệnh và môi trường viết chế độ toán học. Còn lại là bắt buộc phải đặt chúng vào trong các lệnh, môi trường viết toán học, nếu không thì hệ thống sẽ báo lỗi **Missing $ inserted.** 
 
 Ví dụ: 
 
@@ -1035,7 +1021,7 @@ Ví dụ: Với bổ đề Euclid trong lý thuyết số
 
 Bổ đề Euclid: Cho  $a, b \in \mathbb{N}$ và $p \in \mathbb{P}$: 
 
-Nếu $p \ \vdots \ (a \cdot b)$, thì $p \ \vdots \ a$ hoặc $p \vdots b$. 
+Nếu $p \ \vdots \ (a \cdot b)$, thì $p \ \vdots \ a$ hoặc $p \ \vdots \ b$. 
 
 Tuy vậy, đôi khi . . . thường sử dụng dấu $|$ để biểu diễn quan hệ chia hết giữa hai số. 
 
@@ -1047,7 +1033,247 @@ Dấu này được sử dụng chính chỉ trong việc viết . . . (? dùng 
 
 . . . . (? giải thích lệnh này) 
 
+---
+
+## Viết văn bản trong chế độ toán học 
+
+Đã viết một phần bên [[Lecture notes]].  
+
+Khi người dùng viết lệnh `\text` ở sau một số hay một từ nào đó như ở ví dụ sau: 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[utf8]{vietnam}
+\begin{document}
+\[500 \text{quả táo} \times 100 \text{quả cam} = \text{Siuuu}^2\]
+\end{document}
+```
+
+$$
+500 \text{quả táo} \times 100 \text{quả cam} = \text{Siuuu}^2
+$$
+
+Người dùng có thể thấy từ quả táo sẽ bị dính liền với số 500, còn từ quả cam cũng sẽ bị dính liền với số 100. Dù người dùng đã phím cách tạo khoảng trống giữa các số với lệnh `\text` tương ứng.  
+
+Để khắc phục được điều này, người dùng chỉ cần nhấn phím cách văn bản trong lệnh `\text` so với dấu `{`  
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[utf8]{vietnam}
+\begin{document}
+\[500 \text{ quả táo} \times 100 \text{ quả cam} = \text{Siuuu}^2\]
+\end{document}
+```
+
+$$
+500 \text{ quả táo} \times 100 \text{ quả cam} = \text{Siuuu}^2
+$$
+
+Chỉnh sửa lại ở phần [[Lecture notes]] phần ví dụ mở đầu. [^1]
+
+```latex
+\documentclass{letter}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm} 
+\theoremstyle{definition}
+\newtheorem*{definition}{Định nghĩa}
+\begin{document}
+\begin{definition}
+    Cho \(c, d \in \mathbb{R}, c \neq d\) (thường lấy \(c=1 \ \text{và} \ d = 0\)). Hàm Dirichlet được định nghĩa bởi: 
+    \[
+    D(x) = 
+        \begin{cases}
+        c \quad nếu \ x \in \mathbb{Q}\\ 
+        d \quad nếu \ x \notin \mathbb{Q} 
+        \end{cases}
+    \]
+    và không liên tục ở mọi nơi. Hàm Dirichlet có thể được viết dưới dạng giải tích như sau:
+    \[
+    D(x) = \lim\limits_{m \to \infty} \lim\limits_{n \to \infty} \cos^{2n}(m! \pi x)
+    \]
+\end{definition}
+\end{document}
+```
+
+Người dùng có thể thấy, từ "nếu" được viết vào bên trong môi trường toán học sẽ bị in nghiêng. 
+
+. . . (Hướng dẫn sử dụng lệnh `\text`) 
+
+```latex
+\documentclass{letter}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm} 
+\theoremstyle{definition}
+\newtheorem*{definition}{Định nghĩa}
+\begin{document}
+\begin{definition}
+    Cho \(c, d \in \mathbb{R}, c \neq d\) (thường lấy \(c=1 \ \text{và} \ d = 0\)). Hàm Dirichlet được định nghĩa bởi: 
+    \[
+    D(x) = 
+        \begin{cases}
+        c \quad \text{nếu} \ x \in \mathbb{Q}\\ 
+        d \quad \text{nếu} \ x \notin \mathbb{Q} 
+        \end{cases}
+    \]
+    và không liên tục ở mọi nơi. Hàm Dirichlet có thể được viết dưới dạng giải tích như sau:
+    \[
+    D(x) = \lim\limits_{m \to \infty} \lim\limits_{n \to \infty} \cos^{2n}(m! \pi x)
+    \]
+\end{definition}
+\end{document}
+```
+
+<div align="center">
+	
+<img src="LaTeX-Library-project-v1.0.0/Draft/draft img/Dirichlet.jpg">
+
+Nhà toán học người Đức Johann Peter Gustav Lejeune Dirichlet
+
+</div>
+
+
+
+--- 
+
+## In đậm chữ cái Hy Lạp
+
+Để in đậm chữ cái Hy Lạp, trước tiên người dùng cần phải khai báo gói `bm`
+
+```latex
+\usepackage{bm}
+```
+
+Sau đó, người dùng chỉ cần viết các chữ cái Hy Lạp vào trong dấu ngoặc nhọn của lệnh `\bm`. 
+
+```latex
+\bm
+```
+
+Lệnh này chỉ được sử dụng bên trong lệnh, môi trường viết toán học. 
+
+Ví dụ: . . . 
+
+```latex
+\(\bm{\alpha}\)
+```
+
+Nếu như người dùng không thích khai báo package, mà muốn sử dụng một lệnh duy nhất để in đậm các chữ cái Hy Lạp, thì sử dụng qua lệnh: 
+
+```latex
+\boldsymbol{}
+```
+
+Ví dụ: . . . 
+
+```latex
+\(\boldsymbol{\alpha}\)
+```
 
 ---
 
-## Gói `mathtools` 
+## Một số phông chữ trong toán học 
+
+Phông chữ toán học thông thường: 
+
+```latex
+\[ABC \ abc \ 123\]
+```
+
+$$ABC \ abc \ 123$$
+
+Để các chữ cái toán học không bị in nghiêng như trên sử dụng lệnh `\mathrm`: 
+
+```latex
+\[\mathrm{ABC} \ \mathrm{abc} \ 123\]
+```
+
+$$\mathrm{ABC} \ \mathrm{abc} \ 123$$
+
+Để các số được in nghiêng ta sử dụng lệnh `\mathit`: 
+
+```latex
+\[\mathit{ABC} \ \mathit{abc} \ \mathit{123}\]
+```
+
+$$\mathit{ABC} \ \mathit{abc} \ \mathit{123}$$
+
+Để in đậm các cái toán học ta sử dụng lệnh `\mathbf`: 
+
+```latex
+\[\mathbf{ABC} \ \mathbf{abc} \ \mathbf{123}\]
+```
+
+$$\mathbf{ABC} \ \mathbf{abc} \ \mathbf{123}$$
+
+Để . . . 
+
+```latex
+\[\mathsf{ABC} \ \mathsf{abc} \ \mathsf{123}\]
+```
+
+$$\mathsf{ABC} \ \mathsf{abc} \ \mathsf{123}$$
+
+Để . . 
+
+```latex
+\[\mathtt{ABC} \ \mathtt{abc} \ \mathtt{123}\]
+```
+
+$$\mathtt{ABC} \ \mathtt{abc} \ \mathtt{123}$$
+
+Để . . .
+
+```latex
+\[\mathcal{ABCDEF}\]
+```
+
+$$
+\mathcal{ABCDEF}
+$$
+Để viết các tập số như tập tự nhiên $\mathbb{N}$, ..vv.. rước tiên ta cần phải khai báo package là `amssymb` hoặc `amsfonts`. Sau đó sử dụng lệnh `\mathbb`:  
+
+```latex
+\[\mathbb{NPZQRC}\]
+```
+
+$$
+\mathbb{NPZQRC}
+$$
+
+Để viết các tập số như tập tự nhiên $\mathbb{N}$, ..vv.. rước tiên ta cần phải khai báo package là `amssymb` hoặc `amsfonts`. Sau đó sử dụng lệnh `\mathfrak`: 
+
+```latex
+\[\mathfrak{ABC} \ \mathfrak{abc} \ \mathfrak{123}\]
+```
+
+$$\mathfrak{ABC} \ \mathfrak{abc} \ \mathfrak{123}$$
+
+Để . . ., trước tiên ta cần phải khai báo package là `mathrsfs`. Sau đó sử dụng lệnh `\mathscr`: 
+
+```latex
+\[\mathscr{ABCDEF}\] 
+```
+
+$$
+\mathscr{ABCDEF} 
+$$
+
+--- 
+
+## Chưa phân loại (tổng hợp đại trước)
+
+Nơi đây chứa tạp nhám các loại toán học, sau đó mới phân loại sau. 
+
+Tổng hợp tại đây: https://www.overleaf.com/read/cvrzxtfnpxvk#5bc02f 
+
+
+
+---
+
+[^1]: Tài liệu tham khảo hàm Dirichlet: https://mathworld.wolfram.com/DirichletFunction.html

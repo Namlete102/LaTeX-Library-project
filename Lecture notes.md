@@ -1904,7 +1904,7 @@ Nhà toán học người Scotland John Napier
 </div>
 
 ---
-### Kí hiệu, chữ cái toán học  (? đặt tên lại)
+### Chữ cái Hy Lạp
 
 Để viết kí hiệu, chữ cái toán học ở chế độ là `inline math`, cũng như là `display math`, người dùng chỉ cần viết chúng ở bên trong các các cặp kí hiệu, môi trường mà người viết đã trình bày ở [`inline math`, `display math`](). 
 
@@ -1934,6 +1934,10 @@ Nhà vật lý lý thuyết người Anh Paul DIrac
 </div>
 
 Người dùng có thể tham khảo đầy đủ ở [danh sách các kí hiệu toán học, chữ cái Hy Lạp](), nếu như người dùng chưa biết hoặc là nếu quên cách ghi các kí hiệu, chữ cái toán học đó trong lúc soạn thảo LaTeX. 
+
+--- 
+
+### Phông chữ toán học 
 
 Một số yếu tố toán học cần được trình bày bằng các kiểu phông chữ khác chẳng hạn các ký tự/ký hiệu theo một kiểu nhất định, khác nhau khi trình bày toán học. [^14] (?)
 
@@ -2503,7 +2507,7 @@ Văn bản trong toán học
 \end{document}
 ```
 
-Kết quả cho ra được là các từ sẽ được in nghiêng và bị dính vào nhau
+Kết quả cho ra được là các từ sẽ được hệ thống sắp in nghiêng và bị dính vào nhau
 
 $$
 Văn bản trong toán học 
@@ -2529,6 +2533,7 @@ Kết quả lúc này sẽ khác hoàn toàn so với khi chưa thêm văn bản
 $$
 \text{Văn bản trong toán học}
 $$
+
 
 Một số hàm trong toán học chẳng hạn như hàm lượng giác, . . vv . . được khuyến nghị . . . (? bởi ai, điều gì) soạn thảo ở dạng phông chữ thẳng đứng . . . (viết sau) 
 
@@ -2670,7 +2675,6 @@ $$
 3x^2 + 9y =  3a + c
 \end{gather*}
 $$
-
 
 --- 
 
@@ -3212,7 +3216,15 @@ F_n = 2^{2^n}+1
 \end{document}
 ```
 
-(? Nêu vấn đề vì sao ta lại phải phân biệt định nghĩa, định lý) Nhằm phân biệt được định nghĩa, định lý, ..vv.. trong trang tài liệu toán học người dùng sử dụng lệnh
+(? Nêu vấn đề vì sao ta lại phải phân biệt định nghĩa, định lý) 
+
+Khai báo package: 
+
+```latex
+\usepackage{amsthm} 
+```
+
+Nhằm phân biệt được định nghĩa, định lý, ..vv.. trong trang tài liệu toán học người dùng sử dụng lệnh
 
 ```latex
 \theoremstyle{stylename}

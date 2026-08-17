@@ -10,6 +10,8 @@ Các chuyên đề sâu thú vị LaTeX:
 + Tikz 
 + Macro
 
+Mã nguồn dự án: https://github.com/Namlete102/LaTeX-Library-project
+
 Phần giới thiệu LaTeX, mục tiêu của thư viện này: [[About]]
 
 Xem lộ trình dự án và sơ đồ bài học ở [[Lecture notes]]:  [[Roadmap.canvas]] 
