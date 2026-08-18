@@ -2318,6 +2318,8 @@ Hoặc người dùng cũng có thể sử dụng môi trường `cases` sau:
 \end{cases}
 ```
 
+Trước đó, người dùng nhớ hãy khai báo package `amsmath`, thì mới sử dụng được môi trường `cases`.  
+
 Viết lại ví dụ . . . trên bằng môi trường `cases`: 
 
 ```latex
@@ -2334,7 +2336,15 @@ Viết lại ví dụ . . . trên bằng môi trường `cases`:
 \end{document}
 ```
 
-Kết quả cho ra được vẫn sẽ tương tự với kết quả ta có được ở trên. 
+Kết quả cho ra được vẫn sẽ tương tự với kết quả ta có được ở trên (? viết lỗi nhóe). 
+
+$$
+\begin{cases} % không cần phải thêm môi trường matrix 
+	u_1 = 1 \\ 
+	u_2 = 1 \\ 
+	u_{n+1} = u_n + u_{n-1}, \forall n \geq 2  
+\end{cases}
+$$
 
 <div align="center">
 
@@ -2344,8 +2354,7 @@ Nhà toán học người Ý Fibonacci
 
 </div>
 
-
-. . . (viết tiếp ví dụ với dấu ngoặc lớn hiển thị ở bên phải mà ko có ở bên trái)
+. . . (viết tiếp ví dụ với dấu ngoặc lớn hiển thị ở bên phải mà ko có ở bên trái) 
 
 Tham khảo: https://gemini.google.com/app/4475fd095760fba9?hl=vi 
 
