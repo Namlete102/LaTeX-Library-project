@@ -2777,7 +2777,7 @@ F_n = 2^{2^n}+1
 \end{document}
 ```
 
-Điều này cũng được áp dụng tương tự với tất cả với [ngôn ngữ khác](). Chẳng hạn, để viết các từ "định lý", "định nghĩa" ..vv.. đang là tiếng Anh sang tiếng Việt. Người dùng trước tiên cần phải khai báo package [ngôn ngữ tiếng Việt ](), sau đó người dùng chỉ cần gõ lại từ theorem (tiếng Anh) sang từ định lý (tiếng Việt) ở `text`. 
+Điều này cũng được áp dụng tương tự với tất cả với [ngôn ngữ khác](). Chẳng hạn, để viết các từ "định lý", "định nghĩa" ..vv.. đang là tiếng Anh sang tiếng Việt. Người dùng trước tiên cần phải khai báo package [ngôn ngữ tiếng Việt ](), sau đó người dùng chỉ cần gõ lại từ "theorem" (tiếng Anh) sang từ "định lý" (tiếng Việt) ở `text`. 
 
 Quay trở lại ví dụ trên, lúc này từ định lý và định nghĩa đều được viết sang tiếng Việt:  
 

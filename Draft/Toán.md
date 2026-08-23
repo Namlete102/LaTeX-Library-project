@@ -529,6 +529,293 @@ To produce a small matrix suitable for use in text, there is a `smallmatrix` env
 
 To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{psmallmatrix}1 & 2 \\ 3 & 4\end{psmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . . 
 
+### Ma trận bổ sung 
+
+Cho một hệ phương trình tuyến tính tổng quát . . . 
+
+. . . (ma trận hệ số (coefficient matrix), ma trận cột ẩn số, ma trận cột hệ số tự do)
+
+. . . (ma trận bổ sung (augmented matrix))
+
+Để viết ma trận bổ sung, người dùng sẽ sử dụng gián tiếp thông qua môi trường `array`. 
+
+Ví dụ . . . : Cho một hệ phương trình tuyến tính sau 
+
+$$
+\begin{cases}
+	2x_1 + 3x_2 + 4x_3 = 5 \\[0.5em] 
+	3x_1 + 4x_2 + 5x_3 = 6 \\[0.5em]
+	4x_1 + 5x_2 + 6x_3 = 7
+\end{cases}
+$$
+
+Ta viết gọn lại bằng ma trận bổ sung như sau: 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\left[
+\begin{array}{@{}ccc|c@{}}
+2 & 3 & 4 & 5 \\ 
+3 & 4 & 5 & 6 \\
+4 & 5 & 6 & 7 
+\end{array} 
+\right]
+\]
+\end{document}
+```
+
+$$
+\left[
+\begin{array}{@{}ccc|c@{}}
+2 & 3 & 4 & 5 \\ 
+3 & 4 & 5 & 6 \\
+4 & 5 & 6 & 7 
+\end{array} 
+\right] 
+$$
+
+### Pp khử Gauss - Jordan 
+
+(? . . . . Giới thiệu phương pháp khử Gauss - Jordan) 
+
+Ví dụ . . . : Cho một hệ ba phương trình ba ẩn sau: 
+
+```latex
+\[
+\begin{cases}
+    x + 2y -z = 3 \\[0.5em]
+    2x + 5y + z = 10 \\[0.5em] 
+    3x + 6y + 2z = 15 
+\end{cases}
+\]
+```
+
+$$
+\begin{cases}
+    x + 2y -z = 3 \\[0.5em]
+    2x + 5y + z = 10 \\[0.5em] 
+    3x + 6y + 2z = 15 
+\end{cases}
+$$
+
+Viết lại dưới dạng ma trận bổ sung ta được: 
+
+```latex
+\[
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & -1 & 3 \\
+    2 & 5 & 1 & 10 \\
+    3 & 6 & 2 & 15 
+\end{array}
+\right]
+\]
+```
+
+$$
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & -1 & 3 \\
+    2 & 5 & 1 & 10 \\
+    3 & 6 & 2 & 15 
+\end{array}
+\right]
+$$
+
+Sử dụng phương pháp khử Gauss - Jordan để tìm nghiệm hệ trên: 
+
+```latex
+\[
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & -1 & 3 \\
+    2 & 5 & 1 & 10 \\
+    3 & 6 & 2 & 15 
+\end{array}
+\right] 
+\xrightarrow{\substack{R_2 \to R_2 - 2R_1 \\[0.3em] R_3 \to R_3 - 3R_1}}
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & -1 & 3 \\
+    0 & 1 & 3 & 4 \\
+    0 & 0 & 5 & 6 
+\end{array}
+\right] 
+\xrightarrow{R_3 \to \dfrac{1}{5}R_3} 
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & -1 & 3 \\
+    0 & 1 & 3 & 4 \\
+    0 & 0 & 1 & \dfrac{6}{5} 
+\end{array}
+\right] 
+\]
+
+\[
+\xrightarrow{\substack{R_2 \to R_2 - 3R_3 \\[0.3em] R_1 \to R_1 + R_3}} 
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & 0 & \dfrac{21}{5} \\[0.3em]
+    0 & 1 & 0 & \dfrac{2}{5} \\[0.3em]
+    0 & 0 & 1 & \dfrac{6}{5} 
+\end{array}
+\right] 
+\xrightarrow{R_1 \to R_1 - 2R_2} 
+\left[
+\begin{array}{ccc|c}
+    1 & 0 & 0 & \dfrac{17}{5} \\[0.3em]
+    0 & 1 & 0 & \dfrac{2}{5} \\[0.3em]
+    0 & 0 & 1 & \dfrac{6}{5} 
+\end{array}
+\right] 
+\]
+```
+
+$$
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & -1 & 3 \\
+    2 & 5 & 1 & 10 \\
+    3 & 6 & 2 & 15 
+\end{array}
+\right] 
+\xrightarrow{\substack{R_2 \to R_2 - 2R_1 \\[0.3em] R_3 \to R_3 - 3R_1}}
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & -1 & 3 \\
+    0 & 1 & 3 & 4 \\
+    0 & 0 & 5 & 6 
+\end{array}
+\right] 
+\xrightarrow{R_3 \to \dfrac{1}{5}R_3} 
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & -1 & 3 \\
+    0 & 1 & 3 & 4 \\
+    0 & 0 & 1 & \dfrac{6}{5} 
+\end{array}
+\right] 
+$$
+
+$$
+\xrightarrow{\substack{R_2 \to R_2 - 3R_3 \\[0.3em] R_1 \to R_1 + R_3}} 
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & 0 & \dfrac{21}{5} \\[0.3em]
+    0 & 1 & 0 & \dfrac{2}{5} \\[0.3em]
+    0 & 0 & 1 & \dfrac{6}{5} 
+\end{array}
+\right] 
+\xrightarrow{R_1 \to R_1 - 2R_2} 
+\left[
+\begin{array}{ccc|c}
+    1 & 0 & 0 & \dfrac{17}{5} \\[0.3em]
+    0 & 1 & 0 & \dfrac{2}{5} \\[0.3em]
+    0 & 0 & 1 & \dfrac{6}{5} 
+\end{array}
+\right] 
+$$
+Cách viết thứ hai . . . bằng cách sử dụng môi trường `align`
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\begin{align*}
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+2 & 5 & 1 & 10 \\
+3 & 6 & 2 & 15 
+\end{array}\right]
+&\xrightarrow{\substack{R_2 \to R_2 - 2R_1 \\[0.2em] R_3 \to R_3 - 3R_1}}
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+0 & 1 & 3 & 4 \\
+0 & 0 & 5 & 6 
+\end{array}\right] \\[1em] % xuống hàng mới 
+& \xrightarrow{R_3 \to \dfrac{1}{5}R_3} % Vô hàng
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+0 & 1 & 3 & 4 \\
+0 & 0 & 1 & \frac{6}{5} 
+\end{array}\right] \\[1em]
+& \xrightarrow{\substack{R_2 \to R_2 - 3R_3 \\[0.3em] R_1 \to R_1 + R_3}} 
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & 0 & \frac{21}{5} \\[0.3em]
+    0 & 1 & 0 & \frac{2}{5} \\[0.3em]
+    0 & 0 & 1 & \frac{6}{5} 
+\end{array}
+\right] \\[1em]
+& \xrightarrow{R_1 \to R_1 - 2R_2} 
+\left[
+\begin{array}{ccc|c}
+    1 & 0 & 0 & \frac{17}{5} \\[0.3em]
+    0 & 1 & 0 & \frac{2}{5} \\[0.3em]
+    0 & 0 & 1 & \frac{6}{5} 
+\end{array}
+\right] 
+\end{align*}
+\end{document}
+```
+
+$$
+\begin{align*}
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+2 & 5 & 1 & 10 \\
+3 & 6 & 2 & 15 
+\end{array}\right]
+&\xrightarrow{\substack{R_2 \to R_2 - 2R_1 \\[0.2em] R_3 \to R_3 - 3R_1}}
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+0 & 1 & 3 & 4 \\
+0 & 0 & 5 & 6 
+\end{array}\right] \\[1em] % xuống hàng mới 
+& \xrightarrow{R_3 \to \dfrac{1}{5}R_3} % Vô hàng
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+0 & 1 & 3 & 4 \\
+0 & 0 & 1 & \frac{6}{5} 
+\end{array}\right] \\[1em]
+& \xrightarrow{\substack{R_2 \to R_2 - 3R_3 \\[0.3em] R_1 \to R_1 + R_3}} 
+\left[
+\begin{array}{ccc|c}
+    1 & 2 & 0 & \frac{21}{5} \\[0.3em]
+    0 & 1 & 0 & \frac{2}{5} \\[0.3em]
+    0 & 0 & 1 & \frac{6}{5} 
+\end{array}
+\right] \\[1em]
+& \xrightarrow{R_1 \to R_1 - 2R_2} 
+\left[
+\begin{array}{ccc|c}
+    1 & 0 & 0 & \frac{17}{5} \\[0.3em]
+    0 & 1 & 0 & \frac{2}{5} \\[0.3em]
+    0 & 0 & 1 & \frac{6}{5} 
+\end{array}
+\right] 
+\end{align*}
+$$
+
+Vậy 
+
+$$
+(x, y, z) = \left(\frac{17}{5}, \frac{2}{5}, \frac{6}{5}\right)
+$$
+
+
+ <div align="center">
+	
+<img src="LaTeX-Library-project-v1.0.0/Draft/draft img/Gauss-Jordan.jpg" alt="Gauss-Jordan">
+
+Hai nhà toán học người Đức là Carl Gauss (trái) và Wilhelm Jordan (phải) (không nền nhầm lẫn với hai nhà toán học cùng tên khác là  Camille Jordan và Pascual Jordan) 
+
+</div>
+
+
 ---
 
 ## Định thức của ma trận 
@@ -974,13 +1261,19 @@ $\mathring{A}$
 
 ---
 
-## Sai số 
+## Sai số (cũng ko hẳn)
 
 ```latex
 \(a \pm b\)
 ```
 
 $a \pm b$  
+
+Hai nghiệm phân biệt của một phương trình bậc hai một ẩn, với $\Delta > 0$ 
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
 
 ? . . . (dấu dưới đây là dấu gì nhỉ)
 
