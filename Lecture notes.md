@@ -2647,20 +2647,40 @@ p(x) = 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3\\
 \end{multline*}
 $$
 
-
 ---
 
 ### Căn chỉnh phương trình:  
 
 Gợi ý viết ví dụ: 
-+ Thuật toán Euclid để tìm UCLN 
++ Sử dụng môi trường `align` để viết thuật toán Euclid để tìm UCLN của hai số là 441 và 662. Môi trường `align` này không cần đặt vào lệnh, môi trường viết phương trình toán học. Người dùng nhớ cần phải khai báo package `amsmath`. 
+
+```latex
+\begin{align*}
+    662 &= 414 \cdot 1 + 248 \\
+    414 &= 248 \cdot 1 + 166 \\
+    248 &= 166 \cdot 1 + 82 \\
+    166 &= 82 \cdot 2 + 2 \\ 
+    82 &= 2 \cdot 41
+\end{align*}
+```
+
+$$
+\begin{align*}
+    662 &= 414 \cdot 1 + 248 \\
+    414 &= 248 \cdot 1 + 166 \\
+    248 &= 166 \cdot 1 + 82 \\
+    166 &= 82 \cdot 2 + 2 \\ 
+    82 &= 2 \cdot 41
+\end{align*}
+$$
+
 + Môi trường split giúp khai triển chẳng hạn như ví dụ ở overleaf đây
 
 ```latex
-\begin{split}
+\[\begin{split}
 A & = \frac{\pi r^2}{2} \\
  & = \frac{1}{2} \pi r^2
-\end{split}
+\end{split}\]
 ```
 
 $$
@@ -2669,13 +2689,14 @@ A & = \frac{\pi r^2}{2} \\
  & = \frac{1}{2} \pi r^2
 \end{split}
 $$
+
 + Môi trường gather giúp khai triển các phương trình liên tiếp, căn giữa mà không cần quan tâm đến bất kỳ sự căn chỉnh nào 
 
 ```latex
-\begin{gather*} 
+\[\begin{gather*} 
 2x - 5y =  8 \\ 
 3x^2 + 9y =  3a + c
-\end{gather*}
+\end{gather*}\]
 ```
 
 $$
@@ -2705,7 +2726,7 @@ Sau đó, người dùng chỉ cần đặt các lệnh, môi trường . . . (?
 
 Người dùng có thể để cũng như chọn tùy ý bao nhiêu . . . (? bao nhiêu về cái gì) vào trong môi trường `subequation` đó.   
 
-Ví dụ: (với phương trình Maxwell)
+Ví dụ: (với các phương trình Maxwell)
 
 ```latex
 . . .  
@@ -2734,140 +2755,17 @@ Khi biên dịch sang trang tài liệu, nếu như các từ định nghĩa, đ
 
 Ví dụ với môi trường định lý (? nó cũng không có môi trường) về định lý Gauss - Wantzel và môi trường định nghĩa  (? nó cũng không có môi trường) về định nghĩa số nguyên tố Fermat trong lĩnh vực . . . của toán học, trong đó từ định lý và định nghĩa được viết bằng tiếng Anh:  
 
-```latex
-\documentclass{article}
-
-% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
-% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
-\usepackage[utf8]{vietnam}
-
-% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
-\newtheorem{theorem}{Theorem}
-\newtheorem{definition}{Definition}
-
-\begin{document}
-
-% ==========================================
-% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
-% ==========================================
-\begin{theorem}[Gauss--Wantzel]
-% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
-Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
-% Công thức toán dạng khối (display style)
-\[
-n = 2^k \cdot p_1 \cdot p_2 \dots p_t
-\]
-% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
-trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
-\end{theorem}
-
-% ==========================================
-% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
-% ==========================================
-\begin{definition}[Số nguyên tố Fermat]
-% Khai báo dạng tổng quát của số Fermat
-Một số nguyên có dạng 
-\[
-F_n = 2^{2^n}+1 
-\]
-% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
-được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
-\end{definition}
-
-\end{document}
-```
+([1.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
 
 Điều này cũng được áp dụng tương tự với tất cả với [ngôn ngữ khác](). Chẳng hạn, để viết các từ "định lý", "định nghĩa" ..vv.. đang là tiếng Anh sang tiếng Việt. Người dùng trước tiên cần phải khai báo package [ngôn ngữ tiếng Việt ](), sau đó người dùng chỉ cần gõ lại từ "theorem" (tiếng Anh) sang từ "định lý" (tiếng Việt) ở `text`. 
 
-Quay trở lại ví dụ trên, lúc này từ định lý và định nghĩa đều được viết sang tiếng Việt:  
+Quay trở lại ví dụ trên, lúc này từ định lý và định nghĩa đều được viết sang tiếng Việt:
 
-```latex
-\documentclass{article}
-
-% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
-% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
-\usepackage[utf8]{vietnam}
-
-% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
-\newtheorem{theorem}{Định lý}
-\newtheorem{definition}{Định nghĩa}
-
-\begin{document}
-
-% ==========================================
-% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
-% ==========================================
-\begin{theorem}[Gauss--Wantzel]
-% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
-Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
-% Công thức toán dạng khối (display style)
-\[
-n = 2^k \cdot p_1 \cdot p_2 \dots p_t
-\]
-% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
-trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
-\end{theorem}
-
-% ==========================================
-% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
-% ==========================================
-\begin{definition}[Số nguyên tố Fermat]
-% Khai báo dạng tổng quát của số Fermat
-Một số nguyên có dạng 
-\[
-F_n = 2^{2^n}+1 
-\]
-% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
-được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
-\end{definition}
-
-\end{document}
-```
+([2.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
 
 Thậm chí, người dùng cũng có thể viết lại từ "theorem" ở `name` thành từ "định lý" mà không cần phải khai báo package ngôn ngữ tiếng Việt. 
 
-```latex
-\documentclass{article}
-
-% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
-% Sử dụng bảng mã utf8 để gõ tiếng Anh hoặc ký tự đặc biệt bình thường
-\usepackage[utf8]{inputenc}
-
-% Khai báo môi trường "Theorem" (Định lý) và "Definition" (Định nghĩa) trong tiếng Anh
-\newtheorem{định lý}{Theorem}
-\newtheorem{định nghĩa}{Definition}
-
-\begin{document}
-
-% ==========================================
-% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
-% ==========================================
-\begin{định lý}[Gauss--Wantzel]
-% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
-The division of a circle into $n$ equal parts using a straightedge and compass is possible if and only if
-% Công thức hiển thị ở dạng khối (display math mode)
-\[
-n = 2^k \cdot p_1 \cdot p_2 \dots p_t
-\]
-% Giải thích các biến trong công thức
-where $k$ is a non-negative integer and $p_1, p_2, \dots, p_t$ are distinct Fermat primes.
-\end{định lý}
-
-% ==========================================
-% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
-% ==========================================
-\begin{định nghĩa}[Fermat prime]
-% Khai báo dạng tổng quát của số Fermat
-An integer of the form 
-\[
-F_n = 2^{2^n}+1 
-\]
-% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
-is called a Fermat prime if the output value calculated from $F_n$ is a prime number.
-\end{định nghĩa}
-
-\end{document} 
-```
+([3.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
 
 Người dùng cũng có thể viết ở `text` là tên chính định lý, định nghĩa, ..vv.. đó thay vì chỉ hiện từ "định nghĩa", "định lý", ..vv.. thông thường, mới kèm theo tên gọi định lý, định nghĩa đó (? viết lại đọa "thông thường, mới kèm . . .") như ví dụ trên.  
 
@@ -2885,104 +2783,11 @@ Tương tự đối với định nghĩa về số nguyên tố Fermat.
 
 Áp dụng điều này vào lại ví dụ . . . , lúc này ta được: 
 
-```latex
-\documentclass{article}
-
-% Khai báo font tiếng Việt cho LaTeX
-\usepackage[utf8]{vietnam}
-% . . . 
-\usepackage{amsmath}
-
-% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
-\newtheorem{theorem}{Định lý Gauss - Wantzel}
-\newtheorem{definition}{Số nguyên tố Fermat}
-
-\begin{document}
-
-% --- Phát biểu Định lý Gauss - Wantzel ---
-\begin{theorem}
-% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
-Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
-% Công thức phân tích n thành tích các số nguyên tố
-\[
-n = 2^k \cdot p_1 \cdot p_2 \dots p_t
-\]
-% Điều kiện của tham số k và các số nguyên tố Fermat p_i
-trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
-\end{theorem}
-
-% --- Định nghĩa Số nguyên tố Fermat ---
-\begin{definition}
-% Công thức tổng quát của số Fermat
-Một số nguyên có dạng 
-\[
-F_n = 2^{2^n}+1 
-\]
-% Điều kiện để F_n là số nguyên tố
-được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
-\end{definition}
-
-\end{document}
-```
-
-
+([4.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
 
 Trong trường hợp người dùng muốn viết định lý mới, nếu như người dùng sử dụng lại môi trường **theorem** đã được định nghĩa ban đầu, thì ở phần tiêu đề định lý mới đó vẫn sẽ xuất hiện "Định lý Gauss - Wantzel" như ở hai định lý . . . (? Hai định lý gì nhỉ)  
 
-```latex
-\documentclass{article}
-
-% Khai báo font tiếng Việt cho LaTeX
-\usepackage[utf8]{vietnam}
-% . . . 
-\usepackage{amsmath}
-
-% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
-\newtheorem{theorem}{Định lý Gauss - Wantzel}
-\newtheorem{definition}{Số nguyên tố Fermat}
-
-\begin{document}
-
-% --- Phát biểu Định lý Gauss - Wantzel ---
-\begin{theorem}
-% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
-Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
-% Công thức phân tích n thành tích các số nguyên tố
-\[
-n = 2^k \cdot p_1 \cdot p_2 \dots p_t
-\]
-% Điều kiện của tham số k và các số nguyên tố Fermat p_i
-trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
-\end{theorem}
-
-% --- Định nghĩa Số nguyên tố Fermat ---
-\begin{definition}
-% Công thức tổng quát của số Fermat
-Một số nguyên có dạng 
-\[
-F_n = 2^{2^n}+1 
-\]
-% Điều kiện để F_n là số nguyên tố
-được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
-\end{definition}
-
-% Định lý F_5 là hợp số 
-
-\begin{theorem}
-   Số Fermat $F_5$ là hợp số
-\end{theorem} 
-
-% Định lý . . . 
-
-\begin{theorem}
-    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
-    \begin{equation*}
-    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
-    \end{equation*}
-\end{theorem} 
-
-\end{document}
-```
+([5.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
 
 Để khắc phục được điều trên, người dùng cần phải định nghĩa một môi trường mới cho định lý. 
 
@@ -2992,63 +2797,9 @@ Cần phải đảm bảo rằng, nếu như người dùng đã định nghĩa 
 
 Nếu như người dùng định nghĩa môi trường định lý với từ **theorem** đã được sử dụng ở môi trường định lý Gauss - Wantzel, thì hệ thống sẽ báo lỗi **Command \theorem already defined.**  như ở ví dụ . . . dưới đây: 
 
-```latex
-\documentclass{article}
+([6.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
 
-% Khai báo font tiếng Việt cho LaTeX
-\usepackage[utf8]{vietnam}
-% . . . 
-\usepackage{amsmath}
-
-% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
-\newtheorem{theorem}{Định lý Gauss - Wantzel}
-\newtheorem{theorem}{Định lý} % từ theorem ở lệnh đây bị trùng với theorem ở lệnh trên nó. (? Viết lại cmt này)
-\newtheorem{definition}{Số nguyên tố Fermat}
-
-\begin{document}
-
-% --- Phát biểu Định lý Gauss - Wantzel ---
-\begin{theorem}
-% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
-Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
-% Công thức phân tích n thành tích các số nguyên tố
-\[
-n = 2^k \cdot p_1 \cdot p_2 \dots p_t
-\]
-% Điều kiện của tham số k và các số nguyên tố Fermat p_i
-trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
-\end{theorem}
-
-% --- Định nghĩa Số nguyên tố Fermat ---
-\begin{definition}
-% Công thức tổng quát của số Fermat
-Một số nguyên có dạng 
-\[
-F_n = 2^{2^n}+1 
-\]
-% Điều kiện để F_n là số nguyên tố
-được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
-\end{definition}
-
-% Định lý F_5 là hợp số 
-
-\begin{theorem}
-   Số Fermat $F_5$ là hợp số
-\end{theorem} 
-
-% - - - -
-
-\begin{theorem}
-    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
-    \begin{equation*}
-    3^{\frac{F_{n}-1}{2}} \equiv -1 \pmod{F_n}.
-    \end{equation*}
-\end{theorem}
-
-\end{document}
-```
-
-Từ những điều đã nêu ở trên, lúc này để viết một hay nhiều định lý mới khác mà không bị trùng lặp với định lý đã được định nghĩa ban đầu, người dùng chỉ cần đặt tên . . .(? gì, ở đâu) khác đi. 
+Từ những điều đã nêu ở trên, lúc này để viết một hay nhiều định lý mới khác mà không bị trùng lặp với định lý đã được định nghĩa ban đầu, người dùng chỉ cần đặt tên . . . (? gì, ở đâu) khác đi. 
 
 Cụ thể, thay vì sử dụng đầy đủ tên gọi **theorem**, lúc này ta có thể chỉ cần viết tắt lại thành **thm**: 
 
@@ -3056,7 +2807,7 @@ Cụ thể, thay vì sử dụng đầy đủ tên gọi **theorem**, lúc này 
 \newtheorem{thm}{Định lý}
 ```
 
-và ở . . . (? ở đâu trong phần soạn thảo LaTeX)
+và ở . . . (? ở đâu trong phần soạn thảo LaTeX) 
 
 ```latex
 \begin{thm}
@@ -3069,61 +2820,7 @@ và ở . . . (? ở đâu trong phần soạn thảo LaTeX)
 
 Từ đây ta viết lại ví dụ . . . :  
 
-```latex
-\documentclass{article}
-
-% Khai báo font tiếng Việt cho LaTeX
-\usepackage[utf8]{vietnam}
-% . . . 
-\usepackage{amsmath}
-
-% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
-\newtheorem{theorem}{Định lý Gauss - Wantzel}
-\newtheorem{thm}{Định lý} 
-\newtheorem{definition}{Số nguyên tố Fermat}
-
-\begin{document}
-
-% --- Phát biểu Định lý Gauss - Wantzel ---
-\begin{theorem}
-% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
-Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
-% Công thức phân tích n thành tích các số nguyên tố
-\[
-n = 2^k \cdot p_1 \cdot p_2 \dots p_t
-\]
-% Điều kiện của tham số k và các số nguyên tố Fermat p_i
-trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
-\end{theorem}
-
-% --- Định nghĩa Số nguyên tố Fermat ---
-\begin{definition}
-% Công thức tổng quát của số Fermat
-Một số nguyên có dạng 
-\[
-F_n = 2^{2^n}+1 
-\]
-% Điều kiện để F_n là số nguyên tố
-được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
-\end{definition}
-
-% Định lý F_5 là hợp số 
-
-\begin{theorem}
-   Số Fermat $F_5$ là hợp số
-\end{theorem} 
-
-% . . . .
-
-\begin{thm}
-    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
-    \begin{equation*}
-    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
-    \end{equation*}
-\end{thm}
-
-\end{document}
-```
+([7.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
 
 Người dùng có thể áp dụng tương tự . . . (? Áp dụng tương tự điều gì) để khắc phục đoạn mã định lý $F_5$ là hợp số.  
 
@@ -3152,6 +2849,12 @@ Sau đó người dùng chỉ cần thêm dấu `*` ở sau lệnh `\newtheorem`
 ```
 
 Quay lại với ví dụ . . . lúc này đoạn mã có được: 
+
+([8.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
+
+Người dùng có thể thấy rằng, bên cạnh tên "Định lý Gauss - Wantzel" và cũng như là "Số nguyên tố Fermat" không còn xuất hiện số thứ tự bên cạnh nữa. 
+
+Nếu như người dùng viết một ví dụ ngay sau phần **định lý 2.2** ở đoạn mã trên: 
 
 ```latex
 \documentclass{article}
@@ -3211,11 +2914,86 @@ F_n = 2^{2^n}+1
 \end{document}
 ```
 
-Người dùng có thể thấy rằng, bên cạnh tên "Định lý Gauss - Wantzel" và cũng như là "Số nguyên tố Fermat" không còn xuất hiện số thứ tự bên cạnh nữa. 
+người dùng có thể thấy rằng số thứ tự ngay cạnh từ **ví dụ** không được tự cập nhật theo số thứ tự . . . (? viết tiếp)
 
-Với bài viết chia [mục lục]() . . . ta chỉ cần thêm các lệnh . . .  tương ứng với phần tiêu đề . . .đó vào . . .(? viết tào lao gì vậy)
+. . . (? trình bày cách khắc phục)
 
-Ví dụ . . : Nếu như tiêu đề mục đang được sử dụng là lệnh `\section`, thì ta chỉ cần thêm . . . vào   
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} % for theorem environments
+
+% Đặt tên tiêu đề hiển thị cho định lý, định nghĩa và hệ quả
+\newtheorem*{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{thm}{Định lý}
+\newtheorem*{definition}{Số nguyên tố Fermat}
+\newtheorem{example}[thm]{Ví dụ}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{thm}
+   Số Fermat $F_5$ là hợp số
+\end{thm} 
+
+% . . . .
+
+\begin{thm}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
+    \end{equation*}
+\end{thm}
+
+% . . .
+
+\begin{example}
+    \(F_3\) là số nguyên tố. Thật vậy, ta có
+    \[
+        \begin{split}
+            3^{\frac{F_3-1}{2}} & \equiv 3^{128} = 3^3 \cdot (3^5)^{25} \\
+                                & \equiv 27 \cdot (-14)^{25} \\ 
+                                & \equiv 27 \cdot 14^{24} \cdot (-14) \\ 
+                                & \equiv 27 \cdot 19 \equiv 513 \equiv -1 \pmod{257} \\
+        \end{split}
+    \]
+\end{example}
+
+\end{document}
+```
+
+Với bài viết chia [mục lục]() . . . ta chỉ cần thêm các lệnh . . .  tương ứng với phần tiêu đề . . .đó vào . . (? viết tào lao gì vậy)
+
+ Giả sử . . . : Nếu như tiêu đề mục đang được sử dụng là lệnh `\section`, thì ta chỉ cần thêm . . . vào . . . cũng là `section`.  (? viết lại nhé) 
 
 ```latex
 \documentclass{article}
@@ -3278,6 +3056,20 @@ F_n = 2^{2^n}+1
     3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}
     \end{equation*}
 \end{thm}
+
+% . . .
+
+\begin{example}
+    \(F_3\) là số nguyên tố. Thật vậy, ta có
+    \[
+        \begin{split}
+            3^{\frac{F_3-1}{2}} & \equiv 3^{128} = 3^3 \cdot (3^5)^{25} \\
+                                & \equiv 27 \cdot (-14)^{25} \\ 
+                                & \equiv 27 \cdot 14^{24} \cdot (-14) \\ 
+                                & \equiv 27 \cdot 19 \equiv 513 \equiv -1 \pmod{257} \\
+        \end{split}
+    \]
+\end{example}
 
 \end{document}
 ```
@@ -3387,7 +3179,7 @@ trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là cá
 \end{document}
 ```
 
-Ví dụ về stylename **remark** với nhận xét về các số nguyên tố Fermat :
+Ví dụ về stylename **remark** với nhận xét về các số nguyên tố Fermat : 
 
 ```latex
 \documentclass{article}
@@ -3397,8 +3189,101 @@ Ví dụ về stylename **remark** với nhận xét về các số nguyên tố
 \newtheorem*{remark}{Nhận xét} 
 \begin{document}
 \begin{remark}
-Fermat nhận ra 5 số Fermat đầu tiên là \(F_0 = 3, F_1 = 5; F_2 = 17, F_3 = 257, F_4 = 65537\) đều là số nguyên tố và ông đã nhận định rằng $F_n$ là số nguyên tố với mọi giá trị của $n$. Tuy nhiên, đến năm 1732, nhà toán học người Thụy Sĩ là Leohard Euler đã tìm thấy F5 là hợp số.
+Fermat nhận ra 5 số Fermat đầu tiên là \(F_0 = 3, F_1 = 5; F_2 = 17, F_3 = 257, F_4 = 65537\) đều là số nguyên tố và ông đã nhận định rằng $F_n$ là số nguyên tố với mọi giá trị của $n$. Tuy nhiên, đến năm 1732, nhà toán học người Thụy Sĩ Leohard Euler đã chứng minh rằng \(F_5\) là hợp số.
 \end{remark}
+\end{document} 
+```
+
+Từ các đoạn mã trên, ta tổng hợp lại được một đoạn mã sau . . .  (? viết lại nhé) 
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+
+% . . . 
+\theoremstyle{definition}
+\newtheorem*{theorem}{Định lý Gauss - Wantzel}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Định lý}[section] 
+\newtheorem*{definition}{Số nguyên tố Fermat}
+\newtheorem{example}[thm]{Ví dụ}
+
+\theoremstyle{remark} 
+\newtheorem*{remark}{Nhận xét} 
+
+\begin{document}
+
+% . . . 
+\section{Giới thiệu}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% . . . 
+\section{Một số tính chất về tính nguyên tố của số Fermat}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% . . . 
+
+\begin{remark}
+Fermat nhận ra 5 số Fermat đầu tiên là \(F_0 = 3, F_1 = 5; F_2 = 17, F_3 = 257, F_4 = 65537\) đều là số nguyên tố và ông đã nhận định rằng $F_n$ là số nguyên tố với mọi giá trị của $n$. Tuy nhiên, đến năm 1732, nhà toán học người Thụy Sĩ Leohard Euler đã chứng minh rằng \(F_5\) là hợp số.
+\end{remark}
+
+% Định lý F_5 là hợp số 
+
+\begin{thm}
+   Số Fermat $F_5$ là hợp số
+\end{thm} 
+
+% . . . .
+
+\begin{thm}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}
+    \end{equation*}
+\end{thm}
+
+% . . .
+
+\begin{example}
+    \(F_3\) là số nguyên tố. Thật vậy, ta có
+    \[
+        \begin{split}
+            3^{\frac{F_3-1}{2}} & \equiv 3^{128} = 3^3 \cdot (3^5)^{25} \\
+                                & \equiv 27 \cdot (-14)^{25} \\ 
+                                & \equiv 27 \cdot 14^{24} \cdot (-14) \\ 
+                                & \equiv 27 \cdot 19 \equiv 513 \equiv -1 \pmod{257} \\
+        \end{split}
+    \]
+\end{example}
+
 \end{document}
 ```
 
@@ -3414,17 +3299,44 @@ Bằng chứng (tiếng anh là proof) là . . .
 
 Với môi trường `proof`, chúng đã được có trong sẵn package `amsthm` mà ta đã khai báo ở . . . (phần bài học nhân xét mà không đánh số ở trên) 
 
-Ví dụ về môi trường `proof` với chứng minh định lý số Fermat $F_5$ là hợp số 
+Ví dụ về môi trường `proof` với việc chứng minh định lý số Fermat $F_5$ là hợp số 
 
 ```latex
 \documentclass{article}
-\usepackage[utf8]{vietnam} % for Vietnamese 
-\usepackage{amsthm}
-\usepackage{amssymb}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+
+%  . . .
+\theoremstyle{plain}
+\newtheorem{thm}{Định lý}
+
 \begin{document}
+
+% Định lý F_5 là hợp số 
+
+\begin{thm}
+   Số Fermat $F_5$ là hợp số
+\end{thm} 
+
+% Chứng minh định lý F_5 là hợp số
+
 \begin{proof}
-Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
+Ta thấy rằng 
+\[
+    \begin{split}
+        F_5 &= 2^{32} + 1 \\
+            &= 2^4 \cdot 2^{28} + 1 \\ 
+            &= . . .
+    \end{split}
+\]
+Kết quả này chứng tỏ \(F_5 \vdots 641\). Vậy \(F_5\) là hợp số. 
 \end{proof}
+
 \end{document}
 ```
 
@@ -3440,7 +3352,7 @@ Khi hoàn thành xong phần chứng minh cho định lý, mệnh đề, bổ đ
 
 hoặc bởi một ô vuông trắng hoặc đen: 
 
-. . . (? Ảnh ) 
+. . . (? Ảnh) 
 
 Điều này bắt nguồn từ . . . (? một chút lịch sử về việc tại sao phải có điều này) và được viết tắt ngắn gọn lại là QED[^18] . 
 
@@ -3450,7 +3362,7 @@ hoặc bởi một ô vuông trắng hoặc đen:
 \renewcommand\qedsymbol{QED}
 ```
 
-được đặt ở {? ở đâu}
+được đặt ở (? ở đâu)
 
 Từ QED trên thông thường được thay thế ngắn gọn lại bằng một [kí hiệu đặc biệt]() ô vuông trắng 
 
@@ -3464,22 +3376,54 @@ hoặc đôi khi là một ô vuông đen
 \renewcommand\qedsymbol{$\blacksquare$}
 ```
 
-Các lệnh trên đều phải được đặt trước môi trường `proof` như ở ví dụ . . . đây
+Các lệnh trên đều phải được đặt trước môi trường `proof` . . . 
+
+. . .  nếu như người dùng muốn thay ô vuông trắng (mặc định) ở . . . thành ô vuông đen: 
 
 ```latex
 \documentclass{article}
-\usepackage[utf8]{vietnam} % for Vietnamese 
-\usepackage{amsthm}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+% . . .
 \usepackage{amssymb}
+
+%  . . .
+\theoremstyle{plain}
+\newtheorem{thm}{Định lý}
+
 \begin{document}
-\renewcommand\qedsymbol{QED}
+
+% Định lý F_5 là hợp số 
+
+\begin{thm}
+   Số Fermat $F_5$ là hợp số
+\end{thm} 
+
+% Chứng minh định lý F_5 là hợp số
+
+\renewcommand\qedsymbol{$\blacksquare$} % . . . 
+
 \begin{proof}
-Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
+Ta thấy rằng 
+\[
+    \begin{split}
+        F_5 &= 2^{32} + 1 \\
+            &= 2^4 \cdot 2^{28} + 1 \\ 
+            &= . . .
+    \end{split}
+\]
+Kết quả này chứng tỏ \(F_5 \ \vdots \ 641\). Vậy \(F_5\) là hợp số. 
 \end{proof}
+
 \end{document}
 ```
 
-Viết lại đầy đủ từ . . . (? từ đâu)
+Viết lại đầy đủ từ . . . (? từ đâu (where))
 
 ```latex
 \documentclass{article}
@@ -3491,15 +3435,17 @@ Viết lại đầy đủ từ . . . (? từ đâu)
 % . . . 
 \usepackage{amsthm} 
 
-% Đặt tên tiêu đề hiển thị cho định lý, định nghĩa và hệ quả
+%  . . .
 \theoremstyle{plain}
 \newtheorem*{theorem}{Định lý Gauss - Wantzel}
 \newtheorem{thm}{Định lý}[section] 
+
 \theoremstyle{definition}
 \newtheorem*{definition}{Số nguyên tố Fermat}
 \newtheorem{example}[thm]{Ví dụ}
+
 \theoremstyle{remark}
-\newtheorem{remark}{Nhận xét} 
+\newtheorem*{remark}{Nhận xét} 
 
 \begin{document}
 
@@ -3538,6 +3484,12 @@ F_n = 2^{2^n}+1
 được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
 \end{definition}
 
+% . . . 
+
+\begin{remark}
+Fermat nhận ra 5 số Fermat đầu tiên là \(F_0 = 3, F_1 = 5; F_2 = 17, F_3 = 257, F_4 = 65537\) đều là số nguyên tố và ông đã nhận định rằng $F_n$ là số nguyên tố với mọi giá trị của $n$. Tuy nhiên, đến năm 1732, nhà toán học người Thụy Sĩ Leohard Euler đã chứng minh rằng \(F_5\) là hợp số.
+\end{remark}
+
 % Định lý F_5 là hợp số 
 
 \begin{thm}
@@ -3565,6 +3517,20 @@ Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
 Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
 \end{proof} 
 
+% . . .
+
+\begin{example}
+    \(F_3\) là số nguyên tố. Thật vậy, ta có
+    \[
+        \begin{split}
+            3^{\frac{F_3-1}{2}} & \equiv 3^{128} = 3^3 \cdot (3^5)^{25} \\
+                                & \equiv 27 \cdot (-14)^{25} \\ 
+                                & \equiv 27 \cdot 14^{24} \cdot (-14) \\ 
+                                & \equiv 27 \cdot 19 \equiv 513 \equiv -1 \pmod{257} \\
+        \end{split}
+    \]
+\end{example}
+
 \end{document}
 ```
 
@@ -3574,7 +3540,7 @@ Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
 	
 <img src="LaTeX-Library-project-v1.0.0/images/Fermat Gauss Wantzel.jpg" alt="Fermat Gausss Wantzel">
 
-Nhà toán học người Pháp Fermat (trái), nhà toán học người Đức Gauss (giữa) và nhà toán học người Pháp Wantzel (phải)
+Hai nhà toán học người Pháp Fermat (trái), Wantzel (phải) và nhà toán học người Đức Gauss (giữa)
 
 </div>
 
@@ -3672,7 +3638,7 @@ Dấu $\boxtimes, \Box$
 
 \+ Phân số được định nghĩa là . . .   
 
-Ví dụ: $0.5 = \frac{1}{2}$ trong đó $\frac{1}{2}$ chính là phân số của số thập phân hữu hạn $0.5$  
+Ví dụ: $0.5 = \dfrac{1}{2}$ trong đó $\dfrac{1}{2}$ chính là phân số của số thập phân hữu hạn $0.5$  
 
 Để viết được phân số, ta sử dụng lệnh : 
 
@@ -3680,7 +3646,7 @@ Ví dụ: $0.5 = \frac{1}{2}$ trong đó $\frac{1}{2}$ chính là phân số c�
 \frac{tử số}{mẫu số}
 ```
 
-Viết lại phần số $\frac{1}{2}$ bằng lệnh trên 
+Viết lại phần số $\dfrac{1}{2}$ bằng lệnh trên 
 
 ```latex
 \(\frac{1}{2}\)
@@ -4165,11 +4131,23 @@ Như vậy, định lý \ref{thm:0.2} chính là trường hợp tổng quát c�
 </div>
 
 ---
-# c. Các bài học bên lề khác 
+# c. Một số bài học bên lề khác 
 
 Đây là những bài học mở rộng khác liên quan đến LaTeX. 
 
 ## Viết mã LaTeX sao cho đẹp và sạch ? 
+
+Việc viết mã LaTeX trông sẽ như thế nào, tùy thuộc vào từng người dùng . . . Người viết sẽ chỉ đưa ra một số cách trình bày mã LaTeX sao cho đẹp và sạch, giúp những bạn mới học về LaTeX có thể lấy đây là điểm xuất phát thay vì chỉ là một tiêu chuẩn chung thống nhất. . . .
+
+---
+
+## Một số trình soạn thảo LateX khác
+
+Tuy rằng người viết đang hướng dẫn người dùng sử dụng Overleaf để thực hành các lệnh LaTeX một cách cơ bản và có thể vẫn sử dụng chúng để viết các bài luận ngắn, ..vv.. thì vẫn sẽ tiện lợi. Tuy vậy Overleaf chứa một số nhược điểm . . . (? liệt kê)
+
+. . .  
+
+Tất nhiên, những trình soạn thảo ở đây chỉ là gợi ý từ việc người viết thu thập được từ nhiều nơi, cũng như là trải nghiệm cá nhân của người viết, bản thân người viết không muốn người mới bắt đầu học về LaTeX cảm thấy choáng ngợp trước nhiều lựa chọn không cần thiết, thay vào đó ta chỉ cần một nơi để bắt đầu học và thực hành LaTeX trước, để tạo cảm giác . . . với món LaTeX này. 
 
 ---
 
