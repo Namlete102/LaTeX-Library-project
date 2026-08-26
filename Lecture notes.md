@@ -1785,13 +1785,13 @@ Nhà toán học Lary Guth, nhà toán học Vương Hồng và nhà toán học
 
 </div>
 
-Để chuyển số thứ tự đó nằm từ bên phải sang bên trái như hình . . ., người dùng chỉ cần thêm `options` 
+Để chuyển số thứ tự đó nằm từ bên phải sang bên trái như hình . . . (Số hình), người dùng chỉ cần thêm `options` 
 
 ```latex
 leqno
 ```
 
-ở phần khai báo lớp tài liệu (`\documentclass`). 
+ở phần khai báo lớp tài liệu (`documentclass`). 
 
 ```latex
 \documentclass[leqno]{article} % 
@@ -1893,7 +1893,12 @@ hoặc thêm [chú thích]() vào khoảng trống giữa hai biểu thức đó
 
 mà kết quả cho ra được đều sẽ là như sau:
 
-$$\log_b{xy} = \log_b{x} + \log_b{y}$$
+$$
+\log_b{xy} 
+% Chú thích này sẽ lấp lại dòng trống
+= \log_b{x} + \log_b{y}
+$$
+
 
 <div align="center"> 
 
@@ -1919,7 +1924,7 @@ Ví dụ về . . .
 \end{document}
 ```
 
-Người dùng có thể thấy, trong phương trình tính . . . của nhà vật lý Paul Dirac, có chữ cái Hy Lạp lần lượt là $\gamma$ (đọc là gamma) và $\mu$ (đọc là mu) được dùng để . . .(? để làm gì trong phương trình đó)
+Người dùng có thể thấy, trong phương trình tính . . . của nhà vật lý Paul Dirac, có các chữ cái Hy Lạp lần lượt là $\gamma$ (đọc là gamma) và $\mu$ (đọc là mu) được dùng để . . . (? để làm gì trong phương trình đó)
 
 $$
 (i \gamma^\mu \partial_\mu - m) \psi = 0
@@ -1933,7 +1938,7 @@ Nhà vật lý lý thuyết người Anh Paul DIrac
 
 </div>
 
-Người dùng có thể tham khảo đầy đủ ở [danh sách các kí hiệu toán học, chữ cái Hy Lạp](), nếu như người dùng chưa biết hoặc là nếu quên cách ghi các kí hiệu, chữ cái toán học đó trong lúc soạn thảo LaTeX. 
+Người dùng có thể tham khảo đầy đủ ở [danh sách các kí hiệu toán học, chữ cái Hy Lạp](), nếu như người dùng chưa biết cách ghi hoặc là nếu quên cách ghi các chữ cái toán học đó trong lúc soạn thảo LaTeX. 
 
 --- 
 
@@ -2441,7 +2446,15 @@ Nhà vật lý người Anh Isaac Newton
 
 </div>
 
-Cũng ở ví dụ về công thức nhị thức Newton trên, người dùng có thể thấy để viết được biểu thức dài $n-k$ ở chỉ số trên của $a$, chúng cần được gom lại trong dấu ngoặc nhọn `{}` được đặt sau kí hiệu chỉ số trên.
+Cũng ở ví dụ về công thức nhị thức Newton trên, người dùng có thể thấy để viết được biểu thức $n-k$ ở chỉ số trên của $a$, chúng cần được gom lại trong dấu ngoặc nhọn `{}` được đặt sau kí hiệu chỉ số trên. 
+
+Nếu như người viết thông thường 
+
+```latex
+a^n-k
+```
+
+thì hệ thống sẽ chỉ hiểu người dùng đang viết $a^n-k$ thay vì $a^{n-k}$.   
 
 Điều này cũng được áp dụng tương tự đối với chỉ số dưới. 
 
@@ -2460,7 +2473,7 @@ $$
 R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R + g_{\mu\nu}\Lambda = \frac{8\pi G}{c^4}T_{\mu\nu} 
 $$
 
-Người dùng có thể thấy, để viết được bao quát chỉ số dưới $\mu\nu$, chúng cần được viết đấy đủ vào trong dấu ngoặc nhọn `{}` ở sau kí hiệu chỉ số dưới. 
+Người dùng có thể thấy, để viết được bao quát chỉ số dưới biểu thức $\mu\nu$, chúng cần được viết đấy đủ vào trong dấu ngoặc nhọn `{}` ở sau kí hiệu chỉ số dưới. 
 
 <div align="center">
 
@@ -2543,41 +2556,37 @@ $$
 \text{Văn bản trong toán học}
 $$
 
+Bên cạnh việc viết văn bản vào trong toán học, một số hàm trong toán học chẳng hạn như hàm lượng giác, . . vv . . được khuyến nghị . . . (? bởi ai, điều gì) soạn thảo ở dạng phông chữ thẳng đứng . . . (viết sau) 
 
-Một số hàm trong toán học chẳng hạn như hàm lượng giác, . . vv . . được khuyến nghị . . . (? bởi ai, điều gì) soạn thảo ở dạng phông chữ thẳng đứng . . . (viết sau) 
-
-Chẳng hạn, khi viết công thức . . . , nếu như người dùng chỉ viết hàm $\cos$ thông thường
+Chẳng hạn, khi viết công thức . . . , nếu như người dùng chỉ viết hàm $\cos$. $\sin$ thông thường như ở ví dụ sau đây
 
 ```latex
-
+\[cos(2 \alpha) = cos^2(\alpha) - sin^2(\alpha)\]
 ```
 
- thì chúng sẽ bị in nghiêng khi xuất sang trang tài liệu 
+thì người dùng có thể thấy, chúng sẽ bị in nghiêng khi xuất sang trang tài liệu. 
+
+Theo phản xạ nhanh, người dùng sẽ đặt các hàm đó vào trong lệnh `\text`
+
+```latex
+\[\text{cos}(2 \alpha) = \text{cos}^2(\alpha) - \text{sin}^2(\alpha)\]
+```
 
 . . . (kết quả từ ví dụ)
 
-Để viết hàm $\cos$  . . ., người viết chỉ cần thêm dấu `\` bên cạnh hàm đó như . . . . 
+Một cách khác để viết các hàm toán học như $\cos$, $\sin$  . . . như ở ví dụ trên một cách ngắn gọn hơn, người dùng chỉ cần thêm dấu `\` bên cạnh hàm đó: 
 
 ```latex
-
+\[\cos(2 \alpha) = \cos^2(\alpha) - \sin^2(\alpha)\]
 ```
 
-Kết quả lúc này sẽ khác hẳn so với khi ta chưa thêm dấu `\` vào trước hàm $\cos$ đó. 
-
-Điều này, còn được áp dụng với một số hàm khác, chẳng hạn như [giới hạn]() . . .
+Với một số hàm toán học đã được LaTeX cung cấp . . ., nếu như người dùng sử dụng dấu `\` để viết cho một . . . khác thì chúng sẽ báo lỗi . . . (? gì)  
 
 ```latex
-
+\[\nam\]
 ```
 
-
-Với một số hàm toán học đã được LaTeX cung cấp . . ., nếu người dùng sử dụng dấu `\` để viết cho một . . . khác thì chúng sẽ báo lỗi . . . (? gì)  
-
-```latex
-\nam
-```
-
-Xem đầy đủ các hàm được LaTeX . . . tại [danh sách các kí hiệu toán học, chữ cái Hy Lạp]().  
+Người dùng có thể xem đầy đủ các hàm được LaTeX . . . (? LaTeX làm sao) tại [danh sách các kí hiệu toán học, chữ cái Hy Lạp]().  
 
 ---
 
@@ -2652,9 +2661,12 @@ $$
 ### Căn chỉnh phương trình:  
 
 Gợi ý viết ví dụ: 
-+ Sử dụng môi trường `align` để viết thuật toán Euclid để tìm UCLN của hai số là 441 và 662. Môi trường `align` này không cần đặt vào lệnh, môi trường viết phương trình toán học. Người dùng nhớ cần phải khai báo package `amsmath`. 
++ Sử dụng môi trường `align` để viết thuật toán Euclid để tìm UCLN của hai số là 441 và 662. Môi trường `align` này không cần đặt vào lệnh, môi trường viết phương trình toán học. Trước đó, người dùng nhớ cần phải khai báo package `amsmath`. 
 
 ```latex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
 \begin{align*}
     662 &= 414 \cdot 1 + 248 \\
     414 &= 248 \cdot 1 + 166 \\
@@ -2662,6 +2674,7 @@ Gợi ý viết ví dụ:
     166 &= 82 \cdot 2 + 2 \\ 
     82 &= 2 \cdot 41
 \end{align*}
+\end{document}
 ```
 
 $$
@@ -2673,24 +2686,38 @@ $$
     82 &= 2 \cdot 41
 \end{align*}
 $$
+
+>[!WARNING]
+>Người dùng không được để môi trường `align*` vào trong lệnh hoặc môi trường viết toán học. Nếu không, hệ thống sẽ báo lỗi . . . (? báo lỗi gì). 
 
 + Môi trường split giúp khai triển chẳng hạn như ví dụ ở overleaf đây
 
 ```latex
-\[\begin{split}
-A & = \frac{\pi r^2}{2} \\
- & = \frac{1}{2} \pi r^2
-\end{split}\]
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+\begin{split}
+    (a+b)^2 &= (a+b) \cdot (a+b) \\
+            &= a \cdot (a+b) + b \cdot (a+b) \\
+            &= a^2 + ab + ba + b^2 \\
+            &= a^2 +2ab + b^2
+\end{split}
+\]
+
+\end{document}
 ```
 
 $$
 \begin{split}
-A & = \frac{\pi r^2}{2} \\
- & = \frac{1}{2} \pi r^2
+    (a+b)^2 &= (a+b) \cdot (a+b) \\
+            &= a \cdot (a+b) + b \cdot (a+b) \\
+            &= a^2 + ab + ba + b^2 \\
+            &= a^2 +2ab + b^2
 \end{split}
 $$
 
-+ Môi trường gather giúp khai triển các phương trình liên tiếp, căn giữa mà không cần quan tâm đến bất kỳ sự căn chỉnh nào 
++ Môi trường gather giúp khai triển các phương trình liên tiếp, căn giữa mà không cần quan tâm đến bất kỳ sự căn chỉnh nào (? chưa biết lệnh này dùng để làm gì)
 
 ```latex
 \[\begin{gather*} 
@@ -2710,13 +2737,13 @@ $$
 
 ### Viết nhiều phương trình toán học cùng lúc (? đặt lại tên tiêu đề)
 
-Với việc viết một phương trình toán học, người dùng có thể sử dụng các lệnh, môi trường mà người viết đã trình bày ở hai bài học . . . một cách dễ dàng.  
+Với việc viết một phương trình toán học, người dùng có thể sử dụng các lệnh, môi trường mà người viết đã trình bày ở hai bài học . . . (? hai bài học nào) một cách dễ dàng.  
 
-Tuy vậy, trong trường hợp người dùng cần viết nhiều hơn nhiều phương trình cùng một lúc, chẳng hạn như phương trình Maxwell được trích từ tài liệu học MIT sau https://web.mit.edu/8.02t/www/802TEAL3D/visualizations/coursenotes/modules/guide13.pdf . . (? lấy mẫu ví dụ nào đó ở đâu đó để giúp người dùng hình dung ban đầu) 
+Tuy vậy, trong trường hợp người dùng cần viết nhiều hơn nhiều phương trình cùng một lúc, chẳng hạn như phương trình Maxwell được trích từ tài liệu học MIT sau https://web.mit.edu/8.02t/www/802TEAL3D/visualizations/coursenotes/modules/guide13.pdf . . . 
 
-Để làm được điều này, trước tiên người dùng nhớ cần phải khai báo package `amsmath`.  Nếu như người dùng không khai báo package đó, thì hệ thống sẽ báo lỗi . . .  
+Để làm được điều này, trước tiên người dùng nhớ cần phải khai báo package `amsmath`.  Nếu như người dùng không khai báo package đó, thì hệ thống sẽ báo lỗi . . .  (? lỗi gì)
 
-Sau đó, người dùng chỉ cần đặt các lệnh, môi trường . . . (? đặt gì) vào trong môi trường `subequations` 
+Sau đó, người dùng chỉ cần đặt các lệnh, môi trường . . . (? lệnh, môi trường nào) vào trong môi trường `subequations` 
 
 ```latex
 \begin{subequations}
@@ -2724,7 +2751,7 @@ Sau đó, người dùng chỉ cần đặt các lệnh, môi trường . . . (?
 \end{subequations}
 ```
 
-Người dùng có thể để cũng như chọn tùy ý bao nhiêu . . . (? bao nhiêu về cái gì) vào trong môi trường `subequation` đó.   
+Người dùng có thể để cũng như chọn tùy ý bao nhiêu . . . (? bao nhiêu về cái gì) vào bên trong môi trường `subequation`.   
 
 Ví dụ: (với các phương trình Maxwell)
 
@@ -2755,17 +2782,140 @@ Khi biên dịch sang trang tài liệu, nếu như các từ định nghĩa, đ
 
 Ví dụ với môi trường định lý (? nó cũng không có môi trường) về định lý Gauss - Wantzel và môi trường định nghĩa  (? nó cũng không có môi trường) về định nghĩa số nguyên tố Fermat trong lĩnh vực . . . của toán học, trong đó từ định lý và định nghĩa được viết bằng tiếng Anh:  
 
-([1.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
+```latex
+\documentclass{article}
+
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
+\usepackage[utf8]{vietnam}
+
+% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+
+% ==========================================
+% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
+% ==========================================
+\begin{theorem}[Gauss--Wantzel]
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% ==========================================
+% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
+% ==========================================
+\begin{definition}[Số nguyên tố Fermat]
+% Khai báo dạng tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+\end{document}
+```
 
 Điều này cũng được áp dụng tương tự với tất cả với [ngôn ngữ khác](). Chẳng hạn, để viết các từ "định lý", "định nghĩa" ..vv.. đang là tiếng Anh sang tiếng Việt. Người dùng trước tiên cần phải khai báo package [ngôn ngữ tiếng Việt ](), sau đó người dùng chỉ cần gõ lại từ "theorem" (tiếng Anh) sang từ "định lý" (tiếng Việt) ở `text`. 
 
 Quay trở lại ví dụ trên, lúc này từ định lý và định nghĩa đều được viết sang tiếng Việt:
 
-([2.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
+```latex
+\documentclass{article}
+
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
+\usepackage[utf8]{vietnam}
+
+% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
+\newtheorem{theorem}{Định lý}
+\newtheorem{definition}{Định nghĩa}
+
+\begin{document}
+
+% ==========================================
+% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
+% ==========================================
+\begin{theorem}[Gauss--Wantzel]
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% ==========================================
+% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
+% ==========================================
+\begin{definition}[Số nguyên tố Fermat]
+% Khai báo dạng tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+\end{document}
+```
 
 Thậm chí, người dùng cũng có thể viết lại từ "theorem" ở `name` thành từ "định lý" mà không cần phải khai báo package ngôn ngữ tiếng Việt. 
 
-([3.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
+```latex
+\documentclass{article}
+
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng bảng mã utf8 để gõ tiếng Anh hoặc ký tự đặc biệt bình thường
+\usepackage[utf8]{inputenc}
+
+% Khai báo môi trường "Theorem" (Định lý) và "Definition" (Định nghĩa) trong tiếng Anh
+\newtheorem{định lý}{Theorem}
+\newtheorem{định nghĩa}{Definition}
+
+\begin{document}
+
+% ==========================================
+% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
+% ==========================================
+\begin{định lý}[Gauss--Wantzel]
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+The division of a circle into $n$ equal parts using a straightedge and compass is possible if and only if
+% Công thức hiển thị ở dạng khối (display math mode)
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các biến trong công thức
+where $k$ is a non-negative integer and $p_1, p_2, \dots, p_t$ are distinct Fermat primes.
+\end{định lý}
+
+% ==========================================
+% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
+% ==========================================
+\begin{định nghĩa}[Fermat prime]
+% Khai báo dạng tổng quát của số Fermat
+An integer of the form 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
+is called a Fermat prime if the output value calculated from $F_n$ is a prime number.
+\end{định nghĩa}
+
+\end{document} 
+```
 
 Người dùng cũng có thể viết ở `text` là tên chính định lý, định nghĩa, ..vv.. đó thay vì chỉ hiện từ "định nghĩa", "định lý", ..vv.. thông thường, mới kèm theo tên gọi định lý, định nghĩa đó (? viết lại đọa "thông thường, mới kèm . . .") như ví dụ trên.  
 
@@ -2783,11 +2933,103 @@ Tương tự đối với định nghĩa về số nguyên tố Fermat.
 
 Áp dụng điều này vào lại ví dụ . . . , lúc này ta được: 
 
-([4.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . . 
+\usepackage{amsmath}
+
+% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
+\newtheorem{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{definition}{Số nguyên tố Fermat}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+\end{document}
+```
 
 Trong trường hợp người dùng muốn viết định lý mới, nếu như người dùng sử dụng lại môi trường **theorem** đã được định nghĩa ban đầu, thì ở phần tiêu đề định lý mới đó vẫn sẽ xuất hiện "Định lý Gauss - Wantzel" như ở hai định lý . . . (? Hai định lý gì nhỉ)  
 
-([5.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . . 
+\usepackage{amsmath}
+
+% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
+\newtheorem{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{definition}{Số nguyên tố Fermat}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{theorem}
+   Số Fermat $F_5$ là hợp số
+\end{theorem} 
+
+% Định lý . . . 
+
+\begin{theorem}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
+    \end{equation*}
+\end{theorem} 
+
+\end{document}
+
+```
 
 Để khắc phục được điều trên, người dùng cần phải định nghĩa một môi trường mới cho định lý. 
 
@@ -2797,7 +3039,61 @@ Cần phải đảm bảo rằng, nếu như người dùng đã định nghĩa 
 
 Nếu như người dùng định nghĩa môi trường định lý với từ **theorem** đã được sử dụng ở môi trường định lý Gauss - Wantzel, thì hệ thống sẽ báo lỗi **Command \theorem already defined.**  như ở ví dụ . . . dưới đây: 
 
-([6.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . . 
+\usepackage{amsmath}
+
+% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
+\newtheorem{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{theorem}{Định lý} % từ theorem ở lệnh đây bị trùng với theorem ở lệnh trên nó. (? Viết lại cmt này)
+\newtheorem{definition}{Số nguyên tố Fermat}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{theorem}
+   Số Fermat $F_5$ là hợp số
+\end{theorem} 
+
+% - - - -
+
+\begin{theorem}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_{n}-1}{2}} \equiv -1 \pmod{F_n}.
+    \end{equation*}
+\end{theorem}
+
+\end{document}
+```
 
 Từ những điều đã nêu ở trên, lúc này để viết một hay nhiều định lý mới khác mà không bị trùng lặp với định lý đã được định nghĩa ban đầu, người dùng chỉ cần đặt tên . . . (? gì, ở đâu) khác đi. 
 
@@ -2820,7 +3116,62 @@ và ở . . . (? ở đâu trong phần soạn thảo LaTeX)
 
 Từ đây ta viết lại ví dụ . . . :  
 
-([7.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . . 
+\usepackage{amsmath}
+
+% Đặt tên tiêu đề hiển thị cho định lý và định nghĩa
+\newtheorem{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{thm}{Định lý} 
+\newtheorem{definition}{Số nguyên tố Fermat}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{theorem}
+   Số Fermat $F_5$ là hợp số
+\end{theorem} 
+
+% . . . .
+
+\begin{thm}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
+    \end{equation*}
+\end{thm}
+
+\end{document}
+
+```
 
 Người dùng có thể áp dụng tương tự . . . (? Áp dụng tương tự điều gì) để khắc phục đoạn mã định lý $F_5$ là hợp số.  
 
@@ -2849,12 +3200,6 @@ Sau đó người dùng chỉ cần thêm dấu `*` ở sau lệnh `\newtheorem`
 ```
 
 Quay lại với ví dụ . . . lúc này đoạn mã có được: 
-
-([8.tex](https://www.texpage.com/share/5788d282fd5c485684f9af109b110d14))
-
-Người dùng có thể thấy rằng, bên cạnh tên "Định lý Gauss - Wantzel" và cũng như là "Số nguyên tố Fermat" không còn xuất hiện số thứ tự bên cạnh nữa. 
-
-Nếu như người dùng viết một ví dụ ngay sau phần **định lý 2.2** ở đoạn mã trên: 
 
 ```latex
 \documentclass{article}
@@ -2910,6 +3255,83 @@ F_n = 2^{2^n}+1
     3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
     \end{equation*}
 \end{thm}
+
+\end{document}
+```
+
+Người dùng có thể thấy rằng, bên cạnh tên "Định lý Gauss - Wantzel" và cũng như là "Số nguyên tố Fermat" không còn xuất hiện số thứ tự bên cạnh nữa. 
+
+Nếu như người dùng viết một ví dụ ngay sau phần **định lý 2** ở đoạn mã trên: 
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} % for theorem environments
+
+% Đặt tên tiêu đề hiển thị cho định lý, định nghĩa và hệ quả
+\newtheorem*{theorem}{Định lý Gauss - Wantzel}
+\newtheorem{thm}{Định lý}
+\newtheorem*{definition}{Số nguyên tố Fermat}
+\newtheorem{example}{Ví dụ}
+
+\begin{document}
+
+% --- Phát biểu Định lý Gauss - Wantzel ---
+\begin{theorem}
+% Phát biểu điều kiện chia đều đường tròn (dựng đa giác đều)
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức phân tích n thành tích các số nguyên tố
+\[
+n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Điều kiện của tham số k và các số nguyên tố Fermat p_i
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+
+% --- Định nghĩa Số nguyên tố Fermat ---
+\begin{definition}
+% Công thức tổng quát của số Fermat
+Một số nguyên có dạng 
+\[
+F_n = 2^{2^n}+1 
+\]
+% Điều kiện để F_n là số nguyên tố
+được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+\end{definition}
+
+% Định lý F_5 là hợp số 
+
+\begin{thm}
+   Số Fermat $F_5$ là hợp số
+\end{thm} 
+
+% . . . .
+
+\begin{thm}
+    Với $n \geq 1$, số Fermat $F_n = 2^{2^{n}+ 1}$ là số nguyên tố nếu và chỉ nếu
+    \begin{equation*}
+    3^{\frac{F_n -1}{2}} \equiv -1 \pmod{F_n}.
+    \end{equation*}
+\end{thm}
+
+% . . .
+
+\begin{example}
+    \(F_3\) là số nguyên tố. Thật vậy, ta có
+    \[
+        \begin{split}
+            3^{\frac{F_3-1}{2}} & \equiv 3^{128} = 3^3 \cdot (3^5)^{25} \\
+                                & \equiv 27 \cdot (-14)^{25} \\ 
+                                & \equiv 27 \cdot 14^{24} \cdot (-14) \\ 
+                                & \equiv 27 \cdot 19 \equiv 513 \equiv -1 \pmod{257} \\
+        \end{split}
+    \]
+\end{example}
 
 \end{document}
 ```

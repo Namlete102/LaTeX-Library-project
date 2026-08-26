@@ -1556,6 +1556,27 @@ $$\mathfrak{ABC} \ \mathfrak{abc} \ \mathfrak{123}$$
 $$
 \mathscr{ABCDEF} 
 $$
+--- 
+
+## Viết phương trình theo mục lục (đặt tiêu đề lại)
+
+Câu hỏi 1: Đối với chỉ riêng **section**. 
+
+Trước tiên, người dùng cần phải khai báo package `amsmath`, sau đó chỉ cần chèn lệnh
+
+```latex
+\numberwithin{}{}
+```
+
+ở trước môi trường `equation`, . . . (? còn môi trường nào nữa ko)
+
+```latex
+
+```
+
+Câu hỏi 2: Đối với việc có cả subsection bên trong cả section.  
+
+
 
 --- 
 
@@ -1564,8 +1585,6 @@ $$
 Nơi đây chứa tạp nhám các loại toán học, sau đó mới phân loại sau. 
 
 Tổng hợp tại đây: https://www.overleaf.com/read/cvrzxtfnpxvk#5bc02f 
-
-
 
 ---
 
