@@ -829,9 +829,9 @@ $$
 $$
 
 
- <div align="center">
+<div align="center">
 	
-<img src="LaTeX-Library-project-v1.0.0/Draft/draft img/Gauss-Jordan.jpg" alt="Gauss-Jordan">
+<img src="./draft img/Gauss-Jordan.jpg" alt="Gauss-Jordan">
 
 Hai nhà toán học người Đức là Carl Gauss (trái) và Wilhelm Jordan (phải) (không nền nhầm lẫn với hai nhà toán học cùng tên khác là Camille Jordan và Pascual Jordan) 
 

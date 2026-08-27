@@ -11,16 +11,13 @@ Trang tham khảo mẫu thiết kế:
 
 Thiết kế banner bằng Figma dựa trên ý tưởng làm thumbnail từ video âm nhạc của ca sĩ Sufjan Stevens (ý tưởng là vậy chứ lúc làm nhìn chán ác): https://www.figma.com/design/E5loNfD3k4lmooZqjzpNnj/B%C3%ADa-s%C3%A1ch?node-id=1-2&t=GmiSaoQKrySqJyb4-1 
 
-<center>
-<figure>
-    <img src="LaTeX-Library-project-v1.0.0/images/banner.jpg"
-         alt="banner">
-</figure>
-</center>
+<div align="center">
+	<img src="LaTeX-Library-project-v1.0.0/images/banner.jpg" alt="banner">
+</div>
 
 Trong trang web đó cần chứa: 
 + Chắc chắn phải có tài liệu học [[Lecture notes]] (bao gồm phiên bản web và phiên bản pdf (được viết ở lớp report thô sơ trước))
 + Giới thiệu tài liệu học và cảm ơn (Introduction and Thank you)
-+ Giới thiệu ông tác giả: Ngắn gọn thoi (About)
-	Nguyễn Lê Nam (Namlete) một thằng lông bông sinh năm 2007. 
-+ Giới thiệu sơ qua các web chính chứa những phần trên (bổ sung thêm có news để chứa những cập nhật mới nhất về dự án)  
++ Giới thiệu một chút thằng tác giả: Ngắn gọn thoi (About)
+    Nguyễn Lê Nam (Namlete) một thằng lông bông sinh năm 2007.
++ Giới thiệu sơ qua các web chính chứa những phần trên (bổ sung thêm có news để chứa những cập nhật mới nhất về dự án)
