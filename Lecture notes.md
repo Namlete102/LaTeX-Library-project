@@ -9,6 +9,7 @@ Có viết ở phần [[About]]
 
 . . . 
 
+
 ---
 
 ## Cấu trúc soạn thảo của LaTeX:
@@ -412,9 +413,7 @@ hệ thống sẽ tự động xuất sang trang tài liệu đầy đủ từ 1
 
 thì hệ thống sẽ tự động xuất sang trang tài liệu đoạn văn Lorem thứ 100. 
 
-Lý do là bởi 
-
-. . . 1000:150 . . . lấy ở đoạn văn Lorem thứ 100) 
+Lý do là bởi (? bởi vì sao . . . 1000:150 . . . lấy ở đoạn văn Lorem thứ 100) 
 
 
 ---
@@ -504,6 +503,8 @@ Hello LaTeX!
 
 \end{document}
 ```
+
+(? Ảnh)
 
 ---
 
@@ -649,6 +650,7 @@ Hệ thống LaTeX sẽ để căn lề mặc định cho đoạn văn bản là
 ```
 
 Trong đó, alignment type có thể là:
+
 <p align="left">
 + flushleft: Căn trái
 </p>
@@ -829,7 +831,7 @@ Một số lớp tài liệu như `minimal`, `letter` được thiết kế cho 
 
 Các tiêu đề được viết trong các lệnh phân cấp này sẽ được hệ thống hoàn toàn tự động đánh số ở trước nó như trong ví dụ sau đây đối với lớp tài liệu là `book`: 
 
-```latex
+```latex 
 \documentclass{book}
 \usepackage[utf8]{vietnam}
 
@@ -901,8 +903,7 @@ thì tiêu đề của mục "Phương pháp nghiên cứu" ở chương 2, sẽ
 
 ---
 
-
- ki## Mục lục (Table of Contents)
+## Mục lục (Table of Contents)
 
 Để tạo mục lục trong tài liệu đối với một số lớp tài liệu có thể được sử dụng [lệnh phân cấp](), người sử dụng lệnh 
 
@@ -1097,7 +1098,8 @@ Chẳng hạn ta có thể lồng danh sách có thứ tự mặc định của 
 \end{itemize}
 ```
 
-Ví dụ về . . . 
+Ví dụ về lồng nhau . . . (? tìm ví dụ)
+
 ```latex
 
 ```
@@ -1107,6 +1109,7 @@ Ví dụ về . . .
 Danh sách mô tả dùng để . . . 
 
 Để tạo danh sách mô tả trong LaTeX, người dùng cần sử dụng môi trường `description` với lệnh sau: 
+
 ```latex
 \begin{description} 
 \item[Từ khóa 1] Mô tả hoặc giải thích cho từ khóa 1. 
@@ -1138,7 +1141,8 @@ Sử dụng lệnh sau:
 URL sẽ được hiển thị bằng phông chữ đơn cách ([monosaced font]), và nếu người dùng nhấp vào đó, trình duyệt web sẽ mở ra và trỏ đến đúng URL mà người dùng chèn vào lệnh.
 
 Nếu như người dùng không thích để URL hiển thị với phông chữ đơn cách và muốn chúng được in với cùng kiểu chữ với phần còn lại của văn bản, người dùng có thể sử dụng lệnh sau:
-```latex
+
+```latex 
 \urlstyle{same}
 ```
 
@@ -2783,46 +2787,46 @@ Khi biên dịch sang trang tài liệu, nếu như các từ định nghĩa, đ
 Ví dụ với môi trường định lý (? nó cũng không có môi trường) về định lý Gauss - Wantzel và môi trường định nghĩa  (? nó cũng không có môi trường) về định nghĩa số nguyên tố Fermat trong lĩnh vực . . . của toán học, trong đó từ định lý và định nghĩa được viết bằng tiếng Anh:  
 
 ```latex
-\documentclass{article}
-
-% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
-% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
-\usepackage[utf8]{vietnam}
-
-% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
-\newtheorem{theorem}{Theorem}
-\newtheorem{definition}{Definition}
-
-\begin{document}
-
-% ==========================================
-% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
-% ==========================================
-\begin{theorem}[Gauss--Wantzel]
-% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
-Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
-% Công thức toán dạng khối (display style)
-\[
-n = 2^k \cdot p_1 \cdot p_2 \dots p_t
-\]
-% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
-trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
-\end{theorem}
-
-% ==========================================
-% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
-% ==========================================
-\begin{definition}[Số nguyên tố Fermat]
-% Khai báo dạng tổng quát của số Fermat
-Một số nguyên có dạng 
-\[
-F_n = 2^{2^n}+1 
-\]
-% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
-được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
-\end{definition}
-
-\end{document}
+	\documentclass{article}
+	
+	% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+	% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
+	\usepackage[utf8]{vietnam}
+	
+	% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
+	\newtheorem{theorem}{Theorem}
+	\newtheorem{definition}{Definition}
+	
+	\begin{document}
+	
+	% ==========================================
+	% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
+	% ==========================================
+	\begin{theorem}[Gauss--Wantzel]
+	% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+	Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+	% Công thức toán dạng khối (display style)
+	\[
+	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+	\]
+	% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+	trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+	\end{theorem}
+	
+	% ==========================================
+	% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
+	% ==========================================
+	\begin{definition}[Số nguyên tố Fermat]
+	% Khai báo dạng tổng quát của số Fermat
+	Một số nguyên có dạng 
+	\[
+	F_n = 2^{2^n}+1 
+	\]
+	% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
+	được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
+	\end{definition}
+	
+	\end{document}
 ```
 
 Điều này cũng được áp dụng tương tự với tất cả với [ngôn ngữ khác](). Chẳng hạn, để viết các từ "định lý", "định nghĩa" ..vv.. đang là tiếng Anh sang tiếng Việt. Người dùng trước tiên cần phải khai báo package [ngôn ngữ tiếng Việt ](), sau đó người dùng chỉ cần gõ lại từ "theorem" (tiếng Anh) sang từ "định lý" (tiếng Việt) ở `text`. 

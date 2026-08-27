@@ -535,17 +535,25 @@ Cho một hệ phương trình tuyến tính tổng quát . . .
 
 . . . (ma trận hệ số (coefficient matrix), ma trận cột ẩn số, ma trận cột hệ số tự do)
 
-. . . (ma trận bổ sung (augmented matrix))
+. . . (ma trận bổ sung (augmented matrix)) 
 
 Để viết ma trận bổ sung, người dùng sẽ sử dụng gián tiếp thông qua môi trường `array`. 
 
 Ví dụ . . . : Cho một hệ phương trình tuyến tính sau 
 
+```latex
+\begin{cases}
+	x_1 + 2x_2 + 3x_3 = 4 \\[0.5em] 
+	2x_1 + 3x_2 + 4x_3 = 5 \\[0.5em]
+	3x_1 + 4x_2 + 5x_3 = 6
+\end{cases}
+```
+
 $$
 \begin{cases}
-	2x_1 + 3x_2 + 4x_3 = 5 \\[0.5em] 
-	3x_1 + 4x_2 + 5x_3 = 6 \\[0.5em]
-	4x_1 + 5x_2 + 6x_3 = 7
+	x_1 + 2x_2 + 3x_3 = 4 \\[0.5em] 
+	2x_1 + 3x_2 + 4x_3 = 5 \\[0.5em]
+	3x_1 + 4x_2 + 5x_3 = 6
 \end{cases}
 $$
 
@@ -570,7 +578,21 @@ Ta viết gọn lại bằng ma trận bổ sung như sau:
 $$
 \left[
 \begin{array}{@{}ccc|c@{}}
-2 & 3 & 4 & 5 \\ 
+1 & 2 & 3 & 4 \\ 
+3 & 4 & 5 & 6 \\
+4 & 5 & 6 & 7 
+\end{array} 
+\right] 
+$$
+
+Lệnh `@{}` được đặt hai bên . . . (? gì đó) trong dấu ngoặc nhọn, dùng để căn chỉnh hai dấu ngoặc vuông của ma trận bổ sung khi viết ở phần thảo LaTeX sao cho  .  .  . (? giúp chúng như thế nào)  
+
+Nếu như người dùng không lệnh `@{}` này vào, thì lúc này ở trong trang tài liệu sẽ hiện thị một kết quả khác: 
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & 2 & 3 & 4 \\ 
 3 & 4 & 5 & 6 \\
 4 & 5 & 6 & 7 
 \end{array} 
@@ -811,7 +833,7 @@ $$
 	
 <img src="LaTeX-Library-project-v1.0.0/Draft/draft img/Gauss-Jordan.jpg" alt="Gauss-Jordan">
 
-Hai nhà toán học người Đức là Carl Gauss (trái) và Wilhelm Jordan (phải) (không nền nhầm lẫn với hai nhà toán học cùng tên khác là  Camille Jordan và Pascual Jordan) 
+Hai nhà toán học người Đức là Carl Gauss (trái) và Wilhelm Jordan (phải) (không nền nhầm lẫn với hai nhà toán học cùng tên khác là Camille Jordan và Pascual Jordan) 
 
 </div>
 
@@ -819,6 +841,8 @@ Hai nhà toán học người Đức là Carl Gauss (trái) và Wilhelm Jordan (
 ---
 
 ## Định thức của ma trận 
+
+### Công thức LeibnizLeibniz
 
 . . . (định thức của một ma trận) 
 
@@ -851,6 +875,7 @@ $$
   3 & 4
  \end{vmatrix}
 $$
+
 Ngoài ra, định thức của một ma trận vuông $A$ cấp $n$ còn được kí hiệu là $\det(A)$. 
 
 Ví dụ . . .  về công thức tính định thức tổng quát của một ma trân vuông $A$ cấp $n$ được chứng minh bởi nhà toán học Leibniz  
@@ -894,15 +919,53 @@ $$
 \det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right)
 $$
 
+### Công thức khai triển Laplace 
+
+Một cách khác để tính định thức đó là khai triển Laplace . . . (? không cần nói quá rõ chi tiết lý thuyết, những vẫn cần giới thiệu sơ qua)
+
+. . . (? công thức khai triển Laplace tổng quát theo hàng)
+
+```latex
+\[
+\det(A) = \sum_{1 \leq i_1 < \dots < i_k \leq k} ((-1)^{i_1 + \dots i_k + j_1 + \dots + j_k} \cdot \overline{D}_{i_1 \dots i_k}^{j_1 \dots j_k} \cdot D_{i_1 \cdots i_k}^{j_1 \cdots j_k})
+\]
+```
+
+$$
+\det(A) = \sum_{1 \leq i_1 < \dots < i_k \leq k} ((-1)^{i_1 + \dots i_k + j_1 + \dots + j_k} \cdot \overline{D}_{i_1 \dots i_k}^{j_1 \dots j_k} \cdot D_{i_1 \cdots i_k}^{j_1 \cdots j_k})
+$$
+Người dùng có thể thấy, có một khoảng trống giữa lệnh `\sum` hai bên. Vì điều kiện của phương trình quá lớn dẫn đến việc hệ thống tự động co giãn các biểu thức hai bên đầu điều kiện. (? . . . kiểm tra lại phần mô tả này)
+
+Để khắc phục được vấn đề này, trước tiên người dùng cần phải khai báo package `mathtools`. Sau đó, người dùng chỉ cần nhóm điều kiện ở chỉ số dưới lệnh `\sum` này lại vào trong dấu ngoặc nhọn của lệnh `\mathclap`. Cụ thể: 
+
+```latex
+\mathclap{1 \leq i_1 < \dots < i_k \leq k}
+```
+
+Từ đây, ta viết lại công thức khai triển Laplace tổng quát theo theo hàng như sau: 
+
+```latex
+\[
+\det(A) = \sum_{\mathclap{1 \leq i_1 < \dots < i_k \leq k}} ((-1)^{i_1 + \dots i_k + j_1 + \dots + j_k} \cdot \overline{D}_{i_1 \dots i_k}^{j_1 \dots j_k} \cdot D_{i_1 \cdots i_k}^{j_1 \cdots j_k})
+\]
+```
+
+Kết quả hiện thị lúc này,  . . . (? lúc này sẽ ra làm sao)
+
+$$
+    \det(A) = \sum_{\mathclap{1 \leq i_1 < \dots < i_k \leq k}} ((-1)^{i_1 + \dots i_k + j_1 + \dots + j_k} \cdot \overline{D}_{i_1 \dots i_k}^{j_1 \dots j_k} \cdot D_{i_1 \cdots i_k}^{j_1 \cdots j_k})
+$$
 
 
-\+ Vết của ma trận  
+---
+
+##  Vết của ma trận  
 
 ```latex
 \operatorname{tr}(A)
 ```
 
-$\operatorname{tr}(A)$
+$\operatorname{tr}(A)$ 
 
 ---
 
@@ -1121,8 +1184,6 @@ Nguồn: https://thomaskojar.wordpress.com/2021/05/13/history-of-math-symbols/
 \(\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s}\)
 ```
 
-$\zeta(s) = \sum_{n=1)^{100} \frac{1}{n^s}$ (kiểm tra lại lỗi sai)
-
 $\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s}$
 
 Hoặc có thể thêm lệnh 
@@ -1130,6 +1191,7 @@ Hoặc có thể thêm lệnh
 ```latex
 \displaystyle
 ```
+
 vào trước lệnh `\sum`
 
 ```latex
