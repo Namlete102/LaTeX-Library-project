@@ -1,6 +1,128 @@
 
 ## Gói `mathtools` 
 
+. . . 
+
+---
+
+## Bổ sung bài học định nghĩa, định lý, ...vv..
+
+(? . . .nêu nguyên nhân, giải thích vì sao)
+
+(? . . . đi tìm một ví dụ mới sau)
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+% . . .
+\usepackage{amssymb}
+
+%  . . .
+\theoremstyle{plain}
+\newtheorem{proposition}{Mệnh đề}[section]
+
+\begin{document}
+
+\begin{proposition}
+	\begin{enumerate}
+	    \item Nếu \(a, b \in \mathbb{Z_+}\) là hai số nguyên dương nguyên tố cùng nhau thì ta có \(\phi(ab) = \phi(a)\phi(b)\)
+	    \item Nếu \(n = p^m\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = (p-1)p^{m-1}
+	    \]
+	    \item Nếu \(n = p_1^{m_1} \dots p_r^{m_r}\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = \prod_{i = 1}^r (p_i - 1)p_i^{m_1 - 1}
+	    \]
+	\end{enumerate}
+\end{proposition}
+
+\end{document}
+```
+
+
+Để khắc phục được điều có hai cách cơ bản sau: 
+
+**Cách 1**: Sử dụng lệnh `\hfill` đặt trước môi trường `enumerate` trên (? giải thích thêm lệnh này, tham khảo ở bài học đây https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces):
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+% . . .
+\usepackage{amssymb}
+
+%  . . .
+\theoremstyle{plain}
+\newtheorem{proposition}{Mệnh đề}[section]
+
+\begin{document}
+
+\begin{proposition} \hfill
+	\begin{enumerate}
+	    \item Nếu \(a, b \in \mathbb{Z_+}\) là hai số nguyên dương nguyên tố cùng nhau thì ta có \(\phi(ab) = \phi(a)\phi(b)\)
+	    \item Nếu \(n = p^m\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = (p-1)p^{m-1}
+	    \]
+	    \item Nếu \(n = p_1^{m_1} \dots p_r^{m_r}\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = \prod_{i = 1}^r (p_i - 1)p_i^{m_1 - 1}
+	    \]
+	\end{enumerate}
+\end{proposition}
+
+\end{document}
+```
+
+
+**Cách 2**: Thay lệnh `\hfill` ở **cách 1** bằng lệnh mới `\leavemode` . . . (? giải thích thêm lệnh này) 
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+% . . .
+\usepackage{amssymb}
+
+%  . . .
+\theoremstyle{plain}
+\newtheorem{proposition}{Mệnh đề}[section]
+
+\begin{document}
+
+\begin{proposition} \leavevmode % Đẩy item 1 xuống 
+	\begin{enumerate}
+	    \item Nếu \(a, b \in \mathbb{Z_+}\) là hai số nguyên dương nguyên tố cùng nhau thì ta có \(\phi(ab) = \phi(a)\phi(b)\)
+	    \item Nếu \(n = p^m\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = (p-1)p^{m-1}
+	    \]
+	    \item Nếu \(n = p_1^{m_1} \dots p_r^{m_r}\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = \prod_{i = 1}^r (p_i - 1)p_i^{m_1 - 1}
+	    \]
+	\end{enumerate}
+\end{proposition}
+
+\end{document}
+```
 
 ---
 
@@ -1145,6 +1267,9 @@ rồi sau đó sử dụng lệnh
 \end{document}
 ```
 
+---
+
+## Liên phân số 
 
 
 
