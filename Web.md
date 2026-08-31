@@ -21,3 +21,4 @@ Trong trang web đó cần chứa:
 + Giới thiệu một chút thằng tác giả: Ngắn gọn thoi (About)
     Nguyễn Lê Nam (Namlete) một thằng lông bông sinh năm 2007.
 + Giới thiệu sơ qua các web chính chứa những phần trên (bổ sung thêm có news để chứa những cập nhật mới nhất về dự án)
+

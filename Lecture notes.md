@@ -570,7 +570,7 @@ Nếu như người dùng muốn lựa chọn tùy ý việc để đoạn văn 
 
 Cả hai lệnh `\indent` và `\noindent` đều phải được đặt ở trước đoạn văn mà người dùng mong muốn có hay không thụt đầu dòng. 
 
-Kích thước thụt lề đầu dòng của lệnh `\indent` là 20pt (? viết lại chưa hiểu ý cho lắm )
+Khoảng cách thụt lề đầu dòng của lệnh `\indent` mặc định là 20pt (? viết chưa được rõ cho lắm )
 
 ---
 
@@ -3713,7 +3713,7 @@ Fermat nhận ra 5 số Fermat đầu tiên là \(F_0 = 3, F_1 = 5; F_2 = 17, F_
 \end{document}
 ```
 
-Bằng chứng (tiếng anh là proof) là . . . 
+Bằng chứng (tiếng anh là proof) là . . . (? giải thích nghĩa từ bằng chứng, cũng như phân biệt chứng minh toán học so với các chứng minh ở bên vật lý, hóa học, ...vv...)
 
 Để viết bằng chứng trong soạn thảo LaTeX, người dùng sử dụng môi trường `proof`
 
@@ -3723,7 +3723,7 @@ Bằng chứng (tiếng anh là proof) là . . .
 \begin{proof}
 ```
 
-Với môi trường `proof`, chúng đã được có trong sẵn package `amsthm` mà ta đã khai báo ở . . . (phần bài học nhân xét mà không đánh số ở trên) 
+đã được có trong sẵn package `amsthm` mà ta đã khai báo ở . . . (phần bài học nhân xét mà không đánh số ở trên) 
 
 Ví dụ về môi trường `proof` với việc chứng minh định lý số Fermat $F_5$ là hợp số 
 

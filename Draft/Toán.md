@@ -49,7 +49,7 @@
 
 Để khắc phục được điều có hai cách cơ bản sau: 
 
-**Cách 1**: Sử dụng lệnh `\hfill` đặt trước môi trường `enumerate` trên (? giải thích thêm lệnh này, tham khảo ở bài học đây https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces):
+**Cách 1**: Sử dụng lệnh `\hfill` được đặt bên trong môi trường `proposition` mà ta vừa định nghĩa và trước môi trường `enumerate` trên (? giải thích thêm lệnh `\hfill` này, tham khảo ở bài học đây https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces):
 
 ```latex
 \documentclass{article}
@@ -196,7 +196,7 @@ Giả sử, nếu ta bỏ hai lệnh `\left` và `\right` ở hai bên dấu ngo
 >[!WARNING]
 > Ngay sau lệnh `\middle` là phải có các kí hiệu có khả năng co giãn với chiều cao tương ứng . . .(? với gì đó). Nếu không, hệ thống sẽ báo lỗi **Missing delimiter (. inserted).**
 
-Nếu ta thay kí hiệu `|` bằng kí hiệu nằm ngang như $\rightarrow$ (? chắc phải làm một ví dụ mới)
+Nếu người dùng thay kí hiệu `|` bằng kí hiệu nằm ngang như $\rightarrow$ (? chắc phải làm một ví dụ mới)
 
 ```latex
 \documentclass{article}
@@ -214,13 +214,47 @@ Việc người viết thay kí hiệu `|` bằng $\rightarrow$ ở ví dụ nà
 
 ---
 
+## Bổ sung bài học viết phương trình toán học
+
+Người dùng có thể thay đổi số thứ tự nằm cạnh phương trình toán học, bằng cách sử dụng lệnh: 
+
+```latex
+\tag
+```
+
+được đặt bên trong môi trường `equation`. 
+
+. . . .(? giới thiệu thêm về lệnh `\tag`)
+
+Lệnh này được định nghĩa bên trong package `amsmath`, nên người dùng nhớ hãy kiểm tra xem mình đã khai báo package này hay chưa, nếu không hệ thống sẽ báo lỗi **Undefined control sequence**. 
+
+Ví dụ: . . . (? tìm ví dụ và giải thích ví dụ lại sau)
+
+```latex
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{equation} \tag{*}
+    1 + 1 = 2
+    \label{eq:*}
+\end{equation}
+
+\end{document}
+```
+
+
+---
+
 ## Tập hợp các kí hiệu có thể được nhập trực tiếp trên bàn phím 
 
 ```latex
 + - = ! / ( ) [ ] < > | ' : * 
 ```
 
-$+ \ - \ = \ ! \ / \ ( \ ) \ [ \ ] \ < \ > \ | \ ' \ : \ *$
+$+ \ - \ = \ ! \ / \ ( \ ) \ [ \ ] \ < \ > \ | \ ' \ : \ *$  
 
 ---
 
@@ -236,9 +270,10 @@ $+ \ - \ = \ ! \ / \ ( \ ) \ [ \ ] \ < \ > \ | \ ' \ : \ *$
 $\cos(x), \ \sin(x), \ \tan(x), \ \cot(x), ..vv..$  
 
 <div align="center">
-<img src="LaTeX-Library-project-v1.0.0/Draft/draft img/trigonometry iceberg.jpg" alt"trinogometry" width="80%" height="70%"> 
-Tảng băng chìm toán tử lượng giác
+<img src="LaTeX-Library-project-v1.0.0/Draft/draft img/trigonometry iceberg.jpg" alt = "trinogometry" width="80%" height="70%"> 
 </div>
+
+<center>Tảng băng chìm toán tử lượng giác</center>
 
 ---
 
@@ -323,7 +358,7 @@ Khai báo package
 
 Các môi trường sau đây phải được đặt viết trong các lệnh và môi trường **inline math**, **display math**. 
 
-Sử dụng môi trường `bmatrix`
+Sử dụng môi trường `bmatrix` để viết ma trận được bao quanh bởi dấu ngoặc vuong
 
 ```latex
 \begin{bmatrix}
@@ -331,7 +366,7 @@ Sử dụng môi trường `bmatrix`
 \end{bmatrix} 
 ```
 
-Ma trận $2 \times 2$ 
+Ví dụ với một ma trận $2 \times 2$ cơ bản sau: 
 
 ```latex
 \documentclass{article}
@@ -354,7 +389,7 @@ $$
 \end{bmatrix}
 $$
 
-Kí hiệu `&` dùng để phân cách (? sử dụng từ khác) các phân tử bên trong ma trận. Nếu ta không sử dụng dấu `&` ở hàng đầu tiên của ma trận, nhằm 
+Kí hiệu `&` dùng để phân cách (? sử dụng từ khác) các phân tử bên trong ma trận. Nếu ta không sử dụng dấu `&` ở hàng đầu tiên của ma trận
 
 ```latex
 \documentclass{article}
@@ -376,9 +411,10 @@ $$
  \end{bmatrix}
 $$
 
-Người dùng có thể thấy, phần tử đầu tiên của hàng đầu ma trận lúc này là 12 thay vì 1, còn hàng thứ hai bị bỏ trống thay vì là 2. 
+thì người dùng có thể thấy, phần tử đầu tiên của hàng đầu tiên của ma trận lúc này là 12 thay vì 1, còn hàng thứ hai lúc này bị bỏ trống thay vì là 2.  
 
-Còn kí hiệu `\\` được dùng để xuống hàng mới. 
+Kí hiệu `\\` được dùng để xuống hàng mới. 
+
 . . . 
 
 ```latex
@@ -394,7 +430,7 @@ Còn kí hiệu `\\` được dùng để xuống hàng mới.
 \end{document}
 ```
 
-Đoạn mã trên cũng tương đồng với đoạn mã sau
+Đoạn mã trên cũng tương đồng với đoạn mã sau 
 
 ```latex
 \documentclass{article}
@@ -419,17 +455,19 @@ $$
 
 Lúc này ta sẽ hiểu đây là một ma trận $1 \times 3$ (hay còn được gọi là một ma trận dòng). Có phần tử thứ nhất là 1, phần tử thứ 2 là 23 và cuối cùng phần tử thứ 3 là 4.  
 
-Một số tài liệu toán học viết các ma trận thay vì được bao quát bởi dấu ngoặc vuông, chúng lại được bao quát bởi dấu ngoặc tròn như hình dưới đây: 
+Trong một số tài liệu toán học, khi viết các ma trận thay vì được bao quát bởi dấu ngoặc vuông, chúng lại được bao quát bởi dấu ngoặc tròn như hình dưới đây: 
 
-(? Ảnh minh họa cho ma trận được bao quát bởi dấu ngoặc tròn)
+(? Tìm ảnh minh họa cho ma trận được bao quát bởi dấu ngoặc tròn)
 
-. . . 
+Để viết được ma trận được bao quanh bởi dấu ngoặc tròn ta sử dụng lệnh: 
 
 ```latex
 \begin{pmatrix}
 . . .
 \end{pmatrix} 
 ```
+
+(? trình bày cách ghi nhớ lệnh trên bằng cách phân biệt chữ cái đầu matrix là **b** và **p**) 
 
 . . . 
 
@@ -575,13 +613,14 @@ $$
 \end{smallmatrix}
 ```
 
-Ta cần phải thêm . . . 
+Ta cần phải thêm . . . (? thêm gì)
 
-Ví dụ: 
+Ví dụ: . . . 
 
 ```latex
 To produce a small matrix suitable for use in text, there is a `smallmatrix` environment \(\left(\begin{smallmatrix}1 & 2 \\ 3 & 4\end{smallmatrix}\right)\) that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . . 
 ```
+
 
 To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\left(\begin{smallmatrix}1 & 2 \\ 3 & 4\end{smallmatrix}\right)$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . . 
 
@@ -589,7 +628,7 @@ Cách này chỉ phù hợp với việc người dùng viết ma trận đượ
 
 Để làm được điều này, trước tiên người dùng cần phải sử dụng gói `mathtools`.
 
-Môi trường `bsmailmatrix`
+Môi trường `bsmailmatrix` . . .
 
 ```latex
 \begin{bsmailmatrix}
@@ -597,7 +636,7 @@ Môi trường `bsmailmatrix`
 \begin{bsmailmatrix}
 ```
 
-Ví dụ: 
+Ví dụ: . . . 
 
 ```latex
 To produce a small matrix suitable for use in text, there is a `smallmatrix` environment \(\begin{bsmallmatrix}1 & 2 \\ 3 & 4\end{bsmallmatrix}\) that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
@@ -605,7 +644,7 @@ To produce a small matrix suitable for use in text, there is a `smallmatrix` env
 
 To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{bsmallmatrix}1 & 2 \\ 3 & 4\end{bsmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
 
-Môi trường `Bsmailmatrix`
+Môi trường `Bsmailmatrix` . . . 
 
 ```latex
 \begin{Bsmailmatrix}
@@ -613,7 +652,7 @@ Môi trường `Bsmailmatrix`
 \begin{Bsmailmatrix}
 ```
 
-Ví dụ: 
+Ví dụ: . . .
 
 ```latex
 To produce a small matrix suitable for use in text, there is a `smallmatrix` environment \(\begin{Bsmallmatrix}1 & 2 \\ 3 & 4\end{Bsmallmatrix}\) that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
@@ -623,7 +662,7 @@ To produce a small matrix suitable for use in text, there is a `smallmatrix` env
 
 Môi trường `vsmailmatrix` . . . 
 
-Ví dụ: 
+Ví dụ:  . . . 
 
 ```latex
 To produce a small matrix suitable for use in text, there is a `smallmatrix` environment \(\begin{vsmallmatrix}1 & 2 \\ 3 & 4\end{vsmallmatrix}\) that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
@@ -633,7 +672,7 @@ To produce a small matrix suitable for use in text, there is a `smallmatrix` env
 
 Môi trường `Vsmallmatrix` . . . 
 
-Ví dụ: 
+Ví dụ: . . . 
 
 ```latex
 To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{Vsmallmatrix}1 & 2 \\ 3 & 4\end{Vsmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
@@ -643,7 +682,7 @@ To produce a small matrix suitable for use in text, there is a `smallmatrix` env
 
 Ta còn có thể thay cách thủ công . . . (? ở phần giới thiệu gói `amsmath`) . . . bằng môi trường `psmailmatrix` . . .
 
-Ví dụ: 
+Ví dụ: . . . 
 
 ```latex
 To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{psmallmatrix}1 & 2 \\ 3 & 4\end{psmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . .
@@ -655,9 +694,19 @@ To produce a small matrix suitable for use in text, there is a `smallmatrix` env
 
 Cho một hệ phương trình tuyến tính tổng quát . . . 
 
-. . . (ma trận hệ số (coefficient matrix), ma trận cột ẩn số, ma trận cột hệ số tự do)
+$$
+. . . 
+$$
 
-. . . (ma trận bổ sung (augmented matrix)) 
+Đưa về dạng ma trận ta được: 
+
+$$
+. . .
+$$
+
+. . . (trình bày ma trận hệ số (coefficient matrix), ma trận cột ẩn số, ma trận cột hệ số tự do)
+
+. . . (chúng ta còn có thể biểu diễn dạng ma trận trên thành ma trận bổ sung (augmented matrix)) 
 
 Để viết ma trận bổ sung, người dùng sẽ sử dụng gián tiếp thông qua môi trường `array`. 
 
@@ -709,7 +758,7 @@ $$
 
 Lệnh `@{}` được đặt hai bên . . . (? gì đó) trong dấu ngoặc nhọn, dùng để căn chỉnh hai dấu ngoặc vuông của ma trận bổ sung khi viết ở phần thảo LaTeX sao cho  .  .  . (? giúp chúng như thế nào)  
 
-Nếu như người dùng không lệnh `@{}` này vào, thì lúc này ở trong trang tài liệu sẽ hiện thị một kết quả khác: 
+Nếu như người dùng không sử dụng lệnh `@{}`, thì ở trong trang tài liệu lúc này sẽ hiện thị một kết quả hoàn toàn khác:   
 
 $$
 \left[
@@ -862,6 +911,7 @@ $$
 \end{array}
 \right] 
 $$
+
 Cách viết thứ hai . . . bằng cách sử dụng môi trường `align`
 
 ```latex
@@ -964,7 +1014,7 @@ Hai nhà toán học người Đức là Carl Gauss (trái) và Wilhelm Jordan (
 
 ## Định thức của ma trận 
 
-### Công thức LeibnizLeibniz
+### Công thức Leibniz
 
 . . . (định thức của một ma trận) 
 
@@ -1119,20 +1169,24 @@ $x \equiv a \pmod { b }$
 
 ---
 
-## Viết công thức tính tổ hợp chập $k$ của của $n$ 
+## Tổ hợp, chỉnh hợp, hoán vị 
+
+### Tổ hợp chập $k$ của của $n$ 
 
 ```latex
 \[\binom{n}{k} = \frac{n!}{k!(n-k)!}\]
 ```
 
 $$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
-$n! = 1 \cdot 2 \cdot 3 \dots \cdot (n-2) \cdot (n-1) \cdot n$  
+Trong đó: $n! = 1 \cdot 2 \cdot 3 \dots \cdot (n-2) \cdot (n-1) \cdot n$  là một hoán vị cấp n. 
 
-Khai báo package: 
+. . . . khai báo package: 
 
 ```latex
 \usepackage{amsmath}
 ```
+
+. . . . lệnh `\tbinom` . . . : 
 
 ```latex
 \[\tbinom{n}{k} = \frac{n!}{k!(n-k)!}\]
@@ -1269,7 +1323,107 @@ rồi sau đó sử dụng lệnh
 
 ---
 
-## Liên phân số 
+## Liên phân số (? Ktr lại thuật ngữ)
+
+(? giới thiệu một chút liên phân số là gì ? được biểu diễn như thê nào ? Giới thiệu cách viết liên phân số trên giấy trắng trước, rồi từ đó áp dụng chúng vào việc viết liên phân số trên soạn thảo LaTeX . . .)
+
+Để viết được liên phân số, trước tiên người dùng hãy nhớ phải khai báo package `amsmath`. 
+
+. . . (? viết nối tiếp phần trên)
+
+Liên phân số cơ bản: 
+
+```latex
+\documentclass{article}
+
+\usepackage[utf8]{vietnam}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\[
+  x = a_0 + \cfrac{1}{a_1 
+          + \cfrac{1}{a_2 
+          + \cfrac{1}{a_3 + \cfrac{1}{a_4}}}}
+\]
+
+\end{document}
+```
+
+Kết quả: 
+
+$$
+  x = a_0 + \cfrac{1}{a_1 
+          + \cfrac{1}{a_2 
+          + \cfrac{1}{a_3 + \cfrac{1}{a_4} } } }
+$$
+
+Các lệnh này phải được đặt vào trong lệnh hoặc môi trường viết toán học ở chế độ **display math**. 
+
+>[!NOTE]
+>Không nên viết liên phân số ở chế độ ***inline math** . . . (? nguyên nhân vì sao )
+
+
+Ví dụ về liên phân số Rogers – Ramanujan . . . (? thuộc lĩnh vực gì của toán học, nó đang nói về điều gì)[^2]
+
+```latex
+\documentclass{article}
+
+\usepackage[utf8]{vietnam}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{equation}
+       S(q) =  -R(-q) = \cfrac{q^{1/5}}{1 + 
+           \cfrac{q}{1 + 
+           \cfrac{q^2}{1 + 
+           \cfrac{q^3}{1+ \cdots}}}}, \quad |q| < 1 
+\end{equation}
+
+hoặc cũng có thể viết lại thành: 
+
+\begin{equation}
+        R(q) = \cfrac{q^{1/5}}{1 + 
+           \cfrac{q}{1 - 
+           \cfrac{q^2}{1 - 
+           \cfrac{q^3}{1 - \cdots}}}}, \quad |q| < 1 
+\end{equation}
+
+\end{document}
+```
+
+Kết quả: 
+
+$$
+       S(q) =  -R(-q) = \cfrac{q^{1/5}}{1 + 
+           \cfrac{q}{1 + 
+           \cfrac{q^2}{1 + 
+           \cfrac{q^3}{1+ \cdots}}}}, \quad |q| < 1 
+$$
+
+hoặc
+
+$$
+\begin{equation}
+        R(q) = \cfrac{q^{1/5}}{1 + 
+           \cfrac{q}{1 - 
+           \cfrac{q^2}{1 - 
+           \cfrac{q^3}{1 - \cdots}}}}, \quad |q| < 1 
+\end{equation}
+$$
+
+<div align="center">
+<img src="LaTeX-Library-project-v1.0.0/Draft/draft img/Rogers–Ramanujan.jpg" alt="Rogers–Ramanujan">
+</div>
+
+<center>Nhà toán học người Anh   
+Leonard James Rogers và nhà toán người Ấn Độ Srinivasa Ramanujan</center> 
+
+
+
 
 
 
@@ -1776,3 +1930,5 @@ Tổng hợp tại đây: https://www.overleaf.com/read/cvrzxtfnpxvk#5bc02f
 ---
 
 [^1]: Tài liệu tham khảo hàm Dirichlet: https://mathworld.wolfram.com/DirichletFunction.html
+
+[^2]: Nguồn tham khảo liên phân số Roger-Ramanujan: https://arxiv.org/pdf/2512.19952 
