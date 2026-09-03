@@ -50,7 +50,7 @@ Tổng hợp các vấn đề theo tuần/ngày/tháng/năm dưới đây:
 ## 12/07/2026: 
 
 + Bổ sung một số bài học còn thiếu: https://github.com/Namlete102/LaTeX-Library-project/issues/4
-+ Gợi ý ví dụ viết "Tiên đề, định nghĩa, định luật, định lý, bổ đề, hệ quả": https://github.com/Namlete102/LaTeX-Library-project/issues/3
++ Gợi ý ví dụ viết "Tiên đề, định nghĩa, định luật, định lý, bổ đề, hệ quả": https://github.com/Namlete102/LaTeX-Library-project/issues/3 
 
 ## 13/07/2026: 
 
@@ -63,7 +63,7 @@ Lỗi:
 \section{Axiom, theorem $\dots$}
 ```
 
-![](LaTeX-Library-project-v1.0.0/images/issue1.1.jpg)
+![](issue1.1.jpg)
 
 Cách sửa 
 

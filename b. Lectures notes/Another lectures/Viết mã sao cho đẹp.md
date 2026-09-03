@@ -1,0 +1,1 @@
+Việc viết mã LaTeX trông sẽ như thế nào, tùy thuộc vào từng người dùng . . . Người viết sẽ chỉ đưa ra một số cách trình bày mã LaTeX sao cho đẹp và sạch, giúp những bạn mới học về LaTeX có thể lấy đây là điểm xuất phát thay vì chỉ là một tiêu chuẩn chung thống nhất. . . .
