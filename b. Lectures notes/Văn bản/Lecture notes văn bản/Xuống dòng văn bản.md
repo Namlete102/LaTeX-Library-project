@@ -1,1 +1,0 @@
-Người dùng chỉ cần nhấn phím **Enter** được nhập trên bàn phím hai lần, để làm văn bản được xuống dòng mới khi soạn thảo LaTeX. (? viết chưa rõ ý tưởng)
