@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"aa5fe48556120223","x":-720,"y":-320,"width":250,"height":60,"color":"5","type":"text","text":"Lộ trình"},
+		{"id":"fa0396a9a6791915","x":-720,"y":-100,"width":1240,"height":660,"type":"text","text":"Được biên soạn nháp trước bằng văn bản thông thường\n\n+) Mở đầu: \nBao gồm: Viết toán học, kí hiệu nhập trực tiếp bàn phím --> inline math, display math \n\n+) Viết các chữ cái, kí hiệu trong toán học: \nBao gồm: Chữ cái Hy Lạp --> Phông chữ toán học khác --> Các kí hiệu toán học \n\n+) Căn chỉnh phương trình \n\n+) Viết các định nghĩa, định lý,...vv.. \n\n+) Viết bài toán, lời giải (thật ra chung với cái phần định nghĩa, định lý trên á)\n\n\n"}
+	],
+	"edges":[
+		{"id":"8730e4cd901acec5","fromNode":"aa5fe48556120223","fromSide":"bottom","toNode":"fa0396a9a6791915","toSide":"top"}
+	]
+}

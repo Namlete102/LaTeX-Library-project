@@ -1,3 +1,4 @@
+Nơi đây là nháp cho các bài học toán mà mình chưa viết vào bài học chính, vì thiếu sót hay chưa biết phải kết nối chung với phần chính như thế nào. 
 
 ## Gói `mathtools` 
 
@@ -244,7 +245,6 @@ Ví dụ: . . . (? tìm ví dụ và giải thích ví dụ lại sau)
 
 \end{document}
 ```
-
 
 ---
 

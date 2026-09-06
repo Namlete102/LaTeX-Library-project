@@ -10,10 +10,10 @@ Keep calm and love math
 
 </div>
 
-
+## Nội dung bài học: 
 ---
 
-## Toán tử:  
+### Toán tử:  
 
 Là gì ? Như thế nào ? Đọc như nào ?  Khi nào ? 
 
@@ -82,7 +82,7 @@ Dấu $\boxtimes, \Box$
 
 ---
 
-## Liên phân số:  [^1]
+### Liên phân số:  [^1]
 
 Đối với một . . . (ở bài học này chúng ta sẽ học cách viết phân số, liên phân số, ...)
 
@@ -119,7 +119,7 @@ Một cách khác để thay đổi kích thước phân số ở chế độ to
 
 ---
 
-## Giới hạn, đạo hàm, tích phân: 
+### Giới hạn, đạo hàm, tích phân: 
 
 \+ Đây là một chủ đề toán học thú vị được gọi chung là giải tích . . . 
 
@@ -164,7 +164,7 @@ $y^{''}$
 
 ---
 
-## Vector, ma trận: 
+###  Vector, ma trận: 
 
 (Quan trọng của phần này là cách viết phương pháp biến đổi sơ cấp) 
 
@@ -198,7 +198,7 @@ a_{11} & a_{12} & \dots & a_{1n}
 
 ---
 
-## Số phức:  
+###  Số phức:  
 
 \+ Viết tính chất cộng hai số phức liên hợp 
 

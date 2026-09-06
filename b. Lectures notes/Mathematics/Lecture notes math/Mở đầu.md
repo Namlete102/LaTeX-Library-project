@@ -22,7 +22,6 @@ người dùng có thể dễ dàng nhập trực tiếp toán tử (+, -), quan
 
 Điều này cũng tương tự, khi người dùng viết kí hiệu phần trăm 
 
-
 ```latex
 99%  
 ```
@@ -75,7 +74,8 @@ Từ hai điều cơ bản trên, người dùng có thể thấy rằng, để 
 
 . . . (? Giới thiệu) với 1+1 = 2 ở ví dụ . . . chúng được gọi là `inline math` còn nguyên lý bất định hải sơn bắc là `displaymath`. 
 
-LaTeX cung cấp đầy đủ hai chế độ trình bày toán học chính bao gồm
+LaTeX cung cấp đầy đủ hai chế độ trình bày toán học chính bao gồm: 
+
 + `inline math`(**toán học nội tuyến**): được sử dụng để viết các biểu thức, kí hiệu toán học nằm trong cùng ở đoạn văn bản.
 + `display math`(**toán học hiển thị**): được sử dụng để viết các biểu thức, kí hiệu toán học không thuộc ở đoạn văn và được trình bày trên các dòng riêng biệt. 
 
@@ -158,7 +158,7 @@ khi xuất sang trang tài liệu, lập tức hệ thống sẽ tự động b�
 Chú ý trên cũng được áp dụng tương tự đối với việc người dùng viết toán học ở chế độ [display math]().
 
 <div align="center">
-	<img src="LaTeX-Library-project-v1.0.0/Toán học/images math/Pythagoras.jpg" alt="Pythagoras">
+	<img src="LaTeX-Library-project-v1.0.0/b. Lectures notes/Mathematics/images math/Pythagoras.jpg" alt="Pythagoras">
 </div>
 <center>Triết gia và nhà toán học người Hy Lạp cổ đại xứ Samos Pythagoras</center>
 
@@ -373,7 +373,7 @@ $$
 $$
 
 <div align="center"> 
-	<img src="LaTeX-Library-project-v1.0.0/Toán học/images math/John Napier.jpg" alt="John Napier">
+	<img src="LaTeX-Library-project-v1.0.0/b. Lectures notes/Mathematics/images math/John Napier.jpg">
 </div>
 <center>Nhà toán học người Scotland John Napier</center> 
 
